@@ -5,6 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroBgSlider();
   initThemeToggle();
   initHeaderScroll();
   initTypewriterEffect();
@@ -17,6 +18,62 @@ document.addEventListener('DOMContentLoaded', () => {
   initCareerFiltersAndModal();
   initFaqAccordion();
 });
+
+/* -------------------------------------------------------------
+ * 0. Hero Background Image Slider Banner
+ * ------------------------------------------------------------- */
+function initHeroBgSlider() {
+  const slides = document.querySelectorAll('.hero-bg-slide');
+  const dots = document.querySelectorAll('.hero-bg-dot');
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+  let slideTimer = null;
+
+  function showSlide(index) {
+    slides.forEach((slide, idx) => {
+      slide.classList.remove('active');
+      if (idx === index) {
+        slide.classList.add('active');
+      }
+    });
+
+    dots.forEach((dot, idx) => {
+      dot.classList.remove('active');
+      if (idx === index) {
+        dot.classList.add('active');
+      }
+    });
+
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const nextIdx = (currentSlide + 1) % slides.length;
+    showSlide(nextIdx);
+  }
+
+  function startTimer() {
+    stopTimer();
+    slideTimer = setInterval(nextSlide, 5000);
+  }
+
+  function stopTimer() {
+    if (slideTimer) clearInterval(slideTimer);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.getAttribute('data-slide'), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+        startTimer();
+      }
+    });
+  });
+
+  startTimer();
+}
 
 /* -------------------------------------------------------------
  * 1. Dark / Light Theme Switcher
@@ -187,7 +244,7 @@ function initOurWorkSlider() {
       }
     });
 
-    const gap = window.innerWidth <= 768 ? 16 : 28;
+    const gap = window.innerWidth <= 992 ? 16 : 28;
     const cardWidth = cards[0].offsetWidth + gap;
     currentTranslate = -currentSlide * cardWidth;
     prevTranslate = currentTranslate;

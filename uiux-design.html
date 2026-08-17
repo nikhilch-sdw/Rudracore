@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UI/UX Product Design & User Research Services by Rudracore Technologies. Figma Design Systems, Interactive Prototypes, Mobile App UI & Usability Audits.">
+  <title>UI/UX Product Design & Design Systems | Rudracore Technologies</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Fixed Header Container -->
+  <div class="header-wrapper">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-content">
+          <div class="top-bar-left">
+            <a href="mailto:contact@rudracore.tech" class="top-bar-item"><i class="fas fa-envelope"></i> contact@rudracore.tech</a>
+            <a href="tel:+18005557837" class="top-bar-item"><i class="fas fa-phone-volume"></i> +1 (800) 555-RUDR</a>
+          </div>
+          <div class="top-bar-center">
+            <span class="topbar-badge">ISO 27001</span>
+            <span>Enterprise UI/UX Product Design & Design System Studio</span>
+          </div>
+          <div class="top-bar-right">
+            <a href="contact.html" class="top-bar-item" style="color: #60a5fa; font-weight: 700;">Free Design Review <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">R</div>
+          <span class="logo-text">Rudracore<span>.</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="has-dropdown">
+            <a href="index.html#services" class="nav-link active">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
+            <div class="mega-dropdown">
+              <div class="mega-grid">
+                <a href="digital-marketing.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
+                  <div><div class="mega-title">Digital Marketing</div><div class="mega-desc">SEO & Lead Gen.</div></div>
+                </a>
+                <a href="website-development.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
+                  <div><div class="mega-title">Website Development</div><div class="mega-desc">Jamstack & Portals.</div></div>
+                </a>
+                <a href="app-development.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-mobile-alt"></i></div>
+                  <div><div class="mega-title">App Development</div><div class="mega-desc">iOS, Android & Flutter.</div></div>
+                </a>
+                <a href="software-engineering.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-code"></i></div>
+                  <div><div class="mega-title">Software Engineering</div><div class="mega-desc">Microservices & Cloud.</div></div>
+                </a>
+                <a href="ai-automation.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-robot"></i></div>
+                  <div><div class="mega-title">AI Automation</div><div class="mega-desc">Custom LLMs & AI.</div></div>
+                </a>
+                <a href="cloud-devops.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-cloud"></i></div>
+                  <div><div class="mega-title">Cloud & DevOps</div><div class="mega-desc">AWS / GCP Pipelines.</div></div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="career.html" class="nav-link">Career</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <a href="contact.html" class="btn btn-primary-blue btn-sm">Review UX</a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Service Hero -->
+  <section class="sp-hero">
+    <div class="container">
+      <div class="sp-hero-grid">
+        <div>
+          <div class="section-tag tag-blue"><i class="fas fa-wand-magic-sparkles"></i> Human-Centered UX Design</div>
+          <h1 class="sp-title">State-of-the-Art UI/UX Product Design & Figma Design Systems</h1>
+          <p class="sp-subtitle">Transform digital product interfaces with intuitive user research, high-fidelity Figma prototypes, design systems, and conversion-focused user journey engineering.</p>
+          
+          <div class="hero-btns">
+            <a href="#quote" class="btn btn-primary-blue">Request UX Audit & Review <i class="fas fa-pen-ruler"></i></a>
+            <a href="work.html" class="btn btn-secondary">Explore Figma Portfolios <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="sp-pills-bar">
+            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> Design Tokens & Components</div>
+            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> Clickable Interactive Prototypes</div>
+            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> WCAG AA Accessibility Standard</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-enquiry-card">
+            <div class="hero-form-header">
+              <h3>Start Your UX Redesign</h3>
+              <p>Get a heuristic UX teardown & design proposal within 24h.</p>
+            </div>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="Marcus Brody" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Work Email *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="marcus@fintech.io" required>
+              </div>
+              <div class="form-group">
+                <label>Primary Design Requirement</label>
+                <select class="form-control" required>
+                  <option value="SaaS Platform UI/UX Redesign">SaaS Platform UI/UX Redesign</option>
+                  <option value="Mobile App UI Design System">Mobile App UI Design System</option>
+                  <option value="Conversion-Focused UX Audit">Conversion-Focused UX Audit</option>
+                  <option value="Figma Design System Tokens">Figma Design System Tokens</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary-blue" style="width: 100%; margin-top: 0.5rem;">Get Free UX Teardown <i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag tag-orange">Capabilities</div>
+        <h2 class="section-title">End-to-End Product Design Capabilities</h2>
+        <p class="section-subtitle">We craft user interfaces that balance aesthetic delight with seamless functional task completion.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fab fa-figma"></i> Figma Tokens</span>
+            <img src="images/design_showcase.jpg" alt="Figma Design Systems" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Figma Design Systems &amp; Tokens</h4>
+            <p>Building scalable, reusable component libraries, typography scale, color tokens, and auto-layout frames in Figma for effortless developer handoff.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-vial"></i> User Research</span>
+            <img src="images/design_showcase.jpg" alt="Usability Audits" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>User Research &amp; Usability Audits</h4>
+            <p>Conducting user interviews, heuristic UX evaluations, heatmaps, and card-sorting exercises to pinpoint usability friction points.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-mobile-screen"></i> Mobile UI UX</span>
+            <img src="images/design_showcase.jpg" alt="Mobile App UI Design" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Mobile App UI/UX Design</h4>
+            <p>Native iOS Human Interface Guidelines and Android Material Design 3 compliant mobile interface layouts engineered for single-thumb navigation.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-sitemap"></i> Wireframing</span>
+            <img src="images/design_showcase.jpg" alt="Information Architecture" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Wireframing &amp; Information Architecture</h4>
+            <p>Mapping complex user flows, site maps, low-fidelity wireframes, and interactive screen transitions prior to high-fidelity visual design.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-play"></i> Prototyping</span>
+            <img src="images/design_showcase.jpg" alt="High-Fidelity Prototypes" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Interactive High-Fidelity Prototypes</h4>
+            <p>Clickable, micro-animated Figma and Protopie prototypes allowing stakeholders and test users to experience real interaction flows.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-hand-pointer"></i> Motion UX</span>
+            <img src="images/design_showcase.jpg" alt="Micro-Animations" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Micro-Animations &amp; Interaction Motion</h4>
+            <p>Designing subtle button micro-interactions, loading skeleton states, and Lottie animations that delight users without adding bloat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Showcase Section -->
+  <section class="sp-showcase-section">
+    <div class="container">
+      <div class="sp-showcase-grid">
+        <div class="sp-showcase-img-wrapper">
+          <span class="sp-showcase-badge"><i class="fab fa-figma"></i> Figma Enterprise Design System Tokens</span>
+          <img src="images/design_showcase.jpg" alt="Figma UI UX Product Design System Canvas" class="sp-showcase-img">
+        </div>
+        <div>
+          <div class="section-tag tag-blue">In Action</div>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Figma Design Systems &amp; Rapid Wireframing</h2>
+          <p class="section-subtitle" style="text-align: left; margin-bottom: 1.5rem;">Scalable component design tokens, high-fidelity prototypes, and user journey flowcharts that unify design teams and accelerate frontend engineering.</p>
+          <ul class="sp-showcase-list">
+            <li><i class="fas fa-check-circle i-blue"></i> <strong>Design Token Architecture:</strong> Reusable color, typography, and spacing variables.</li>
+            <li><i class="fas fa-check-circle i-blue"></i> <strong>Clickable Prototypes:</strong> Realistic interaction flows for user testing and stakeholder buy-in.</li>
+            <li><i class="fas fa-check-circle i-blue"></i> <strong>WCAG AA Accessibility:</strong> Screen reader and high-contrast compliance out of the box.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Matrix -->
+  <section class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag tag-blue">Design Stack</div>
+        <h2 class="section-title">Modern Design Studio Tools</h2>
+        <p class="section-subtitle">We utilize industry-standard product design, prototyping, and research tools.</p>
+      </div>
+
+      <div class="tech-matrix-grid">
+        <div class="tech-badge"><i class="fab fa-figma"></i> Figma Professional</div>
+        <div class="tech-badge"><i class="fas fa-bolt"></i> FigJam Whiteboarding</div>
+        <div class="tech-badge"><i class="fas fa-play"></i> ProtoPie Interactive</div>
+        <div class="tech-badge"><i class="fas fa-film"></i> Lottie Animations</div>
+        <div class="tech-badge"><i class="fas fa-eye"></i> Maze Usability Testing</div>
+        <div class="tech-badge"><i class="fas fa-palette"></i> Adobe Creative Cloud</div>
+        <div class="tech-badge"><i class="fas fa-code"></i> Storybook UI Tokens</div>
+        <div class="tech-badge"><i class="fas fa-universal-access"></i> Stark WCAG Contrast Checker</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="background-color: var(--brand-black); color: var(--brand-white); padding: 4rem 0 2rem 0;">
+    <div class="container">
+      <div class="footer-bottom text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; color: #94a3b8; font-size: 0.9rem;">
+        <p>&copy; 2026 Rudracore Technologies. All rights reserved. • ISO 27001 Certified Product Design Firm</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

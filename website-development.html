@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website Development Services by Rudracore Technologies. High-converting React/Next.js Jamstack sites, custom storefronts & WebGL 3D portals.">
+  <title>Website Development & Web Engineering | Rudracore Technologies</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Fixed Header Container -->
+  <div class="header-wrapper">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-content">
+          <div class="top-bar-left">
+            <a href="mailto:contact@rudracore.tech" class="top-bar-item"><i class="fas fa-envelope"></i> contact@rudracore.tech</a>
+            <a href="tel:+18005557837" class="top-bar-item"><i class="fas fa-phone-volume"></i> +1 (800) 555-RUDR</a>
+          </div>
+          <div class="top-bar-center">
+            <span class="topbar-badge">ISO 27001</span>
+            <span>Enterprise Jamstack &amp; Web Engineering</span>
+          </div>
+          <div class="top-bar-right">
+            <a href="contact.html" class="top-bar-item" style="color: #60a5fa; font-weight: 700;">Free Consultation <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">R</div>
+          <span class="logo-text">Rudracore<span>.</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="has-dropdown">
+            <a href="index.html#services" class="nav-link active">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
+            <div class="mega-dropdown">
+              <div class="mega-grid">
+                <a href="digital-marketing.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
+                  <div><div class="mega-title">Digital Marketing</div><div class="mega-desc">SEO & Lead Gen.</div></div>
+                </a>
+                <a href="website-development.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
+                  <div><div class="mega-title">Website Development</div><div class="mega-desc">Jamstack & Portals.</div></div>
+                </a>
+                <a href="app-development.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-mobile-alt"></i></div>
+                  <div><div class="mega-title">App Development</div><div class="mega-desc">iOS, Android & Flutter.</div></div>
+                </a>
+                <a href="software-engineering.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-code"></i></div>
+                  <div><div class="mega-title">Software Engineering</div><div class="mega-desc">Microservices & Cloud.</div></div>
+                </a>
+                <a href="ai-automation.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-robot"></i></div>
+                  <div><div class="mega-title">AI Automation</div><div class="mega-desc">Custom LLMs & AI.</div></div>
+                </a>
+                <a href="cloud-devops.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-cloud"></i></div>
+                  <div><div class="mega-title">Cloud & DevOps</div><div class="mega-desc">AWS / GCP Pipelines.</div></div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="career.html" class="nav-link">Career</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <a href="contact.html" class="btn btn-primary-blue btn-sm">Build Website</a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Service Hero -->
+  <section class="sp-hero">
+    <div class="container">
+      <div class="sp-hero-grid">
+        <div>
+          <div class="section-tag tag-blue"><i class="fas fa-globe"></i> Web Engineering & Jamstack</div>
+          <h1 class="sp-title">High-Converting Web Applications & Custom Portals</h1>
+          <p class="sp-subtitle">We craft sub-second loading web applications, headless e-commerce storefronts, and interactive enterprise portals using modern React, Next.js, and WebGL technology.</p>
+          
+          <div class="hero-btns">
+            <a href="#quote" class="btn btn-primary-blue">Request Website Proposal <i class="fas fa-code"></i></a>
+            <a href="work.html" class="btn btn-secondary">Explore Web Showcase <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="sp-pills-bar">
+            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> Sub-Second Page Speed</div>
+            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> 100% Core Web Vitals SLA</div>
+            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> Headless & CMS Ready</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-enquiry-card">
+            <div class="hero-form-header">
+              <h3>Start Your Web Project</h3>
+              <p>Get architectural scope, tech recommendations & timeline.</p>
+            </div>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="David Miller" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Work Email *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="david@enterprise.com" required>
+              </div>
+              <div class="form-group">
+                <label>Estimated Project Budget</label>
+                <div class="hero-budget-pills">
+                  <div class="hero-budget-pill selected" data-budget="<$10k">&lt;$10k</div>
+                  <div class="hero-budget-pill" data-budget="$10k-$25k">$10k-$25k</div>
+                  <div class="hero-budget-pill" data-budget="$25k+">$25k+</div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary-blue" style="width: 100%; margin-top: 0.5rem;">Get Free Quote <i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag tag-orange">Capabilities</div>
+        <h2 class="section-title">Modern Web Engineering Solutions</h2>
+        <p class="section-subtitle">From high-speed marketing websites to complex SaaS web portals, we build web solutions engineered for scale.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fab fa-react"></i> Next.js Jamstack</span>
+            <img src="images/web_showcase.jpg" alt="React & Next.js Jamstack Sites" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>React &amp; Next.js Jamstack Sites</h4>
+            <p>Server-side rendered (SSR) and static site generation (SSG) for lightning-fast speeds, SEO dominance, and high conversions.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-cart-shopping"></i> Headless Commerce</span>
+            <img src="images/hero_bg_2.jpg" alt="Headless E-Commerce" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Headless E-Commerce Engines</h4>
+            <p>Custom Shopify Plus, Commerce Layer, and Stripe API integrations delivering ultra-fast checkout experiences.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-cube"></i> 3D WebGL</span>
+            <img src="images/web_showcase.jpg" alt="WebGL & 3D Interactive Design" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>WebGL &amp; 3D Interactive Design</h4>
+            <p>Immersive 3D web experiences, Three.js product visualizers, and interactive canvas graphics for innovative branding.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-layer-group"></i> Headless CMS</span>
+            <img src="images/hero_bg_2.jpg" alt="Custom Headless CMS Portals" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Custom Headless CMS Portals</h4>
+            <p>Seamless integrations with Strapi, Sanity, and Contentful allowing marketing teams to edit content effortless without breaking layout.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-gauge-high"></i> Core Web Vitals</span>
+            <img src="images/web_showcase.jpg" alt="Performance Optimization" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>Performance &amp; CWV Optimization</h4>
+            <p>Optimizing LCP, INP, asset compression, CDN edge distribution, and code splitting for perfect 100 Lighthouse scores.</p>
+          </div>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-img-wrapper">
+            <span class="capability-img-tag"><i class="fas fa-universal-access"></i> WCAG AA</span>
+            <img src="images/hero_bg_2.jpg" alt="WCAG Accessibility" class="capability-img">
+          </div>
+          <div class="capability-body">
+            <h4>WCAG Accessibility &amp; Security</h4>
+            <p>Strict WCAG 2.1 AA compliance, SSL encryption, security headers, and cross-browser testing for maximum reach.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Showcase Section -->
+  <section class="sp-showcase-section">
+    <div class="container">
+      <div class="sp-showcase-grid">
+        <div class="sp-showcase-img-wrapper">
+          <span class="sp-showcase-badge"><i class="fas fa-gauge-high"></i> Next.js 99/100 Core Web Vitals</span>
+          <img src="images/web_showcase.jpg" alt="Next.js Responsive Web Application" class="sp-showcase-img">
+        </div>
+        <div>
+          <div class="section-tag tag-blue">In Action</div>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Sub-Second Speed &amp; Headless Architecture</h2>
+          <p class="section-subtitle" style="text-align: left; margin-bottom: 1.5rem;">Experience lightning-fast user interactions with React server components, static edge generation, and decoupled headless CMS integrations.</p>
+          <ul class="sp-showcase-list">
+            <li><i class="fas fa-check-circle i-blue"></i> <strong>Sub-Second Loading SLA:</strong> Optimized asset loading and edge CDN delivery under 700ms.</li>
+            <li><i class="fas fa-check-circle i-blue"></i> <strong>Headless E-Commerce:</strong> Custom checkout engines handling peak holiday sales traffic effortlessly.</li>
+            <li><i class="fas fa-check-circle i-blue"></i> <strong>Full SEO &amp; Accessibility:</strong> 100/100 Lighthouse auditing for search visibility.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Matrix -->
+  <section class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag tag-blue">Web Stack</div>
+        <h2 class="section-title">Cutting-Edge Web Frameworks</h2>
+        <p class="section-subtitle">We build with industry-tested open source frameworks and cloud infrastructure.</p>
+      </div>
+
+      <div class="tech-matrix-grid">
+        <div class="tech-badge"><i class="fab fa-react"></i> React.js</div>
+        <div class="tech-badge"><i class="fas fa-N"></i> Next.js 14</div>
+        <div class="tech-badge"><i class="fab fa-js"></i> TypeScript</div>
+        <div class="tech-badge"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="tech-badge"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+        <div class="tech-badge"><i class="fas fa-bolt"></i> Vercel Edge</div>
+        <div class="tech-badge"><i class="fab fa-shopify"></i> Shopify API</div>
+        <div class="tech-badge"><i class="fas fa-database"></i> PostgreSQL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="background-color: var(--brand-black); color: var(--brand-white); padding: 4rem 0 2rem 0;">
+    <div class="container">
+      <div class="footer-bottom text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; color: #94a3b8; font-size: 0.9rem;">
+        <p>&copy; 2026 Rudracore Technologies. All rights reserved. • ISO 27001 Certified Web Development Firm</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
