@@ -53,6 +53,46 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html" class="nav-link">Home</a></li>
           
+          <!-- Products Dropdown -->
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link">Products <i class="fas fa-chevron-down nav-arrow"></i></a>
+            <div class="mega-dropdown">
+              <div class="mega-grid">
+                <a href="chatwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: #dcf8c6; color: #25d366;"><i class="fab fa-whatsapp"></i></div>
+                  <div>
+                    <div class="mega-title">Chatwings</div>
+                    <div class="mega-desc">WhatsApp API Automation &amp; CRM Suite.</div>
+                  </div>
+                </a>
+
+                <a href="seowings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-chart-line"></i></div>
+                  <div>
+                    <div class="mega-title">SEOWings</div>
+                    <div class="mega-desc">Website Audit &amp; Rank Tracking Tool.</div>
+                  </div>
+                </a>
+
+                <a href="sbn.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-newspaper"></i></div>
+                  <div>
+                    <div class="mega-title">SBN News App</div>
+                    <div class="mega-desc">Real-Time News &amp; Audio Feed Platform.</div>
+                  </div>
+                </a>
+
+                <a href="expert-sports.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-running"></i></div>
+                  <div>
+                    <div class="mega-title">Expert Sports</div>
+                    <div class="mega-desc">Sports Equipment &amp; Fitness Platform.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          
           <!-- Services Mega Dropdown -->
           <li class="has-dropdown">
             <a href="index.html#services" class="nav-link">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
@@ -211,6 +251,7 @@
       <!-- Filter Bar -->
       <div class="work-filter-bar">
         <button class="work-filter-btn active" data-filter="all">All Projects</button>
+        <button class="work-filter-btn" data-filter="products" style="border-color: var(--brand-orange); font-weight: 700;"><i class="fas fa-cubes"></i> Our Products</button>
         <button class="work-filter-btn" data-filter="healthcare">Healthcare &amp; Telehealth</button>
         <button class="work-filter-btn" data-filter="realestate">Real Estate &amp; PropTech</button>
         <button class="work-filter-btn" data-filter="logistics">Logistics &amp; Telematics</button>
@@ -220,6 +261,152 @@
 
       <!-- Case Study Grid -->
       <div class="case-study-grid">
+        <!-- Product 1: Chatwings -->
+        <div class="case-study-card" data-category="products">
+          <div class="case-study-badge-strip">
+            <span class="ind-pill" style="background-color: #dcf8c6; color: #16a34a; font-weight: 700;"><i class="fab fa-whatsapp"></i> Chatwings API</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;"><i class="fas fa-check-circle" style="color: #25d366;"></i> WhatsApp SaaS</span>
+          </div>
+          <div class="case-study-body">
+            <h3 class="case-study-title">Chatwings - WhatsApp API Software &amp; Automation Suite</h3>
+            <p class="case-study-summary">Enterprise WhatsApp Cloud API messaging software with automated broadcast scheduling, AI chatbots, and multi-agent shared team inbox.</p>
+            <div class="case-study-metrics">
+              <div>
+                <div class="metric-box-val">99.9%</div>
+                <div class="metric-box-lbl">Delivery Rate</div>
+              </div>
+              <div>
+                <div class="metric-box-val">10x</div>
+                <div class="metric-box-lbl">Response Speed</div>
+              </div>
+            </div>
+            <div class="case-study-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">WebSockets</span>
+              <span class="tech-tag">Meta Cloud API</span>
+              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">React</span>
+            </div>
+            <div class="case-study-action" style="display: flex; gap: 0.5rem; flex-direction: column;">
+              <a href="chatwings.html" class="btn btn-primary-orange btn-sm" style="width: 100%; text-align: center;">
+                Product Details <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://chatwings.co/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">
+                Visit Live Platform <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: SEOWings -->
+        <div class="case-study-card" data-category="products">
+          <div class="case-study-badge-strip">
+            <span class="ind-pill" style="background-color: var(--bg-accent-orange); color: var(--brand-orange); font-weight: 700;"><i class="fas fa-chart-line"></i> SEOWings Tool</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;"><i class="fas fa-check-circle" style="color: var(--brand-orange);"></i> Website Diagnostic</span>
+          </div>
+          <div class="case-study-body">
+            <h3 class="case-study-title">SEOWings - Website Audit &amp; Keyword Rank Tracker</h3>
+            <p class="case-study-summary">Comprehensive website diagnostic tool offering automated technical SEO site audits, keyword rank tracking, and Core Web Vitals performance monitors.</p>
+            <div class="case-study-metrics">
+              <div>
+                <div class="metric-box-val">3.5x</div>
+                <div class="metric-box-lbl">Traffic Growth</div>
+              </div>
+              <div>
+                <div class="metric-box-val">50+</div>
+                <div class="metric-box-lbl">Audit Checks</div>
+              </div>
+            </div>
+            <div class="case-study-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Puppeteer</span>
+              <span class="tech-tag">Elasticsearch</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Go</span>
+            </div>
+            <div class="case-study-action" style="display: flex; gap: 0.5rem; flex-direction: column;">
+              <a href="seowings.html" class="btn btn-primary-orange btn-sm" style="width: 100%; text-align: center;">
+                Product Details <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://seo.chatwings.co" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">
+                Visit Live Tool <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: SBN News App -->
+        <div class="case-study-card" data-category="products">
+          <div class="case-study-badge-strip">
+            <span class="ind-pill" style="background-color: var(--bg-tertiary); color: var(--brand-navy); font-weight: 700;"><i class="fas fa-newspaper"></i> SBN News App</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;"><i class="fas fa-star" style="color: #f59e0b;"></i> 4.8 Rating</span>
+          </div>
+          <div class="case-study-body">
+            <h3 class="case-study-title">SBN - Real-Time Smart Breaking News Mobile App</h3>
+            <p class="case-study-summary">High-speed news aggregation mobile application with AI text-to-speech audio playback, topic recommendations, and targeted breaking news notifications.</p>
+            <div class="case-study-metrics">
+              <div>
+                <div class="metric-box-val">500k+</div>
+                <div class="metric-box-lbl">Active Readers</div>
+              </div>
+              <div>
+                <div class="metric-box-val">&lt; 50ms</div>
+                <div class="metric-box-lbl">Feed Latency</div>
+              </div>
+            </div>
+            <div class="case-study-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Go Microservices</span>
+              <span class="tech-tag">Kafka</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">AI TTS</span>
+            </div>
+            <div class="case-study-action" style="display: flex; gap: 0.5rem; flex-direction: column;">
+              <a href="sbn.html" class="btn btn-primary-orange btn-sm" style="width: 100%; text-align: center;">
+                Product Details <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://sbn.s8home.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">
+                Visit Live Platform <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Expert Sports Meerut -->
+        <div class="case-study-card" data-category="products">
+          <div class="case-study-badge-strip">
+            <span class="ind-pill" style="background-color: rgba(16, 185, 129, 0.15); color: #047857; font-weight: 700;"><i class="fas fa-running"></i> Expert Sports</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;"><i class="fas fa-check-circle" style="color: #10b981;"></i> Sports Platform</span>
+          </div>
+          <div class="case-study-body">
+            <h3 class="case-study-title">Expert Sports Meerut - Sports Equipment &amp; Fitness Platform</h3>
+            <p class="case-study-summary">Premier digital sports equipment and athletic fitness gear platform serving sports academies, professional athletes, and gym centers.</p>
+            <div class="case-study-metrics">
+              <div>
+                <div class="metric-box-val">10,000+</div>
+                <div class="metric-box-lbl">Sports Gear</div>
+              </div>
+              <div>
+                <div class="metric-box-val">500+</div>
+                <div class="metric-box-lbl">Academies Served</div>
+              </div>
+            </div>
+            <div class="case-study-tech">
+              <span class="tech-tag">Jamstack Web</span>
+              <span class="tech-tag">Node.js API</span>
+              <span class="tech-tag">E-Commerce</span>
+              <span class="tech-tag">Payment Gateway</span>
+            </div>
+            <div class="case-study-action" style="display: flex; gap: 0.5rem; flex-direction: column;">
+              <a href="expert-sports.html" class="btn btn-primary-orange btn-sm" style="width: 100%; text-align: center;">
+                Product Details <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://expertsportsmeerut.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">
+                Visit Live Store <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- Project 1: Healthcare -->
         <div class="case-study-card" data-category="healthcare">
           <div class="case-study-badge-strip">
@@ -486,12 +673,12 @@
         <div class="footer-col">
           <h5 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem;">Services</h5>
           <ul class="footer-links">
-            <li><a href="index.html#services">Digital Marketing</a></li>
-            <li><a href="index.html#services">Website Development</a></li>
-            <li><a href="index.html#services">Mobile App Development</a></li>
-            <li><a href="index.html#services">Software Engineering</a></li>
-            <li><a href="index.html#services">AI &amp; Workflows</a></li>
-            <li><a href="index.html#services">Cloud &amp; DevOps</a></li>
+            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+            <li><a href="website-development.html">Website Development</a></li>
+            <li><a href="app-development.html">Mobile App Development</a></li>
+            <li><a href="software-engineering.html">Software Engineering</a></li>
+            <li><a href="ai-automation.html">AI &amp; Workflows</a></li>
+            <li><a href="cloud-devops.html">Cloud &amp; DevOps</a></li>
           </ul>
         </div>
 
@@ -499,12 +686,12 @@
         <div class="footer-col">
           <h5 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem;">Industries</h5>
           <ul class="footer-links">
-            <li><a href="index.html#industries">Healthcare &amp; Telemedicine</a></li>
-            <li><a href="index.html#industries">Real Estate &amp; PropTech</a></li>
-            <li><a href="index.html#industries">Logistics &amp; Supply Chain</a></li>
-            <li><a href="index.html#industries">FinTech &amp; E-Commerce</a></li>
-            <li><a href="index.html#industries">EdTech &amp; E-Learning</a></li>
-            <li><a href="index.html#industries">Energy &amp; Utilities</a></li>
+            <li><a href="industry-healthcare.html">Healthcare &amp; Telemedicine</a></li>
+            <li><a href="industry-realestate.html">Real Estate &amp; PropTech</a></li>
+            <li><a href="industry-logistics.html">Logistics &amp; Supply Chain</a></li>
+            <li><a href="industry-fintech.html">FinTech &amp; Retail</a></li>
+            <li><a href="industry-edtech.html">EdTech &amp; E-Learning</a></li>
+            <li><a href="industry-energy.html">Energy &amp; Utilities</a></li>
           </ul>
         </div>
 
@@ -513,6 +700,7 @@
           <h5 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem;">Company</h5>
           <ul class="footer-links">
             <li><a href="about.html">About Rudracore</a></li>
+            <li><a href="products.html">Our Products</a></li>
             <li><a href="work.html">Case Studies &amp; Work</a></li>
             <li><a href="career.html">Careers &amp; Openings</a></li>
             <li><a href="index.html#estimator">Cost Estimator</a></li>
