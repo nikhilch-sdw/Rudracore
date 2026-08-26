@@ -160,8 +160,7 @@
     <header class="header" id="header">
       <div class="container nav-container">
         <a href="index.html" class="logo">
-          <div class="logo-icon">R</div>
-          <span class="logo-text">Rudracore<span>.</span></span>
+          <img src="images/logo.png" alt="Rudracore Technology" class="logo-img">
         </a>
 
         <ul class="nav-menu" id="navMenu">
@@ -388,32 +387,79 @@
     </div>
   </section>
 
-  <!-- Live Platform Console Section -->
-  <section class="sp-showcase-section" style="padding: 5rem 0; background: var(--bg-secondary);">
+  <!-- Interactive Product Gallery Slider Section -->
+  <section class="pm-gallery-section">
     <div class="container">
-      <div class="sp-showcase-grid">
-        <div class="sp-showcase-img-wrapper" style="border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
-          <span class="sp-showcase-badge" style="background: var(--brand-orange); color: #ffffff;"><i class="fas fa-chart-line"></i> SEOWings Core Console</span>
-          <img src="images/hero_bg_2.jpg" alt="SEOWings Platform Showcase" class="sp-showcase-img">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+        <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);"><i class="fas fa-images"></i> Product Tool Showcase</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">SEOWings Diagnostic Console &amp; Reports</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.5rem;">Slide through technical audit dashboards, rank tracking charts, Core Web Vitals diagnostics, and white-label reports.</p>
+      </div>
+
+      <div class="pm-gallery-card">
+        <button class="pm-gallery-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="pm-gallery-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="pm-gallery-viewport">
+          <div class="pm-gallery-track">
+            <!-- Slide 1 -->
+            <div class="pm-gallery-slide">
+              <img src="images/hero_bg_2.jpg" alt="SEOWings SEO Diagnostic Dashboard">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Technical Site Health Command Center</h4>
+                  <p>Overall site health score, active crawling progress, and error alert breakdown.</p>
+                </div>
+                <span class="badge" style="background: var(--brand-orange); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Live Tool</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="pm-gallery-slide">
+              <img src="images/marketing_showcase.jpg" alt="Keyword Rank Tracker Console">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Global Keyword Rank Tracker</h4>
+                  <p>Daily position tracking across Google Desktop and Mobile search results.</p>
+                </div>
+                <span class="badge" style="background: var(--brand-blue); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Rank Analytics</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="pm-gallery-slide">
+              <img src="images/web_showcase.jpg" alt="Core Web Vitals & Speed Diagnostics">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Core Web Vitals Performance Audit</h4>
+                  <p>LCP, INP, and CLS score analysis with actionable developer code fix blueprints.</p>
+                </div>
+                <span class="badge" style="background: #10b981; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Core Web Vitals</span>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="pm-gallery-slide">
+              <img src="images/hero_dashboard.png" alt="White Label Client PDF Audit Reports">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Automated White-Label PDF Reports</h4>
+                  <p>Custom-branded client SEO reports with automated PDF generation &amp; scheduling.</p>
+                </div>
+                <span class="badge" style="background: #8b5cf6; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">White Label</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <span class="pm-badge"><i class="fas fa-bolt"></i> Headless Crawler Engine</span>
-          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
-            High-Speed Go &amp; Puppeteer Crawlers
-          </h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            SEOWings uses headless Puppeteer rendering to parse client-side JavaScript Single Page Applications (React, Vue, Angular) as accurately as traditional HTML.
-          </p>
-          <ul class="sp-showcase-list" style="margin-bottom: 2rem;">
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>JS SPA Rendering:</strong> Full diagnostic auditing of modern React &amp; Vue web apps.</li>
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>Sub-2 Minute Audits:</strong> Fast parallel site crawler execution.</li>
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>Remediation Blueprints:</strong> Step-by-step developer code snippets for quick fixes.</li>
-          </ul>
-          
-          <a href="https://seo.chatwings.co" target="_blank" rel="noopener noreferrer" class="pm-btn-primary">
-            Launch SEOWings Live Tool (seo.chatwings.co) <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
+      </div>
+
+      <div class="pm-gallery-dots"></div>
+
+      <!-- Live Action Buttons -->
+      <div style="text-align: center; margin-top: 2.75rem;">
+        <a href="https://seo.chatwings.co" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem; padding: 0.95rem 2.25rem;">
+          Launch SEOWings Live Tool (seo.chatwings.co) <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -424,9 +470,8 @@
       <div class="footer-top-row">
         <!-- Brand Column -->
         <div class="footer-brand">
-          <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: 1.25rem; display: inline-flex;">
-            <div class="logo-icon">R</div>
-            <div class="logo-text" style="color: #ffffff;">Rudracore<span>.</span></div>
+          <a href="index.html" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            <img src="images/logo.png" alt="Rudracore Technology" class="logo-img" style="height: 48px;">
           </a>
           <p style="font-size: 0.88rem; line-height: 1.7; color: #94a3b8; margin-bottom: 1.25rem;">Rudracore Technologies architects scalable software, high-performing mobile applications, and ROI-driven digital growth engines for world-class enterprises.</p>
           

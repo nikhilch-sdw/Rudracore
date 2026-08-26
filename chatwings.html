@@ -160,8 +160,7 @@
     <header class="header" id="header">
       <div class="container nav-container">
         <a href="index.html" class="logo">
-          <div class="logo-icon">R</div>
-          <span class="logo-text">Rudracore<span>.</span></span>
+          <img src="images/logo.png" alt="Rudracore Technology" class="logo-img">
         </a>
 
         <ul class="nav-menu" id="navMenu">
@@ -392,32 +391,79 @@
     </div>
   </section>
 
-  <!-- Live Platform Console Section -->
-  <section class="sp-showcase-section" style="padding: 5rem 0; background: var(--bg-secondary);">
+  <!-- Interactive Product Gallery Slider Section -->
+  <section class="pm-gallery-section">
     <div class="container">
-      <div class="sp-showcase-grid">
-        <div class="sp-showcase-img-wrapper" style="border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
-          <span class="sp-showcase-badge" style="background: #25d366; color: #ffffff;"><i class="fab fa-whatsapp"></i> Chatwings Core Console</span>
-          <img src="images/hero_bg_1.jpg" alt="Chatwings Platform Showcase" class="sp-showcase-img">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);"><i class="fas fa-images"></i> Product Platform Showcase</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">Chatwings Interface &amp; Live Console</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.5rem;">Explore live dashboard views, campaign management tools, multi-agent chat interfaces, and automated flow builders.</p>
+      </div>
+
+      <div class="pm-gallery-card">
+        <button class="pm-gallery-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="pm-gallery-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="pm-gallery-viewport">
+          <div class="pm-gallery-track">
+            <!-- Slide 1 -->
+            <div class="pm-gallery-slide">
+              <img src="images/hero_bg_1.jpg" alt="Chatwings Meta Cloud Dashboard">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Meta Cloud API Command Center</h4>
+                  <p>Real-time campaign delivery metrics, system health, and API queue monitor.</p>
+                </div>
+                <span class="badge" style="background: #25d366; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Live Platform</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="pm-gallery-slide">
+              <img src="images/hero_dashboard.png" alt="Multi-Agent Shared Inbox Console">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Multi-Agent Shared Customer Inbox</h4>
+                  <p>Unified inbox for support agents with live chat routing and automated ticketing.</p>
+                </div>
+                <span class="badge" style="background: var(--brand-blue); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Team Workflow</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="pm-gallery-slide">
+              <img src="images/software_showcase.jpg" alt="AI Automated Flow Builder">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Automated AI Chatbot Flow Builder</h4>
+                  <p>Visual drag-and-drop chatbot builder for instant FAQ and order updates.</p>
+                </div>
+                <span class="badge" style="background: var(--brand-orange); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">AI Automation</span>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="pm-gallery-slide">
+              <img src="images/hero_bg_2.jpg" alt="Bulk Broadcast Analytics">
+              <div class="pm-gallery-caption">
+                <div>
+                  <h4>Broadcast Campaign Analytics</h4>
+                  <p>In-depth open-rate analysis, click tracking, and lead conversion reports.</p>
+                </div>
+                <span class="badge" style="background: #0284c7; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Analytics</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <span class="pm-badge"><i class="fas fa-shield-halved"></i> 100% Meta Compliant</span>
-          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin-top: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
-            Official Meta Cloud Infrastructure
-          </h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            Bypass unauthorized web wrappers. Chatwings operates strictly on official Meta Cloud API endpoints, ensuring maximum delivery speed and zero account ban risks.
-          </p>
-          <ul class="sp-showcase-list" style="margin-bottom: 2rem;">
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>Zero Ban Risk:</strong> Official Meta Cloud API compliance.</li>
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>Sub-Second Speed:</strong> High-throughput automated message queues.</li>
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>Encrypted Security:</strong> End-to-end data encryption &amp; ISO 27001 privacy.</li>
-          </ul>
-          
-          <a href="https://chatwings.co/" target="_blank" rel="noopener noreferrer" class="pm-btn-primary">
-            Launch Chatwings Live Platform (chatwings.co) <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
+      </div>
+
+      <div class="pm-gallery-dots"></div>
+
+      <!-- Live Action Buttons -->
+      <div style="text-align: center; margin-top: 2.75rem;">
+        <a href="https://chatwings.co/" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem; padding: 0.95rem 2.25rem;">
+          Launch Chatwings Live Platform (chatwings.co) <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -428,9 +474,8 @@
       <div class="footer-top-row">
         <!-- Brand Column -->
         <div class="footer-brand">
-          <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: 1.25rem; display: inline-flex;">
-            <div class="logo-icon">R</div>
-            <div class="logo-text" style="color: #ffffff;">Rudracore<span>.</span></div>
+          <a href="index.html" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            <img src="images/logo.png" alt="Rudracore Technology" class="logo-img" style="height: 48px;">
           </a>
           <p style="font-size: 0.88rem; line-height: 1.7; color: #94a3b8; margin-bottom: 1.25rem;">Rudracore Technologies architects scalable software, high-performing mobile applications, and ROI-driven digital growth engines for world-class enterprises.</p>
           

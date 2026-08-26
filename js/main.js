@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWorkFiltersAndModal();
   initCareerFiltersAndModal();
   initFaqAccordion();
+  initProductGallerySlider();
 });
 
 /* -------------------------------------------------------------
@@ -675,6 +676,90 @@ function initFaqAccordion() {
         item.classList.add('active');
       }
     });
+  });
+}
+
+/* -------------------------------------------------------------
+ * 13. Product Gallery Slider Component
+ * ------------------------------------------------------------- */
+function initProductGallerySlider() {
+  const sliders = document.querySelectorAll('.pm-gallery-card');
+  if (sliders.length === 0) return;
+
+  sliders.forEach(slider => {
+    const track = slider.querySelector('.pm-gallery-track');
+    const slides = slider.querySelectorAll('.pm-gallery-slide');
+    const prevBtn = slider.querySelector('.pm-gallery-arrow.prev');
+    const nextBtn = slider.querySelector('.pm-gallery-arrow.next');
+    const dotsContainer = slider.parentElement.querySelector('.pm-gallery-dots');
+
+    if (!track || slides.length === 0) return;
+
+    let currentIndex = 0;
+    let timer = null;
+
+    // Create dots if container exists
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.classList.add('pm-gallery-dot');
+        if (idx === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(idx));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function updateDots() {
+      if (!dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll('.pm-gallery-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      if (index < 0) {
+        currentIndex = slides.length - 1;
+      } else if (index >= slides.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateDots();
+      resetTimer();
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    }
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(() => {
+        goToSlide(currentIndex + 1);
+      }, 5000);
+    }
+
+    function stopTimer() {
+      if (timer) clearInterval(timer);
+    }
+
+    function resetTimer() {
+      startTimer();
+    }
+
+    // Pause auto-slide on mouse enter
+    slider.addEventListener('mouseenter', stopTimer);
+    slider.addEventListener('mouseleave', startTimer);
+
+    startTimer();
   });
 }
 
