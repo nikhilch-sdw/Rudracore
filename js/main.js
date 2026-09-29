@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductGallerySlider();
   initTechFilterTabs();
   initHeroInternalParticles();
+  initWhySplitShowcase();
 });
 
 /* -------------------------------------------------------------
@@ -972,7 +973,12 @@ function initHeroInternalParticles() {
     canvas.height = Math.round(height * dpr);
   }
 
-  // Non-Tilting Interactive Cursor Listeners (Image stays completely steady)
+  const mobileEl = document.getElementById('heroActiveMobile');
+  const badgeCloudEl = document.getElementById('badgeCloud');
+  const badgeSpeedEl = document.getElementById('badgeSpeed');
+  const laptopImgEl = document.getElementById('heroShowcaseImage');
+
+  // Multiplane Interactive Layer Movement (Active Mobile & Floating Widgets)
   wrapper.addEventListener('mousemove', (e) => {
     const rect = canvas.getBoundingClientRect();
     const clientX = e.clientX - rect.left;
@@ -980,12 +986,33 @@ function initHeroInternalParticles() {
     mouse.x = (clientX / rect.width) * BASE_SIZE;
     mouse.y = (clientY / rect.height) * BASE_SIZE;
     mouse.active = true;
+
+    // Subtle 3D parallax depth between layers without tilting the frame
+    const normX = (clientX / rect.width) - 0.5;
+    const normY = (clientY / rect.height) - 0.5;
+
+    if (mobileEl) {
+      mobileEl.style.transform = `translate3d(${normX * 18}px, ${normY * 18 - 6}px, 0) rotate(${normX * 4}deg)`;
+    }
+    if (badgeCloudEl) {
+      badgeCloudEl.style.transform = `translate3d(${normX * -12}px, ${normY * -10}px, 0)`;
+    }
+    if (badgeSpeedEl) {
+      badgeSpeedEl.style.transform = `translate3d(${normX * -14}px, ${normY * -12}px, 0)`;
+    }
+    if (laptopImgEl) {
+      laptopImgEl.style.transform = `translate3d(${normX * 6}px, ${normY * 6}px, 0)`;
+    }
   });
 
   wrapper.addEventListener('mouseleave', () => {
     mouse.active = false;
     mouse.x = -9999;
     mouse.y = -9999;
+    if (mobileEl) mobileEl.style.transform = '';
+    if (badgeCloudEl) badgeCloudEl.style.transform = '';
+    if (badgeSpeedEl) badgeSpeedEl.style.transform = '';
+    if (laptopImgEl) laptopImgEl.style.transform = '';
   });
 
   wrapper.addEventListener('click', (e) => {
@@ -1306,3 +1333,91 @@ function initHeroInternalParticles() {
 
   animId = requestAnimationFrame(render);
 }
+
+/* -------------------------------------------------------------
+ * 23. Why Choose Us: Interactive Split Showcase
+ * ------------------------------------------------------------- */
+function initWhySplitShowcase() {
+  const tabs = document.querySelectorAll('.why-pillar-tab');
+  const panels = document.querySelectorAll('.why-preview-panel');
+  const showcase = document.getElementById('whySplitShowcase');
+
+  if (tabs.length === 0 || panels.length === 0) return;
+
+  let currentIndex = 0;
+  let autoTimer = null;
+  let isHovered = false;
+
+  function activateTab(index, isUserInteraction = false) {
+    if (index < 0 || index >= tabs.length) return;
+    currentIndex = index;
+
+    const activeTab = tabs[index];
+    const targetId = activeTab.getAttribute('data-target');
+
+    tabs.forEach((tab, i) => {
+      const isCurrent = i === index;
+      tab.classList.toggle('active', isCurrent);
+      tab.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
+    });
+
+    panels.forEach(panel => {
+      if (panel.id === targetId) {
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    });
+
+    if (isUserInteraction) {
+      resetTimer();
+    }
+  }
+
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => {
+      activateTab(idx, true);
+    });
+
+    tab.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activateTab(idx, true);
+      }
+    });
+  });
+
+  function startTimer() {
+    stopTimer();
+    autoTimer = setInterval(() => {
+      if (!isHovered) {
+        const nextIdx = (currentIndex + 1) % tabs.length;
+        activateTab(nextIdx, false);
+      }
+    }, 6000);
+  }
+
+  function stopTimer() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  function resetTimer() {
+    stopTimer();
+    startTimer();
+  }
+
+  if (showcase) {
+    showcase.addEventListener('mouseenter', () => {
+      isHovered = true;
+    });
+    showcase.addEventListener('mouseleave', () => {
+      isHovered = false;
+    });
+  }
+
+  startTimer();
+}
+
