@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCareerFiltersAndModal();
   initFaqAccordion();
   initProductGallerySlider();
+  initTechFilterTabs();
 });
 
 /* -------------------------------------------------------------
@@ -90,7 +91,7 @@ function initThemeToggle() {
   themeBtn.addEventListener('click', () => {
     const activeTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-    
+
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('rudracore_theme', newTheme);
     updateThemeIcon(themeBtn, newTheme);
@@ -155,9 +156,9 @@ function initTypewriterEffect() {
 
   const phrases = [
     'Digital Marketing',
-    'Mobile App Development',
-    'Custom Software Engineering',
-    'Cloud & Enterprise AI'
+    'Software Solutions',
+    'Mobile App Design',
+    'Cloud & AI Engines'
   ];
 
   let phraseIdx = 0;
@@ -549,7 +550,7 @@ function initWorkFiltersAndModal() {
         const title = btn.getAttribute('data-title') || 'Case Study Details';
         const client = btn.getAttribute('data-client') || 'Enterprise Client';
         const desc = btn.getAttribute('data-desc') || 'Full implementation case study details.';
-        
+
         const modalTitle = document.getElementById('modalCaseTitle');
         const modalClient = document.getElementById('modalCaseClient');
         const modalDesc = document.getElementById('modalCaseDesc');
@@ -763,3 +764,33 @@ function initProductGallerySlider() {
   });
 }
 
+/* -------------------------------------------------------------
+ * 13. Tech Stack Matrix Category Filter Tabs
+ * ------------------------------------------------------------- */
+function initTechFilterTabs() {
+  const filterBtns = document.querySelectorAll('.tech-filter-btn');
+  const techCards = document.querySelectorAll('.tech-cards-grid .tech-card-item');
+
+  if (filterBtns.length === 0 || techCards.length === 0) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      techCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.classList.remove('is-hidden');
+          card.style.animation = 'none';
+          card.offsetHeight; // force reflow
+          card.style.animation = 'techFadeInUp 0.28s ease forwards';
+        } else {
+          card.classList.add('is-hidden');
+        }
+      });
+    });
+  });
+}

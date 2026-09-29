@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QR Wings - Smart QR Scanning Platform & Automated AI Review Engine. Accelerate 5-star customer reviews, prevent negative feedback, and boost local SEO ratings.">
+  <meta name="keywords" content="QR Wings, AI Review Engine, QR Code Reviews, Google Reviews Automation, Reputation Management, 5 Star Reviews">
+  <title>QR Wings — AI Review Engine &amp; Smart QR Reputation Platform | Rudracore</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .pm-hero {
+      padding: 2.5rem 0 4.5rem;
+      background: radial-gradient(circle at 15% 15%, rgba(239, 68, 68, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.06) 0%, transparent 45%);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .pm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: rgba(239, 68, 68, 0.12);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      margin-bottom: 1.25rem;
+    }
+    .pm-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+    }
+    .pm-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-bottom: 2rem;
+    }
+    .pm-btn-primary {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .pm-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+      color: #fff;
+    }
+    .pm-btn-ghost {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      font-weight: 700;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .pm-btn-ghost:hover {
+      border-color: #ef4444;
+      color: #ef4444;
+      transform: translateY(-2px);
+    }
+    .pm-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border-color: rgba(239, 68, 68, 0.4);
+    }
+    .pm-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Header Container -->
+  <div class="header-wrapper">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-content">
+          <div class="top-bar-left">
+            <a href="mailto:contact@rudracore.tech" class="top-bar-item"><i class="fas fa-envelope"></i> contact@rudracore.tech</a>
+            <a href="tel:+18005557837" class="top-bar-item"><i class="fas fa-phone-volume"></i> +1 (800) 555-RUDR</a>
+          </div>
+          <div class="top-bar-center">
+            <span class="topbar-badge">ISO 27001</span>
+            <span>Enterprise AI Review Acceleration &amp; Reputation Platform</span>
+          </div>
+          <div class="top-bar-right">
+            <a href="contact.html" class="top-bar-item" style="color: #60a5fa; font-weight: 700;">Free Consultation <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon"><i class="fas fa-cube"></i></span>
+          <span class="logo-text">RUDRA<span>CORE</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link active">Products <i class="fas fa-chevron-down nav-arrow"></i></a>
+            <div class="mega-dropdown">
+              <div class="mega-grid">
+                <a href="chatwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: rgba(37, 211, 102, 0.15); color: #25d366;"><i class="fab fa-whatsapp"></i></div>
+                  <div>
+                    <div class="mega-title">Chatwings</div>
+                    <div class="mega-desc">Enterprise WhatsApp Cloud API Automation.</div>
+                  </div>
+                </a>
+                <a href="seowings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-chart-line"></i></div>
+                  <div>
+                    <div class="mega-title">SEOWings</div>
+                    <div class="mega-desc">Website SEO &amp; Core Web Vitals Auditor.</div>
+                  </div>
+                </a>
+                <a href="sbn.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-newspaper"></i></div>
+                  <div>
+                    <div class="mega-title">SBN News Network</div>
+                    <div class="mega-desc">High-Throughput Digital Newsroom CMS.</div>
+                  </div>
+                </a>
+                <a href="qrwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: rgba(239, 68, 68, 0.15); color: #ef4444;"><i class="fas fa-qrcode"></i></div>
+                  <div>
+                    <div class="mega-title">QR Wings</div>
+                    <div class="mega-desc">AI Review Engine &amp; Smart QR Reputation.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="index.html#services" class="nav-link">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
+            <div class="mega-dropdown">
+              <div class="mega-grid">
+                <a href="digital-marketing.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
+                  <div><div class="mega-title">Digital Marketing</div><div class="mega-desc">SEO &amp; Lead Gen.</div></div>
+                </a>
+                <a href="website-development.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
+                  <div><div class="mega-title">Website Development</div><div class="mega-desc">Jamstack &amp; Portals.</div></div>
+                </a>
+                <a href="app-development.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-mobile-alt"></i></div>
+                  <div><div class="mega-title">App Development</div><div class="mega-desc">iOS, Android &amp; Flutter.</div></div>
+                </a>
+                <a href="software-engineering.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-code"></i></div>
+                  <div><div class="mega-title">Software Engineering</div><div class="mega-desc">Microservices &amp; Cloud.</div></div>
+                </a>
+                <a href="ai-automation.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-robot"></i></div>
+                  <div><div class="mega-title">AI Automation</div><div class="mega-desc">Custom LLMs &amp; AI.</div></div>
+                </a>
+                <a href="cloud-devops.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-cloud"></i></div>
+                  <div><div class="mega-title">Cloud &amp; DevOps</div><div class="mega-desc">AWS / GCP Pipelines.</div></div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="career.html" class="nav-link">Career</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <a href="contact.html?product=qrwings" class="pm-btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">
+            Get QR Wings <i class="fas fa-arrow-right"></i>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero Spotlight Section -->
+  <section class="pm-hero">
+    <div class="container">
+      
+      <!-- Minimalist Breadcrumb -->
+      <div class="breadcrumb" style="margin-bottom: 1.75rem; font-size: 0.88rem;">
+        <a href="index.html" style="color: var(--text-muted);">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--text-muted); margin: 0 0.5rem;"></i>
+        <a href="products.html" style="color: var(--text-muted);">Products</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--text-muted); margin: 0 0.5rem;"></i>
+        <span style="color: #ef4444; font-weight: 700;">QR Wings</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: center;">
+        <div>
+          <span class="pm-badge"><i class="fas fa-qrcode"></i> AI Review Engine &amp; Reputation Platform</span>
+          <h1 class="pm-title">QR Wings — Smart QR Scanning &amp; 5-Star AI Reviews</h1>
+          <p class="pm-subtitle">Smart QR scanning platform with automated AI suggestions for 5-star customer reviews. Accelerate review velocity on Google, TripAdvisor, and Yelp while privately intercepting unhappy feedback before it goes public.</p>
+          
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2.5rem;">
+            <a href="contact.html?product=qrwings" class="pm-btn-primary" style="font-size: 1rem;">
+              Request Live Demo <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="contact.html?product=qrwings" class="pm-btn-ghost">
+              Explore Pricing &amp; Plans <i class="fas fa-comments"></i>
+            </a>
+          </div>
+
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">
+              <i class="fas fa-check-circle" style="color: #22c55e;"></i> +380% Review Velocity
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">
+              <i class="fas fa-check-circle" style="color: #22c55e;"></i> 4.9★ Average Rating
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; color: var(--text-primary);">
+              <i class="fas fa-check-circle" style="color: #22c55e;"></i> 100k+ Scans Handled
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15); border: 1px solid var(--border-color);">
+            <img src="images/qrwings_preview.jpg" alt="QR Wings AI Review Engine" style="width: 100%; height: auto; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.9) 100%); color: #fff; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-weight: 700; font-size: 1.05rem;">QR Wings Analytics Hub</div>
+                <div style="font-size: 0.8rem; color: #94a3b8;">Real-Time Review Velocity Stream</div>
+              </div>
+              <span style="background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 999px;">
+                +380% Review Velocity
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section style="padding: 5rem 0; background-color: var(--bg-primary);">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;">
+        <span class="section-tag tag-blue"><i class="fas fa-bolt"></i> Key Capabilities</span>
+        <h2 style="font-size: 2.25rem; font-weight: 800; margin-top: 0.75rem;">Engineered for Reputation Growth</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.5rem;">Automate the entire customer review lifecycle from point-of-sale QR scan to published Google 5-star praise.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="pm-card">
+          <div class="pm-icon-box" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;"><i class="fas fa-qrcode"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Dynamic Smart QR Codes</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.92rem;">Generate branded, trackable table tents, receipts, and NFC-compatible cards with instant destination updates.</p>
+        </div>
+
+        <div class="pm-card">
+          <div class="pm-icon-box" style="background: rgba(59, 130, 246, 0.12); color: #3b82f6;"><i class="fas fa-robot"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">AI Prompt Suggestions</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.92rem;">One-tap AI suggestions tailor positive sentiments into articulate Google reviews in seconds.</p>
+        </div>
+
+        <div class="pm-card">
+          <div class="pm-icon-box" style="background: rgba(34, 197, 94, 0.12); color: #22c55e;"><i class="fas fa-shield-alt"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Negative Feedback Interceptor</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.92rem;">Privately routes dissatisfied feedback to management for immediate resolution before public posting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="padding: 4.5rem 0; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; text-align: center;">
+    <div class="container" style="max-width: 700px;">
+      <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem;">Ready to Supercharge Your Local Reputation?</h2>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem;">Deploy QR Wings across your locations in under 15 minutes. See a 3x boost in verified 5-star reviews.</p>
+      <a href="contact.html?product=qrwings" class="pm-btn-primary" style="font-size: 1.05rem; padding: 1rem 2.25rem;">
+        Get Started with QR Wings <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Rudracore Technologies. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
+          <a href="#" style="color: #94a3b8;">Privacy Policy</a>
+          <a href="#" style="color: #94a3b8;">Terms of Service</a>
+          <a href="#" style="color: #94a3b8;">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
