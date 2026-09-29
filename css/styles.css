@@ -946,15 +946,17 @@ body {
 }
 
 .rotator-text {
-  color: var(--brand-blue);
   background: linear-gradient(135deg, var(--brand-blue) 0%, #3b82f6 50%, var(--brand-orange) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   display: inline-block;
   white-space: nowrap;
   position: relative;
   font-weight: 800;
   padding-bottom: 2px;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .rotator-text::after {
@@ -1082,10 +1084,217 @@ body {
   font-weight: 500;
 }
 
-/* 5. Hero Visual & Compact Proposal Card */
+/* =============================================================
+   5. Hero Visual - Premium 3D Tech Artwork Showcase
+   ============================================================= */
 .hero-visual {
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.hero-showcase-container {
+  position: relative;
+  width: 100%;
+  max-width: 530px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ambient Radial Glow Behind Image */
+.hero-ambient-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(249, 115, 22, 0.08) 50%, transparent 70%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 0;
+  animation: ambientPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes ambientPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.94);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 1;
+  }
+}
+
+/* Hero Showcase Artwork Wrapper (Transparent Floating Cutout, No Grey Shape) */
+.hero-image-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-image-wrapper:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .hero-image-wrapper {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.hero-showcase-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+  filter: drop-shadow(0 20px 45px rgba(15, 23, 42, 0.12));
+}
+
+[data-theme="dark"] .hero-showcase-image {
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 35px rgba(37, 99, 235, 0.28));
+}
+
+/* Dynamic Animated Internal Particles & Circuits Canvas */
+.hero-internal-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: auto;
+  mix-blend-mode: screen;
+  border-radius: 0;
+}
+
+/* Holographic Shimmer Across Glass Structure & Tech Devices */
+.hero-glass-shimmer {
+  position: absolute;
+  top: -60%;
+  left: -80%;
+  width: 70%;
+  height: 220%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 35%,
+    rgba(56, 189, 248, 0.22) 48%,
+    rgba(249, 115, 22, 0.18) 52%,
+    rgba(255, 255, 255, 0.3) 55%,
+    rgba(255, 255, 255, 0) 65%,
+    transparent 100%
+  );
+  transform: rotate(22deg);
+  pointer-events: none;
+  z-index: 4;
+  mix-blend-mode: overlay;
+  animation: glassShimmerSweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes glassShimmerSweep {
+  0% {
+    transform: translateX(-120%) rotate(22deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(260%) rotate(22deg);
+    opacity: 0.85;
+  }
+  75%, 100% {
+    transform: translateX(260%) rotate(22deg);
+    opacity: 0;
+  }
+}
+
+/* Synaptic Energy Emitters over Foreground Neural Clusters */
+.hero-energy-emitter {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.hero-energy-emitter.emitter-left {
+  left: 28%;
+  top: 72%;
+}
+
+.hero-energy-emitter.emitter-right {
+  left: 82%;
+  top: 66%;
+}
+
+.hero-energy-emitter::before,
+.hero-energy-emitter::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56, 189, 248, 0.85);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  animation: emitterRipple 3.5s cubic-bezier(0.1, 0.5, 0.4, 1) infinite;
+}
+
+.hero-energy-emitter.emitter-right::before,
+.hero-energy-emitter.emitter-right::after {
+  border-color: rgba(249, 115, 22, 0.85);
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+}
+
+.hero-energy-emitter::after {
+  animation-delay: 1.75s;
+}
+
+@keyframes emitterRipple {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+/* Responsive Scaling */
+@media (max-width: 992px) {
+  .hero-showcase-container {
+    max-width: 480px;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-showcase-container {
+    max-width: 100%;
+  }
+  .hero-image-wrapper {
+    border-radius: 18px;
+  }
+  .hero-showcase-image {
+    border-radius: 16px;
+  }
 }
 
 .hero-enquiry-card {
