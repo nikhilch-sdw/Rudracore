@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTechFilterTabs();
   initHeroInternalParticles();
   initWhySplitShowcase();
+  initFloatingActionButtons();
 });
 
 /* -------------------------------------------------------------
@@ -482,18 +483,20 @@ function initMobileMenu() {
     }
   });
 
-  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+  const dropdownItems = document.querySelectorAll('.has-dropdown, .nav-item-dropdown');
   dropdownItems.forEach(item => {
     const link = item.querySelector('.nav-link');
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        item.classList.toggle('open');
-      }
-    });
+    if (link) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          item.classList.toggle('open');
+        }
+      });
+    }
   });
 
-  const links = menu.querySelectorAll('.dropdown-item, .nav-link:not(.nav-item-dropdown > .nav-link)');
+  const links = menu.querySelectorAll('.mega-item, .dropdown-item, .nav-link:not(.has-dropdown > .nav-link):not(.nav-item-dropdown > .nav-link)');
   links.forEach(l => {
     l.addEventListener('click', () => {
       menu.classList.remove('active');
@@ -1419,5 +1422,29 @@ function initWhySplitShowcase() {
   }
 
   startTimer();
+}
+
+/* -------------------------------------------------------------
+ * 17. Floating Contact Action Buttons (Call & WhatsApp)
+ * ------------------------------------------------------------- */
+function initFloatingActionButtons() {
+  if (document.querySelector('.floating-contact-actions')) return;
+
+  const container = document.createElement('div');
+  container.className = 'floating-contact-actions';
+  container.id = 'floatingContactActions';
+  container.innerHTML = `
+    <!-- Call Floating Button -->
+    <a href="tel:+917906683614" class="floating-btn floating-call-btn" aria-label="Call Rudracore" title="Call: +91-7906683614">
+      <i class="fas fa-phone-alt"></i>
+      <span class="floating-tooltip">Call +91-7906683614</span>
+    </a>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917906683614?text=Hello%20Rudracore%20Team%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp-btn" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="floating-tooltip">Chat on WhatsApp</span>
+    </a>
+  `;
+  document.body.appendChild(container);
 }
 

@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cyber Security & Compliance Audit Services by Rudracore Technologies. Penetration Testing, HIPAA/SOC-2 Compliance, AES-256 Data Encryption & Vulnerability Assessment.">
-  <title>Cyber Security & Enterprise Compliance | Rudracore Technologies</title>
+  <meta name="description" content="Enterprise Cyber Security & Zero-Trust Architecture by Rudracore Technologies. Penetration testing, ISO 27001, SOC 2 compliance, and Cloud Security Posture Management.">
+  <meta name="keywords" content="Cyber Security, Penetration Testing, Zero Trust, ISO 27001, SOC 2, HIPAA Compliance, Vulnerability Assessment, Cloud Security, Rudracore">
+  <title>Enterprise Cyber Security & Compliance Engineering | Rudracore</title>
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    :root {
+      --theme-color: #ef4444;
+      --theme-color-hover: #dc2626;
+      --theme-gradient: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      --theme-glow: rgba(239, 68, 68, 0.35);
+      --theme-subtle: rgba(239, 68, 68, 0.08);
+      --theme-border: rgba(239, 68, 68, 0.22);
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Fixed Header Container -->
+  <!-- Fixed Header Container (Top Bar + Main Navigation) -->
   <div class="header-wrapper">
+    <!-- Top Blue Announcement Strip -->
     <div class="top-bar">
       <div class="container">
         <div class="top-bar-content">
           <div class="top-bar-left">
-            <a href="mailto:contact@rudracore.com" class="top-bar-item"><i class="fas fa-envelope"></i> contact@rudracore.com</a>
+            <a href="mailto:contact@rudracore.com" class="top-bar-item"><i class="fas fa-envelope"></i>
+              contact@rudracore.com</a>
             <a href="tel:+917906683614" class="top-bar-item"><i class="fas fa-phone-volume"></i> +91-7906683614</a>
           </div>
+
           <div class="top-bar-center">
             <span class="topbar-badge">ISO 27001</span>
-            <span>Enterprise Cyber Security & Compliance Engineering</span>
+            <span>Enterprise App Development &amp; Software Engineering</span>
           </div>
+
           <div class="top-bar-right">
-            <a href="contact.html" class="top-bar-item" style="color: #60a5fa; font-weight: 700;">Free Security Audit <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="top-bar-item" style="color: #60a5fa; font-weight: 700;">Free Consultation <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -44,222 +64,486 @@
           <img src="images/logo.png" alt="Rudracore Technology" class="logo-img">
         </a>
 
+        <!-- Mega Dropdown Navigation -->
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html" class="nav-link">Home</a></li>
+
+          <!-- Products Dropdown -->
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link">Products <i class="fas fa-chevron-down nav-arrow"></i></a>
+            <div class="mega-dropdown">
+              <div class="mega-grid">
+                <a href="chatwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: #dcf8c6; color: #25d366;"><i class="fab fa-whatsapp"></i></div>
+                  <div><div class="mega-title">Chatwings</div></div>
+                </a>
+
+                <a href="seowings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-chart-line"></i></div>
+                  <div><div class="mega-title">SEOWings</div></div>
+                </a>
+
+                <a href="sbn.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-newspaper"></i></div>
+                  <div><div class="mega-title">SBN News Network</div></div>
+                </a>
+
+                <a href="qrwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: rgba(239, 68, 68, 0.15); color: #ef4444;"><i class="fas fa-qrcode"></i></div>
+                  <div><div class="mega-title">QR Wings</div></div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Services Mega Dropdown -->
           <li class="has-dropdown">
             <a href="index.html#services" class="nav-link active">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
             <div class="mega-dropdown">
               <div class="mega-grid">
                 <a href="website-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
-                  <div><div class="mega-title">Website Development</div><div class="mega-desc">Jamstack & Portals.</div></div>
+                  <div><div class="mega-title">Website Development</div></div>
                 </a>
+
                 <a href="app-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-mobile-alt"></i></div>
-                  <div><div class="mega-title">App Development</div><div class="mega-desc">iOS, Android & Flutter.</div></div>
+                  <div><div class="mega-title">App Development</div></div>
                 </a>
+
                 <a href="software-engineering.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-code"></i></div>
-                  <div><div class="mega-title">Software Engineering</div><div class="mega-desc">Microservices & Cloud.</div></div>
+                  <div><div class="mega-title">Software Engineering</div></div>
                 </a>
+
                 <a href="ai-automation.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-robot"></i></div>
-                  <div><div class="mega-title">AI Automation</div><div class="mega-desc">Custom LLMs & AI.</div></div>
+                  <div><div class="mega-title">AI Automation</div></div>
                 </a>
+
                 <a href="cloud-devops.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-cloud"></i></div>
-                  <div><div class="mega-title">Cloud & DevOps</div><div class="mega-desc">AWS / GCP Pipelines.</div></div>
+                  <div><div class="mega-title">Cloud &amp; DevOps</div></div>
                 </a>
               </div>
             </div>
           </li>
+
           <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="work.html" class="nav-link">Work</a></li>
           <li><a href="career.html" class="nav-link">Career</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
 
+        <!-- Right Header Actions -->
         <div class="nav-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-          <a href="contact.html" class="btn btn-primary-orange btn-sm">Audit Security</a>
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="contact.html" class="btn btn-primary-orange btn-sm">Get Started</a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
       </div>
     </header>
   </div>
 
-  <!-- Service Hero -->
-  <section class="sp-hero">
+  <!-- Hero Spotlight Section -->
+  <section class="pm-hero">
     <div class="container">
-      <div class="sp-hero-grid">
-        <div>
-          <div class="section-tag tag-orange"><i class="fas fa-shield-halved"></i> Cyber Security & Compliance</div>
-          <h1 class="sp-title">Enterprise Security Audits, Penetration Testing & Regulatory Compliance</h1>
-          <p class="sp-subtitle">Protect your critical business infrastructure and customer data with offensive security penetration testing, HIPAA/SOC-2 readiness audits, and zero-trust security architecture.</p>
-          
-          <div class="hero-btns">
-            <a href="#quote" class="btn btn-primary-orange">Schedule Security Vulnerability Scan <i class="fas fa-lock"></i></a>
-            <a href="work.html" class="btn btn-secondary">Read Compliance Audits <i class="fas fa-arrow-right"></i></a>
-          </div>
+      
+      <!-- Minimalist Breadcrumb -->
+      <div class="breadcrumb" style="margin-bottom: 1.75rem; font-size: 0.88rem;">
+        <a href="index.html" style="color: var(--text-muted);">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--text-muted); margin: 0 0.5rem;"></i>
+        <a href="index.html#services" style="color: var(--text-muted);">Services</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--text-muted); margin: 0 0.5rem;"></i>
+        <span style="color: var(--theme-color); font-weight: 700;">Cyber Security</span>
+      </div>
 
-          <div class="sp-pills-bar">
-            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> ISO 27001 Certified Auditors</div>
-            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> HIPAA, SOC-2 & PCI-DSS</div>
-            <div class="sp-pill-item"><i class="fas fa-check-circle"></i> AES-256 At-Rest Encryption</div>
-          </div>
-        </div>
-
-        <div>
-          <div class="hero-enquiry-card">
-            <div class="hero-form-header">
-              <h3>Request Security Assessment</h3>
-              <p>Get confidential penetration test proposal & compliance roadmap.</p>
+      <div class="pm-hero-grid">
+        <div class="pm-hero-left">
+          <div>
+            <span class="pm-badge"><i class="fas fa-shield-halved"></i> Zero-Trust Defense &amp; ISO 27001</span>
+            <h1 class="pm-title">Enterprise Cyber Security &amp; Compliance Engineering</h1>
+            <p class="pm-subtitle">Fortify digital perimeters, eliminate vulnerabilities, and achieve enterprise compliance with penetration testing, automated threat detection, and zero-trust cloud security architectures.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
+              <a href="#demo-form" class="pm-btn-primary" style="font-size: 1rem;">
+                Schedule Security Audit <i class="fas fa-shield-virus"></i>
+              </a>
+              <a href="work.html" class="pm-btn-ghost">
+                Explore Defense Protocols <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="contactName">Your Name *</label>
-                <input type="text" id="contactName" class="form-control" placeholder="Sarah Jenkins" required>
+          </div>
+
+          <div class="pm-metrics-row">
+            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> ISO 27001 &amp; SOC 2 Ready</div>
+            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Zero-Trust IAM &amp; Encryption</div>
+            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Continuous Vulnerability Scans</div>
+          </div>
+        </div>
+
+        <div class="pm-hero-right">
+          <div class="pm-hero-showcase">
+            <img src="images/security_showcase.jpg" alt="Cyber Security Showcase Architecture">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1.5rem; background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.95) 100%); color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+              <div>
+                <div style="font-weight: 700; font-size: 1.05rem;">Zero-Trust Security &amp; Threat Telemetry</div>
+                <div style="font-size: 0.82rem; color: #94a3b8;">SIEM &bull; WAF &bull; Trivy &bull; SonarQube &bull; Vault</div>
               </div>
-              <div class="form-group">
-                <label for="contactEmail">Work Email *</label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="sarah@healthcorp.com" required>
-              </div>
-              <div class="form-group">
-                <label>Primary Compliance Goal</label>
-                <select class="form-control" required>
-                  <option value="HIPAA Healthcare Compliance">HIPAA Healthcare Compliance</option>
-                  <option value="SOC-2 Type II Audit Readiness">SOC-2 Type II Audit Readiness</option>
-                  <option value="Web & API Penetration Testing">Web & API Penetration Testing</option>
-                  <option value="ISO 27001 Security Framework">ISO 27001 Security Framework</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary-orange" style="width: 100%; margin-top: 0.5rem;">Request Confidential Scan <i class="fas fa-paper-plane"></i></button>
-            </form>
+              <span style="background: var(--theme-subtle); color: #ffffff; border: 1px solid var(--theme-border); font-size: 0.75rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 999px;">
+                <i class="fas fa-lock"></i> Zero CVE Tolerance
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Capabilities -->
-  <section class="section">
+  <!-- Section 1: Overview & Strategic Value -->
+  <section class="cw-overview-section">
     <div class="container">
-      <div class="text-center">
-        <div class="section-tag tag-blue">Capabilities</div>
-        <h2 class="section-title">Cyber Security & Risk Mitigation Services</h2>
-        <p class="section-subtitle">We identify security vulnerabilities before bad actors can exploit them.</p>
+      <div class="cw-article-lead">
+        <span class="pm-badge" style="margin-bottom: 1rem;">
+          <i class="fas fa-shield-check"></i> Proactive Defense Architecture
+        </span>
+        <p style="margin: 0; font-size: 1.15rem; line-height: 1.8;">
+          Data breaches and ransomware incidents devastate enterprise market valuation, customer trust, and regulatory standing. Reactive patching after an exploit is too late. Rudracore embeds security directly into your architecture and CI/CD pipelines, establishing immutable defense layers and automated compliance across cloud and application infrastructure.
+        </p>
       </div>
 
-      <div class="capabilities-grid">
-        <div class="capability-card">
-          <div class="capability-img-wrapper">
-            <span class="capability-img-tag"><i class="fas fa-bug"></i> OWASP Pen-Test</span>
-            <img src="images/security_showcase.jpg" alt="Penetration Testing" class="capability-img">
-          </div>
-          <div class="capability-body">
-            <h4>Penetration Testing (Pen-Testing)</h4>
-            <p>Black-box and white-box security penetration testing for web applications, mobile apps, and cloud APIs following OWASP Top 10 standards.</p>
+      <div class="cw-article-block" style="margin-bottom: 0;">
+        <h2>Why Shift-Left Security Outperforms Post-Mortem Audits</h2>
+        <p>
+          Finding vulnerabilities after production release is 30x more expensive to remediate than during development. We integrate <strong>Static Application Security Testing (SAST), Dynamic Testing (DAST), and Container Image Scanning</strong> directly into every pull request.
+        </p>
+        <p style="margin-bottom: 0;">
+          Combined with <strong>Zero-Trust network segmentation, automated secret rotation, and 24/7 SIEM monitoring</strong>, your systems remain impenetrable against automated bot nets, credential stuffing, and sophisticated zero-day attack vectors.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: What We Deliver (Sober Gradient) -->
+  <section class="cw-deliverables-section" id="deliverables">
+    <div class="container">
+      <div class="cw-section-header">
+        <span class="pm-badge">
+          <i class="fas fa-cubes"></i> Core Capabilities
+        </span>
+        <h2>What Our Security Engineering Delivers</h2>
+        <p>
+          Comprehensive threat mitigation, penetration testing, and compliance certification readiness:
+        </p>
+      </div>
+
+      <div class="cw-service-list">
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-shield-virus"></i></div>
+          <div class="cw-service-content">
+            <h3>Full-Scope Penetration Testing</h3>
+            <p>Black-box, gray-box, and white-box ethical hacking identifying business logic flaws, injection vulnerabilities, and API authentication bypasses.</p>
           </div>
         </div>
 
-        <div class="capability-card">
-          <div class="capability-img-wrapper">
-            <span class="capability-img-tag"><i class="fas fa-file-shield"></i> HIPAA &amp; SOC-2</span>
-            <img src="images/security_showcase.jpg" alt="HIPAA & SOC-2 Compliance" class="capability-img">
-          </div>
-          <div class="capability-body">
-            <h4>HIPAA, SOC-2 &amp; PCI Compliance</h4>
-            <p>End-to-end audit preparation, gap analysis, policy documentation, and technical remediation for HIPAA, SOC 2 Type II, and PCI-DSS certification.</p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border-color: rgba(16, 185, 129, 0.2);"><i class="fas fa-certificate"></i></div>
+          <div class="cw-service-content">
+            <h3>SOC 2 &amp; ISO 27001 Compliance</h3>
+            <p>Turnkey audit readiness, security policies drafting, evidence collection pipelines, and remediation of non-compliant infrastructure controls.</p>
           </div>
         </div>
 
-        <div class="capability-card">
-          <div class="capability-img-wrapper">
-            <span class="capability-img-tag"><i class="fas fa-key"></i> Zero-Trust IAM</span>
-            <img src="images/security_showcase.jpg" alt="Zero-Trust Architecture" class="capability-img">
-          </div>
-          <div class="capability-body">
-            <h4>Zero-Trust Architecture &amp; Identity</h4>
-            <p>Implementing Okta/Auth0 Multi-Factor Authentication (MFA), role-based access control (RBAC), and least-privilege identity access management.</p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; border-color: rgba(37, 99, 235, 0.2);"><i class="fas fa-lock"></i></div>
+          <div class="cw-service-content">
+            <h3>Zero-Trust IAM &amp; Secret Vaults</h3>
+            <p>HashiCorp Vault secret rotation, least-privilege AWS/GCP IAM roles, hardware MFA enforcement, and ephemeral developer access keys.</p>
           </div>
         </div>
 
-        <div class="capability-card">
-          <div class="capability-img-wrapper">
-            <span class="capability-img-tag"><i class="fas fa-vault"></i> AES-256 Vault</span>
-            <img src="images/security_showcase.jpg" alt="Data Encryption" class="capability-img">
-          </div>
-          <div class="capability-body">
-            <h4>Data Encryption &amp; Key Management</h4>
-            <p>AES-256 encryption at rest and TLS 1.3 encryption in transit, paired with AWS KMS / HashiCorp Vault key rotation management.</p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: rgba(245, 158, 11, 0.1); color: #d97706; border-color: rgba(245, 158, 11, 0.2);"><i class="fas fa-network-wired"></i></div>
+          <div class="cw-service-content">
+            <h3>Cloud Security Posture Management</h3>
+            <p>Continuous CSPM auditing to identify misconfigured S3 buckets, exposed ports, permissive security groups, and unencrypted databases.</p>
           </div>
         </div>
 
-        <div class="capability-card">
-          <div class="capability-img-wrapper">
-            <span class="capability-img-tag"><i class="fas fa-radar"></i> SIEM Monitoring</span>
-            <img src="images/security_showcase.jpg" alt="Vulnerability Assessment" class="capability-img">
-          </div>
-          <div class="capability-body">
-            <h4>Vulnerability Assessment &amp; Monitoring</h4>
-            <p>Continuous automated vulnerability scanning, dependency CVE alerts, and real-time SIEM log monitoring for threat detection.</p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: rgba(139, 92, 246, 0.1); color: #7c3aed; border-color: rgba(139, 92, 246, 0.2);"><i class="fas fa-code-compare"></i></div>
+          <div class="cw-service-content">
+            <h3>DevSecOps &amp; Automated Pipeline Scans</h3>
+            <p>Automated dependency vulnerability audits (Dependabot, Snyk), static code analysis (SonarQube), and container CVE scanning (Trivy).</p>
           </div>
         </div>
 
-        <div class="capability-card">
-          <div class="capability-img-wrapper">
-            <span class="capability-img-tag"><i class="fas fa-user-shield"></i> Phishing Defense</span>
-            <img src="images/security_showcase.jpg" alt="Employee Security Awareness" class="capability-img">
-          </div>
-          <div class="capability-body">
-            <h4>Employee Security Awareness</h4>
-            <p>Simulated phishing campaigns and employee cyber security training to eliminate social engineering vulnerabilities.</p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-tower-broadcast"></i></div>
+          <div class="cw-service-content">
+            <h3>24/7 SIEM &amp; Threat Detection</h3>
+            <p>Centralized log aggregation, real-time intrusion detection (IDS/IPS), Web Application Firewalls (Cloudflare/AWS WAF), and automated IP banning.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Visual Showcase Section -->
-  <section class="sp-showcase-section">
+  <!-- Section 3: Industry Applications (4-Column Sector Grid) -->
+  <section class="cw-industries-section">
     <div class="container">
-      <div class="sp-showcase-grid">
-        <div class="sp-showcase-img-wrapper">
-          <span class="sp-showcase-badge"><i class="fas fa-shield-halved"></i> OWASP & HIPAA Security Monitor</span>
-          <img src="images/security_showcase.jpg" alt="Cyber Security Operations Center & Penetration Test Console" class="sp-showcase-img">
+      <div class="cw-section-header">
+        <span class="pm-badge">
+          <i class="fas fa-industry"></i> Industry Solutions
+        </span>
+        <h2>Tailored Solutions Across Industries</h2>
+        <p>
+          Specialized architectures engineered to solve mission-critical operational challenges across key sectors:
+        </p>
+      </div>
+
+      <div class="cw-industry-grid">
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #ef4444, #b91c1c);"></div>
+          <div class="cw-industry-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.25)">
+            <i class="fas fa-vault"></i>
+          </div>
+          <h4>FinTech &amp; Payments</h4>
+          <p>PCI-DSS level 1 controls, tokenization of payment card credentials, and anti-fraud transaction verification.</p>
         </div>
-        <div>
-          <div class="section-tag tag-orange">In Action</div>
-          <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Offensive Pen-Testing &amp; SOC-2 Audit Readiness</h2>
-          <p class="section-subtitle" style="text-align: left; margin-bottom: 1.5rem;">Rigorous black-box penetration testing and automated vulnerability assessments to safeguard enterprise applications against zero-day exploits and data breaches.</p>
-          <ul class="sp-showcase-list">
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>OWASP Top 10 Auditing:</strong> Eliminating SQL Injection, XSS, and broken access controls.</li>
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>Regulatory Compliance SLA:</strong> Guaranteed HIPAA, SOC-2, and PCI-DSS readiness.</li>
-            <li><i class="fas fa-check-circle i-orange"></i> <strong>AES-256 Data Protection:</strong> Encryption at rest and TLS 1.3 transport security.</li>
-          </ul>
+
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+          <div class="cw-industry-icon" style="background: rgba(16, 185, 129, 0.14); color: #059669; border: 1px solid rgba(16, 185, 129, 0.25)">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h4>Healthcare &amp; MedTech</h4>
+          <p>HIPAA and HITECH compliance, protected health information (PHI) encryption, and biometric patient access audit logs.</p>
+        </div>
+
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #3b82f6, #1d4ed8);"></div>
+          <div class="cw-industry-icon" style="background: rgba(59, 130, 246, 0.12); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.25)">
+            <i class="fas fa-cloud-arrow-up"></i>
+          </div>
+          <h4>Enterprise SaaS</h4>
+          <p>Customer security questionnaire defense, multi-tenant database row isolation, and enterprise SSO integrations.</p>
+        </div>
+
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #f59e0b, #ea580c);"></div>
+          <div class="cw-industry-icon" style="background: rgba(245, 158, 11, 0.12); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.25)">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <h4>Legal &amp; Defense</h4>
+          <p>Air-gapped data vaults, cryptographic digital watermarking, and zero-knowledge client privilege architectures.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Tech Matrix -->
-  <section class="section" style="background-color: var(--bg-secondary);">
+  <!-- Section 4: Modern Technical Comparison Matrix -->
+  <section style="padding: 5rem 0; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
     <div class="container">
-      <div class="text-center">
-        <div class="section-tag tag-orange">Security Tooling</div>
-        <h2 class="section-title">Industry Standard Security Stack</h2>
-        <p class="section-subtitle">We utilize offensive and defensive cyber security scanning tools.</p>
+      <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
+        <span class="pm-badge">Engineering Matrix</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+          Rudracore DevSecOps vs Reactive Annual Audits
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          Why resilient organizations build continuous security defenses rather than waiting for annual checkups.
+        </p>
       </div>
 
-      <div class="tech-matrix-grid">
-        <div class="tech-badge"><i class="fas fa-shield"></i> OWASP Top 10</div>
-        <div class="tech-badge"><i class="fas fa-spider"></i> Burp Suite Professional</div>
-        <div class="tech-badge"><i class="fas fa-terminal"></i> Kali Linux / Metasploit</div>
-        <div class="tech-badge"><i class="fas fa-vault"></i> HashiCorp Vault</div>
-        <div class="tech-badge"><i class="fas fa-user-check"></i> Auth0 / Okta MFA</div>
-        <div class="tech-badge"><i class="fas fa-magnifying-glass"></i> SonarQube Code Audit</div>
-        <div class="tech-badge"><i class="fas fa-cloud-shield"></i> Cloudflare WAF</div>
-        <div class="tech-badge"><i class="fas fa-certificate"></i> SSL / TLS 1.3</div>
+      <div class="seo-table-wrapper">
+        <table class="seo-table">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Evaluation Factor</th>
+              <th style="width: 34%; color: var(--theme-color);"><i class="fas fa-circle-check"></i> Rudracore Continuous DevSecOps</th>
+              <th style="width: 34%; color: #dc2626;"><i class="fas fa-circle-xmark"></i> Traditional Annual Pentests</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Vulnerability Detection</strong></td>
+              <td style="color: var(--theme-color); font-weight: 600;">Automated on every Git commit &amp; PR</td>
+              <td style="color: #dc2626; font-weight: 600;">Discovered 11 months too late after release</td>
+            </tr>
+            <tr>
+              <td><strong>Threat Mitigation Time</strong></td>
+              <td style="color: var(--theme-color); font-weight: 600;">Sub-1 hour automated patch pipelines</td>
+              <td style="color: #dc2626; font-weight: normal;">Weeks of manual developer triage</td>
+            </tr>
+            <tr>
+              <td><strong>Compliance Status</strong></td>
+              <td style="color: var(--theme-color); font-weight: 600;">Real-time audit evidence collection</td>
+              <td style="color: #dc2626; font-weight: normal;">Scrambling for screenshots before audit date</td>
+            </tr>
+            <tr>
+              <td><strong>Secret Management</strong></td>
+              <td style="color: var(--theme-color); font-weight: 600;">Automated rotation in HashiCorp Vault</td>
+              <td style="color: #dc2626; font-weight: normal;">Hardcoded API keys in plain text config files</td>
+            </tr>
+            <tr>
+              <td><strong>Container Security</strong></td>
+              <td style="color: var(--theme-color); font-weight: 600;">Automated image CVE scanning &amp; signing</td>
+              <td style="color: #dc2626; font-weight: normal;">Vulnerable unpatched base images in production</td>
+            </tr>
+            <tr>
+              <td><strong>Incident Response</strong></td>
+              <td style="color: var(--theme-color); font-weight: 600;">Automated WAF blocking &amp; PagerDuty alerts</td>
+              <td style="color: #dc2626; font-weight: normal;">Discovered when users complain on Twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Modern Interactive Accordion FAQ Section -->
+  <section class="cw-faq-section">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+        <span class="pm-badge">Frequently Asked Questions</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+          Everything You Need to Know About Cyber Security
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          Practical answers on penetration testing scope, SOC 2 preparation, and remediation support.
+        </p>
+      </div>
+
+      <div class="cw-faq-wrapper">
+        <div class="cw-faq-item active">
+          <button class="cw-faq-trigger" aria-expanded="true">
+            <span>What is included in a Rudracore penetration testing engagement?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>We conduct rigorous manual and automated testing across your web applications, mobile apps, and cloud APIs. You receive an executive summary, detailed vulnerability technical breakdowns with CVSS scores, proof-of-concept exploit steps, and actionable developer code fixes.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>How long does it take to prepare our organization for a SOC 2 Type II audit?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Our accelerated SOC 2 sprint typically achieves audit readiness within 6 to 8 weeks, configuring automated policy controls, secret management, and continuous evidence pipelines in Vanta or Drata.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Will penetration testing cause disruption to our live production users?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>We design test plans to minimize disruption. Destructive tests (such as volumetric DDoS simulation) are conducted in mirrored staging environments or during scheduled maintenance windows with explicit client coordination.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Do you help fix the vulnerabilities discovered during the security audit?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Yes. Unlike auditing firms that merely hand you a 50-page PDF report, our software engineers provide direct pull requests and architectural patches to remediate every finding.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>How do you handle cloud security posture management on AWS, GCP, and Azure?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>We implement automated tools like Trivy, Prowler, and AWS Security Hub to continuously audit cloud configurations against CIS Benchmarks, alerting your team to permissive IAM roles and unencrypted data volumes.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Can you assist us with enterprise customer security questionnaires (SIG / CAIQ)?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Yes. We routinely help B2B SaaS founders and enterprise engineering teams draft comprehensive responses to vendor security assessments, helping close enterprise deals faster.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Dedicated Project Enquiry Form + Showcase Section -->
+  <section id="demo-form" class="cw-demo-section">
+    <div class="container">
+      <div class="cw-demo-grid">
+        
+        <!-- Left Side: Enquiry Form (NO BUDGET FIELD) -->
+        <div class="cw-demo-form-card">
+          <div style="margin-bottom: 1.15rem;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem; letter-spacing: -0.02em;">
+              Schedule Enterprise Security Assessment
+            </h2>
+            <p style="font-size: 0.92rem; margin: 0; line-height: 1.5;">
+              Meet with our Principal Cyber Security Architects. Receive a preliminary external attack surface audit.
+            </p>
+          </div>
+
+          <form id="serviceEnquiryForm" onsubmit="event.preventDefault(); alert('Thank you! Your project inquiry has been received. Our solutions architect will contact you within 2 business hours.'); this.reset();">
+            <div class="cw-form-row">
+              <div class="form-group">
+                <label for="clientName" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Name *</label>
+                <input type="text" id="clientName" class="form-control" placeholder="Your name" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+              <div class="form-group">
+                <label for="clientEmail" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Work Email *</label>
+                <input type="email" id="clientEmail" class="form-control" placeholder="name@company.com" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div class="cw-form-row">
+              <div class="form-group">
+                <label for="clientPhone" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Phone / WhatsApp *</label>
+                <input type="tel" id="clientPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+              <div class="form-group">
+                <label for="clientScope" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Project Requirements</label>
+                <input type="text" id="clientScope" class="form-control" placeholder="E.g., Web App Pentest, SOC 2 Preparation" style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem;">
+              <div style="font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
+                <i class="fas fa-shield-halved" style="color: var(--theme-color);"></i> ISO 27001 Certified Engineering
+              </div>
+              <button type="submit" class="pm-btn-primary" style="padding: 0.7rem 1.6rem; font-size: 0.92rem; border: none; cursor: pointer;">
+                Request Security Audit <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Side: Visual Showcase Image -->
+        <div class="cw-demo-image-card">
+          <div class="cw-demo-img-wrapper">
+            <img src="images/security_showcase.jpg" alt="Rudracore Cyber Security Production Engineering" class="cw-demo-img">
+            <div class="cw-demo-badge-overlay">
+              <span class="pm-badge" style="background: rgba(15, 23, 42, 0.85); color: #ffffff; border-color: var(--theme-border); backdrop-filter: blur(8px); padding: 0.3rem 0.75rem; font-size: 0.78rem; margin: 0;">
+                <i class="fas fa-shield-halved"></i> Continuous Threat Detection &amp; Zero CVE Protocol
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -343,6 +627,19 @@
     </div>
   </footer>
 
+  <!-- Floating Contact Action Buttons (Call & WhatsApp) -->
+  <div class="floating-contact-actions" id="floatingContactActions">
+    <a href="tel:+917906683614" class="floating-btn floating-call-btn" aria-label="Call Rudracore" title="Call Us: +91-7906683614">
+      <i class="fas fa-phone-alt"></i>
+      <span class="floating-tooltip">Call +91-7906683614</span>
+    </a>
+    <a href="https://wa.me/917906683614?text=Hello%20Rudracore%20Team%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp-btn" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="floating-tooltip">Chat on WhatsApp</span>
+    </a>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
+
 </html>
