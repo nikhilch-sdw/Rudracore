@@ -345,6 +345,28 @@ img {
   box-shadow: 0 14px 28px -6px rgba(255, 107, 0, 0.4);
 }
 
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background-color: #25D366;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px -4px rgba(37, 211, 102, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #20BA59 0%, #0E7468 100%);
+  background-color: #20BA59;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -6px rgba(37, 211, 102, 0.6);
+}
+
 .btn-secondary {
   background-color: var(--bg-card);
   color: var(--text-primary);
