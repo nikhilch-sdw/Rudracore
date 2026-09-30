@@ -13,6 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   <style>
@@ -22,6 +25,48 @@
       background: radial-gradient(circle at 15% 15%, rgba(30, 41, 59, 0.08) 0%, transparent 45%),
                   radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.06) 0%, transparent 45%);
       border-bottom: 1px solid var(--border-color);
+    }
+    .pm-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3rem;
+      align-items: stretch;
+    }
+    @media (max-width: 992px) {
+      .pm-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    .pm-hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .pm-hero-right {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .pm-hero-showcase {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border-color);
+      background: #0b1120;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 380px;
+    }
+    .pm-hero-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      flex: 1;
     }
     .pm-badge {
       display: inline-flex;
@@ -36,23 +81,23 @@
       background: rgba(30, 41, 59, 0.12);
       color: var(--brand-navy);
       border: 1px solid rgba(30, 41, 59, 0.25);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     .pm-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
       font-weight: 800;
-      line-height: 1.15;
+      line-height: 1.18;
       letter-spacing: -0.02em;
       color: var(--text-primary);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     .pm-subtitle {
-      font-size: 1.1rem;
-      line-height: 1.7;
+      font-size: 1.05rem;
+      line-height: 1.65;
       color: var(--text-muted);
       max-width: 620px;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
     }
     .pm-btn-primary {
       background: linear-gradient(135deg, var(--brand-navy) 0%, #334155 100%);
@@ -94,8 +139,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
-      margin-top: 2.25rem;
-      padding-top: 1.5rem;
+      margin-top: auto;
+      padding-top: 1.25rem;
       border-top: 1px dashed var(--border-color);
     }
     .pm-metric-item {
@@ -131,6 +176,104 @@
       justify-content: center;
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
+    }
+
+    /* Publishing Architecture & Text Components for SBN */
+    .seo-pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 992px) {
+      .seo-pipeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .seo-pipeline-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .seo-pipeline-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.25rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .seo-pipeline-step:hover {
+      border-color: #6366f1;
+      transform: translateY(-3px);
+    }
+    .seo-pipeline-num {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: #6366f1;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+    }
+    .seo-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+      margin-top: 2rem;
+    }
+    .seo-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    .seo-table th, .seo-table td {
+      padding: 1.1rem 1.35rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .seo-table th {
+      background: var(--bg-secondary);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .seo-table tr:last-child td {
+      border-bottom: none;
+    }
+    .seo-table tr:hover td {
+      background: rgba(99, 102, 241, 0.03);
+    }
+    .seo-faq-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      transition: all 0.3s ease;
+    }
+    .seo-faq-card:hover {
+      border-color: #6366f1;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    }
+    .seo-faq-question {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .seo-faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin: 0;
     }
   </style>
 </head>
@@ -171,7 +314,7 @@
             <div class="mega-dropdown">
               <div class="mega-grid">
                 <a href="chatwings.html" class="mega-item">
-                  <div class="mega-icon" style="background-color: #dcf8c6; color: #25d366;"><i class="fab fa-whatsapp"></i></div>
+                  <div class="mega-icon" style="background-color: rgba(37, 211, 102, 0.15); color: #25d366;"><i class="fab fa-whatsapp"></i></div>
                   <div>
                     <div class="mega-title">Chatwings</div>
                   </div>
@@ -187,14 +330,14 @@
                 <a href="sbn.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-newspaper"></i></div>
                   <div>
-                    <div class="mega-title">SBN News App</div>
+                    <div class="mega-title">SBN News Network</div>
                   </div>
                 </a>
 
-                <a href="expert-sports.html" class="mega-item">
-                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-running"></i></div>
+                <a href="qrwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: rgba(239, 68, 68, 0.15); color: #ef4444;"><i class="fas fa-qrcode"></i></div>
                   <div>
-                    <div class="mega-title">Expert Sports</div>
+                    <div class="mega-title">QR Wings</div>
                   </div>
                 </a>
               </div>
@@ -207,27 +350,27 @@
               <div class="mega-grid">
                 <a href="digital-marketing.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
-                  <div><div class="mega-title">Digital Marketing</div><div class="mega-desc">SEO &amp; Lead Gen.</div></div>
+                  <div><div class="mega-title">Digital Marketing</div></div>
                 </a>
                 <a href="website-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
-                  <div><div class="mega-title">Website Development</div><div class="mega-desc">Jamstack &amp; Portals.</div></div>
+                  <div><div class="mega-title">Website Development</div></div>
                 </a>
                 <a href="app-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-mobile-alt"></i></div>
-                  <div><div class="mega-title">App Development</div><div class="mega-desc">iOS, Android &amp; Flutter.</div></div>
+                  <div><div class="mega-title">Mobile App Development</div></div>
                 </a>
                 <a href="software-engineering.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-code"></i></div>
-                  <div><div class="mega-title">Software Engineering</div><div class="mega-desc">Microservices &amp; Cloud.</div></div>
+                  <div><div class="mega-title">Software Engineering</div></div>
                 </a>
                 <a href="ai-automation.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-robot"></i></div>
-                  <div><div class="mega-title">AI Automation</div><div class="mega-desc">Custom LLMs &amp; AI.</div></div>
+                  <div><div class="mega-title">AI &amp; Automation</div></div>
                 </a>
                 <a href="cloud-devops.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-cloud"></i></div>
-                  <div><div class="mega-title">Cloud &amp; DevOps</div><div class="mega-desc">AWS / GCP Pipelines.</div></div>
+                  <div><div class="mega-title">Cloud &amp; DevOps</div></div>
                 </a>
               </div>
             </div>
@@ -263,62 +406,110 @@
         <span style="color: var(--brand-navy); font-weight: 700;">SBN News App</span>
       </div>
 
-      <div class="sp-hero-grid">
-        <div>
-          <span class="pm-badge"><i class="fas fa-newspaper"></i> Smart Breaking News &amp; Audio Platform</span>
-          <h1 class="pm-title">SBN — Smart Breaking News &amp; Audio Reader Engine</h1>
-          <p class="pm-subtitle">Deliver real-time mobile news feeds to 500,000+ active readers. SBN combines sub-50ms breaking push notifications, AI text-to-speech audio synthesis, and personalized machine learning recommendation streams.</p>
-          
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-            <a href="https://sbn.s8home.com" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem;">
-              Visit / Launch SBN Live Platform (sbn.s8home.com) <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="contact.html?product=sbn" class="pm-btn-ghost">
-              Publisher Partnership <i class="fas fa-arrow-right"></i>
-            </a>
+      <div class="pm-hero-grid">
+        <div class="pm-hero-left">
+          <div>
+            <span class="pm-badge"><i class="fas fa-newspaper"></i> Smart Breaking News &amp; Audio Platform</span>
+            <h1 class="pm-title">SBN — Smart Breaking News &amp; Audio Reader Engine</h1>
+            <p class="pm-subtitle">Deliver real-time mobile news feeds to 500,000+ active readers. SBN combines sub-50ms breaking push notifications, AI text-to-speech audio synthesis, and personalized machine learning recommendation streams.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
+              <a href="https://sbn.s8home.com" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem;">
+                Launch Live Platform <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="#demo-form" class="pm-btn-ghost">
+                Publisher Partnership <i class="fas fa-arrow-down"></i>
+              </a>
+            </div>
           </div>
 
           <div class="pm-metrics-row">
-            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> 500k+ Active Readers</div>
-            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Sub-50ms Feed Latency</div>
-            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Neural AI Voice Synthesizer</div>
+            <div class="pm-metric-item">
+              <i class="fas fa-check-circle"></i> 500k+ Active Readers
+            </div>
+            <div class="pm-metric-item">
+              <i class="fas fa-check-circle"></i> Sub-50ms Feed Latency
+            </div>
+            <div class="pm-metric-item">
+              <i class="fas fa-check-circle"></i> Neural AI Voice Synthesizer
+            </div>
           </div>
         </div>
 
-        <div>
-          <div class="hero-enquiry-card" style="border: 1px solid var(--border-color); box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-radius: var(--radius-lg);">
-            <div class="hero-form-header">
-              <h3 style="font-weight: 800; font-size: 1.3rem;">Publisher &amp; Media Inquiry</h3>
-              <p style="font-size: 0.88rem; color: var(--text-muted);">Connect your publisher network or request custom app licensing.</p>
+        <div class="pm-hero-right">
+          <div class="pm-hero-showcase">
+            <img src="images/sbn_preview.jpg" alt="SBN Mobile NewsPulse App Showcase">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1.5rem; background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.95) 100%); color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+              <div>
+                <div style="font-weight: 700; font-size: 1.05rem;">SBN Mobile NewsPulse Engine</div>
+                <div style="font-size: 0.82rem; color: #94a3b8;">Sub-50ms Stream Delivery &amp; AI Neural Audio</div>
+              </div>
+              <span style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 0.75rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 999px;">
+                <i class="fas fa-bolt"></i> Real-Time Feed
+              </span>
             </div>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="contactName" style="font-weight: 600; font-size: 0.85rem;">Your Name *</label>
-                <input type="text" id="contactName" class="form-control" placeholder="Dominic Hayes" required>
-              </div>
-              <div class="form-group">
-                <label for="contactEmail" style="font-weight: 600; font-size: 0.85rem;">Work Email *</label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="dominic@media.com" required>
-              </div>
-              <div class="form-group">
-                <label style="font-weight: 600; font-size: 0.85rem;">Publisher Network Type</label>
-                <select class="form-control" required>
-                  <option value="Digital News Publisher">Digital News Publisher</option>
-                  <option value="Media Syndication Group">Media Syndication Group</option>
-                  <option value="Custom Mobile App License">Custom Mobile App License</option>
-                </select>
-              </div>
-              <button type="submit" class="pm-btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem; border: none; cursor: pointer;">
-                Submit Media Inquiry <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Minimalist Capabilities Section -->
+  <!-- Section 1: Sub-50ms Content Ingestion & Real-Time Pipeline -->
+  <section class="section" style="padding: 4.5rem 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center" style="max-width: 720px; margin: 0 auto 3rem;">
+        <span class="pm-badge" style="background: rgba(99, 102, 241, 0.12); color: #6366f1; border-color: rgba(99, 102, 241, 0.25);">
+          <i class="fas fa-bolt"></i> High-Throughput Media Engine
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">
+          Sub-50ms Content Ingestion &amp; Real-Time Distribution
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          How SBN processes millions of breaking articles across news agencies, social feeds, and live editorial desks with zero latency bottlenecks.
+        </p>
+      </div>
+
+      <div class="seo-pipeline-grid">
+        <div class="seo-pipeline-step">
+          <div class="seo-pipeline-num">STEP 01</div>
+          <div style="font-size: 1.75rem; color: #6366f1; margin-bottom: 1rem;"><i class="fas fa-satellite-dish"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Distributed Feed Scraper</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+            Concurrent Go microservices crawl over 15,000+ RSS feeds, journalist wires, and Twitter/X emergency desks every 5 seconds.
+          </p>
+        </div>
+
+        <div class="seo-pipeline-step">
+          <div class="seo-pipeline-num">STEP 02</div>
+          <div style="font-size: 1.75rem; color: #a855f7; margin-bottom: 1rem;"><i class="fas fa-brain"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">NLP Entity &amp; Deduplication</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+            Transformer embeddings cluster overlapping headlines, eliminate duplicate articles, and tag entities (locations, companies, VIPs).
+          </p>
+        </div>
+
+        <div class="seo-pipeline-step">
+          <div class="seo-pipeline-num">STEP 03</div>
+          <div style="font-size: 1.75rem; color: #3b82f6; margin-bottom: 1rem;"><i class="fas fa-network-wired"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Kafka Event Fan-Out</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+            Partitioned Apache Kafka clusters broadcast validated alerts to geo-distributed edge WebSocket nodes in less than 20 milliseconds.
+          </p>
+        </div>
+
+        <div class="seo-pipeline-step">
+          <div class="seo-pipeline-num">STEP 04</div>
+          <div style="font-size: 1.75rem; color: #10b981; margin-bottom: 1rem;"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Sub-50ms Mobile Push &amp; Sync</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+            Zero-payload silent push wakes up Android and iOS clients to fetch delta updates, guaranteeing readers instant headline display.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Core Engineering & News Capabilities -->
   <section class="section" style="padding: 5rem 0; background: var(--bg-primary);">
     <div class="container">
       <div class="text-center" style="max-width: 650px; margin: 0 auto 3.5rem;">
@@ -387,79 +578,221 @@
     </div>
   </section>
 
-  <!-- Interactive Product Gallery Slider Section -->
-  <section class="pm-gallery-section">
+  <!-- Section 3: Performance Benchmark Matrix (SBN vs Legacy CMS & Web Portals) -->
+  <section class="section" style="padding: 4.5rem 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
-      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
-        <span class="pm-badge" style="background: rgba(30, 41, 59, 0.12); color: var(--brand-navy); border-color: rgba(30, 41, 59, 0.25);"><i class="fas fa-images"></i> Product Platform Showcase</span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">SBN App Mobile Interface &amp; Feeds</h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">Explore real-time breaking news streams, AI audio reader player, personalized feeds, and push alert logs.</p>
+      <div class="text-center" style="max-width: 760px; margin: 0 auto 2.5rem;">
+        <span class="pm-badge" style="background: rgba(99, 102, 241, 0.12); color: #6366f1; border-color: rgba(99, 102, 241, 0.25);">
+          <i class="fas fa-chart-simple"></i> Architecture Benchmark
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">
+          SBN Engine vs Traditional News CMS &amp; Portals
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          Why modern publishing houses and digital news brands migrate from sluggish WordPress / RSS setups to SBN's reactive edge architecture.
+        </p>
       </div>
 
-      <div class="pm-gallery-card">
-        <button class="pm-gallery-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-        <button class="pm-gallery-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-        
-        <div class="pm-gallery-viewport">
-          <div class="pm-gallery-track">
-            <!-- Slide 1 -->
-            <div class="pm-gallery-slide">
-              <img src="images/hero_bg_3.jpg" alt="SBN Real Time News Feed UI">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Real-Time Breaking News Stream</h4>
-                  <p>Sub-50ms feed ingestion engine powered by Go microservices &amp; Kafka queues.</p>
-                </div>
-                <span class="badge" style="background: var(--brand-navy); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Live Platform</span>
-              </div>
-            </div>
+      <div class="seo-table-wrapper">
+        <table class="seo-table">
+          <thead>
+            <tr>
+              <th style="width: 28%;">Performance Capability</th>
+              <th style="width: 36%; color: #6366f1; background: rgba(99, 102, 241, 0.08);"><i class="fas fa-bolt"></i> SBN NewsPulse Engine</th>
+              <th style="width: 36%;">Traditional Web Portals &amp; RSS Feeds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Breaking Ingestion Latency</strong></td>
+              <td style="color: #10b981; font-weight: 600;"><i class="fas fa-check-circle"></i> Sub-50ms (Go Microservices + Kafka)</td>
+              <td style="color: #ef4444;"><i class="fas fa-times-circle"></i> 5–30 minutes (Cron polling queues)</td>
+            </tr>
+            <tr>
+              <td><strong>Audio Article Synthesis</strong></td>
+              <td style="color: #10b981; font-weight: 600;"><i class="fas fa-check-circle"></i> Automated Neural AI Voices (12+ Accents)</td>
+              <td style="color: #ef4444;"><i class="fas fa-times-circle"></i> None (Manual podcast studio recording)</td>
+            </tr>
+            <tr>
+              <td><strong>Traffic Spike Resilience</strong></td>
+              <td style="color: #10b981; font-weight: 600;"><i class="fas fa-check-circle"></i> 100,000 req/sec auto-scaling edge CDN</td>
+              <td style="color: #ef4444;"><i class="fas fa-times-circle"></i> 502 bad gateway during breaking news spikes</td>
+            </tr>
+            <tr>
+              <td><strong>Personalization &amp; Feed CTR</strong></td>
+              <td style="color: #10b981; font-weight: 600;"><i class="fas fa-check-circle"></i> +64% CTR via On-Device ML Recommendations</td>
+              <td style="color: #ef4444;"><i class="fas fa-times-circle"></i> Static reverse-chronological list</td>
+            </tr>
+            <tr>
+              <td><strong>Offline Reading Mode</strong></td>
+              <td style="color: #10b981; font-weight: 600;"><i class="fas fa-check-circle"></i> Zero-loss SQLite cache on device</td>
+              <td style="color: #ef4444;"><i class="fas fa-times-circle"></i> Fails without active cellular / WiFi connection</td>
+            </tr>
+            <tr>
+              <td><strong>Push Notification Delivery</strong></td>
+              <td style="color: #10b981; font-weight: 600;"><i class="fas fa-check-circle"></i> Geo-partitioned FCM burst &lt; 2 seconds</td>
+              <td style="color: #ef4444;"><i class="fas fa-times-circle"></i> 15–45 minute delayed queue dispatch</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-            <!-- Slide 2 -->
-            <div class="pm-gallery-slide">
-              <img src="images/app_showcase.jpg" alt="AI Neural Audio Reader Player">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>AI Text-to-Speech Neural Audio Player</h4>
-                  <p>Hands-free news article listening experience with custom voice controls.</p>
-                </div>
-                <span class="badge" style="background: #a855f7; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Audio AI</span>
-              </div>
-            </div>
+  <!-- Section 4: Publisher Syndication Use Cases -->
+  <section class="section" style="padding: 5rem 0; background: var(--bg-primary);">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+        <span class="pm-badge" style="background: rgba(30, 41, 59, 0.12); color: var(--brand-navy); border-color: rgba(30, 41, 59, 0.25);">
+          <i class="fas fa-building-columns"></i> Publishing Solutions
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">
+          Tailored for Every Digital Media Network
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          From regional publications to national broadcast syndicates, SBN powers high-engagement mobile distribution.
+        </p>
+      </div>
 
-            <!-- Slide 3 -->
-            <div class="pm-gallery-slide">
-              <img src="images/hero_dashboard.png" alt="Publisher Content Syndication Console">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Publisher Management &amp; Analytics Console</h4>
-                  <p>Multi-channel news syndication, audience analytics, and push notification triggers.</p>
-                </div>
-                <span class="badge" style="background: var(--brand-blue); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Publisher Console</span>
-              </div>
-            </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="pm-card">
+          <div style="font-size: 1.5rem; color: #6366f1; margin-bottom: 1rem;"><i class="fas fa-tower-broadcast"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Regional News Groups</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            Hyper-localize headlines by district and municipality with automated geotargeting and city-specific breaking push alerts.
+          </p>
+        </div>
 
-            <!-- Slide 4 -->
-            <div class="pm-gallery-slide">
-              <img src="images/hero_bg_1.jpg" alt="Offline Mode & Native Mobile App">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Flutter Native iOS &amp; Android App</h4>
-                  <p>60fps smooth scrolling performance with automated offline article caching.</p>
-                </div>
-                <span class="badge" style="background: #10b981; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Native App</span>
-              </div>
-            </div>
-          </div>
+        <div class="pm-card">
+          <div style="font-size: 1.5rem; color: #10b981; margin-bottom: 1rem;"><i class="fas fa-chart-line"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Financial &amp; Market Wires</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            Stream stock ticker movements, earnings releases, and regulatory updates directly into trader feeds within milliseconds.
+          </p>
+        </div>
+
+        <div class="pm-card">
+          <div style="font-size: 1.5rem; color: #f97316; margin-bottom: 1rem;"><i class="fas fa-podcast"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Audio &amp; Commuter Media</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            Turn lengthy editorial columns into 3-minute morning news briefing audio capsules with hands-free car play support.
+          </p>
+        </div>
+
+        <div class="pm-card">
+          <div style="font-size: 1.5rem; color: #a855f7; margin-bottom: 1rem;"><i class="fas fa-award"></i></div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Sports &amp; Live Events</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            Deliver live score cards, play-by-play commentary, and instant video clip teasers during high-traffic tournament matches.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: SEO FAQs for Publishing & News Readers -->
+  <section class="section" style="padding: 4.5rem 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
+        <span class="pm-badge" style="background: rgba(30, 41, 59, 0.12); color: var(--brand-navy); border-color: rgba(30, 41, 59, 0.25);">
+          <i class="fas fa-circle-question"></i> Editorial Insights
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">
+          Frequently Asked Questions
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          Everything news publishers and media leaders need to know about integrating SBN.
+        </p>
+      </div>
+
+      <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+        <div class="seo-faq-card">
+          <h4>How does SBN achieve sub-50ms breaking news push dispatch?</h4>
+          <p>SBN replaces legacy database polling with distributed in-memory Go ingest engines connected directly to an Apache Kafka messaging fabric. Once an editorial desk publishes an article, our WebSocket fan-out architecture dispatches push triggers to subscriber edges in milliseconds without waiting for batch runs.</p>
+        </div>
+
+        <div class="seo-faq-card">
+          <h4>Can SBN convert written articles into natural audio news podcasts automatically?</h4>
+          <p>Yes. SBN incorporates a neural text-to-speech engine configured with broadcast journalism inflections. It automatically parses article body text, strips out markup or photo captions, and synthesizes crisp audio streams playable on lock-screens and headphones.</p>
+        </div>
+
+        <div class="seo-faq-card">
+          <h4>Does SBN support monetization and native ad networks?</h4>
+          <p>Absolutely. SBN includes native in-stream ad slots that integrate seamlessly with Google Ad Manager, Prebid Mobile, and direct sponsor placements without impacting app scroll smoothness or battery life.</p>
+        </div>
+
+        <div class="seo-faq-card">
+          <h4>Can publishers license SBN as a white-label mobile app?</h4>
+          <p>Yes. Digital publishers can license the SBN engine under their own branded app identity on both Google Play Store and Apple App Store, complete with custom typography, brand palette, and editorial CMS integration.</p>
         </div>
       </div>
 
-      <div class="pm-gallery-dots"></div>
-
-      <!-- Live Action Buttons -->
-      <div style="text-align: center; margin-top: 2.75rem;">
+      <div style="text-align: center; margin-top: 3rem;">
         <a href="https://sbn.s8home.com" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem; padding: 0.95rem 2.25rem;">
-          Launch SBN Live Platform (sbn.s8home.com) <i class="fas fa-arrow-up-right-from-square"></i>
+          Explore Live SBN App (sbn.s8home.com) <i class="fas fa-arrow-up-right-from-square"></i>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated Publisher Partnership & Media Licensing Form Section -->
+  <section id="demo-form" style="padding: 5rem 0; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="max-width: 860px; margin: 0 auto; background: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem 2.5rem; box-shadow: var(--shadow-lg);">
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+          <span class="pm-badge" style="background: rgba(30, 41, 59, 0.12); color: var(--brand-navy); border-color: rgba(30, 41, 59, 0.25);">
+            <i class="fas fa-newspaper"></i> Publisher &amp; Media Licensing
+          </span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+            Publisher Partnership &amp; Media App Licensing
+          </h2>
+          <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Connect your digital publication network, request custom mobile app licensing, or integrate our neural audio reader engine.
+          </p>
+        </div>
+
+        <form id="sbnInquiryForm" onsubmit="event.preventDefault(); alert('Thank you! Your publisher media inquiry has been received. Our media partnerships team will contact you within 2 business hours.'); this.reset();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label for="sbnName" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Your Name *</label>
+              <input type="text" id="sbnName" class="form-control" placeholder="Dominic Hayes" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+            </div>
+            <div class="form-group">
+              <label for="sbnEmail" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Work Email *</label>
+              <input type="email" id="sbnEmail" class="form-control" placeholder="dominic@media.com" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label for="sbnPhone" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Direct Phone / WhatsApp *</label>
+              <input type="tel" id="sbnPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+            </div>
+            <div class="form-group">
+              <label for="sbnType" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Publisher Network Type</label>
+              <select id="sbnType" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+                <option value="Digital News Publisher">Digital News Publisher</option>
+                <option value="Media Syndication Group">Media Syndication Group</option>
+                <option value="Regional / Broadcast Outlet">Regional / Broadcast Outlet</option>
+                <option value="Custom Mobile App License">Custom Mobile App License</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="sbnNotes" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Network Scope &amp; Syndication Requirements</label>
+            <textarea id="sbnNotes" rows="3" class="form-control" placeholder="Describe your publication, monthly reader volume, or specific feature requests (e.g., custom branded Flutter app, multilingual audio reader, automated ad injection)..." style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem; resize: vertical;"></textarea>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
+            <button type="submit" class="pm-btn-primary" style="border: none; cursor: pointer; font-size: 1rem; padding: 0.85rem 2rem;">
+              Submit Media Partnership Request <i class="fas fa-paper-plane"></i>
+            </button>
+            <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-lock" style="color: var(--brand-navy);"></i> Guaranteed response within 2 hours • Enterprise SLA available
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </section>

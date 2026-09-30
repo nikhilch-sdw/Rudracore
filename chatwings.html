@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <link rel="icon" type="image/png" href="images/logo.png">
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   <style>
@@ -22,6 +24,48 @@
       background: radial-gradient(circle at 15% 15%, rgba(37, 211, 102, 0.08) 0%, transparent 45%),
                   radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.06) 0%, transparent 45%);
       border-bottom: 1px solid var(--border-color);
+    }
+    .pm-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3rem;
+      align-items: stretch;
+    }
+    @media (max-width: 992px) {
+      .pm-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    .pm-hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .pm-hero-right {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .pm-hero-showcase {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border-color);
+      background: #0b1120;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 380px;
+    }
+    .pm-hero-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      flex: 1;
     }
     .pm-badge {
       display: inline-flex;
@@ -36,23 +80,23 @@
       background: rgba(37, 211, 102, 0.12);
       color: #16a34a;
       border: 1px solid rgba(37, 211, 102, 0.25);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     .pm-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
       font-weight: 800;
-      line-height: 1.15;
+      line-height: 1.18;
       letter-spacing: -0.02em;
       color: var(--text-primary);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     .pm-subtitle {
-      font-size: 1.1rem;
-      line-height: 1.7;
+      font-size: 1.05rem;
+      line-height: 1.65;
       color: var(--text-muted);
       max-width: 620px;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
     }
     .pm-btn-primary {
       background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
@@ -94,8 +138,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
-      margin-top: 2.25rem;
-      padding-top: 1.5rem;
+      margin-top: auto;
+      padding-top: 1.25rem;
       border-top: 1px dashed var(--border-color);
     }
     .pm-metric-item {
@@ -131,6 +175,376 @@
       justify-content: center;
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
+    }
+
+    :root {
+      --text-muted: #414142;
+      --text-secondary: #414142;
+    }
+    [data-theme="dark"] {
+      --text-muted: #94a3b8;
+      --text-secondary: #cbd5e1;
+    }
+
+    body {
+      color: #414142;
+    }
+    [data-theme="dark"] body {
+      color: #cbd5e1;
+    }
+
+    /* Clean Professional Editorial Overview */
+    .cw-overview-section {
+      padding: 4.5rem 0 3.5rem;
+      background: var(--bg-primary);
+    }
+    .cw-article-lead {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #414142;
+      margin-bottom: 2.75rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .cw-article-block {
+      margin-bottom: 3.5rem;
+    }
+    .cw-article-block h2 {
+      font-family: var(--font-heading);
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .cw-article-block p {
+      color: #414142;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .cw-article-block p strong {
+      color: var(--text-primary);
+    }
+    .pm-subtitle,
+    .cw-article-lead p,
+    .cw-article-block p,
+    .cw-section-header p,
+    .cw-service-content p,
+    .cw-industry-item p,
+    .cw-faq-body p,
+    .seo-table td {
+      color: #414142;
+    }
+    [data-theme="dark"] .pm-subtitle,
+    [data-theme="dark"] .cw-article-lead,
+    [data-theme="dark"] .cw-article-lead p,
+    [data-theme="dark"] .cw-article-block p,
+    [data-theme="dark"] .cw-section-header p,
+    [data-theme="dark"] .cw-service-content p,
+    [data-theme="dark"] .cw-industry-item p,
+    [data-theme="dark"] .cw-faq-body p,
+    [data-theme="dark"] .seo-table td {
+      color: #cbd5e1;
+    }
+
+    /* Section 2: What Chatwings WhatsApp Automation Delivers (Sober Gradient) */
+    .cw-deliverables-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(37, 211, 102, 0.045) 40%, rgba(16, 185, 129, 0.025) 80%, var(--bg-secondary) 100%);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+    [data-theme="dark"] .cw-deliverables-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(37, 211, 102, 0.06) 50%, var(--bg-secondary) 100%);
+    }
+    .cw-section-header {
+      margin-bottom: 2.75rem;
+    }
+    .cw-section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-top: 0.65rem;
+      letter-spacing: -0.02em;
+    }
+    .cw-section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 0.5rem;
+      max-width: 850px;
+    }
+    .cw-service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem 2rem;
+    }
+    @media (max-width: 768px) {
+      .cw-service-list {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+    }
+    .cw-service-item {
+      background: linear-gradient(145deg, var(--bg-card) 0%, rgba(37, 211, 102, 0.035) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.35rem;
+      align-items: flex-start;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      position: relative;
+      overflow: hidden;
+    }
+    .cw-service-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #25d366 0%, #10b981 100%);
+      border-radius: 4px 0 0 4px;
+    }
+    .cw-service-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(37, 211, 102, 0.5);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.1);
+    }
+    .cw-service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(16, 185, 129, 0.06) 100%);
+      color: #16a34a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(37, 211, 102, 0.22);
+    }
+    .cw-service-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+    .cw-service-content p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Section 3: Industries That Benefit (Sober Gradient) */
+    .cw-industries-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(241, 245, 249, 0.65) 50%, var(--bg-primary) 100%);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+    [data-theme="dark"] .cw-industries-section {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(15, 23, 42, 0.55) 50%, var(--bg-primary) 100%);
+    }
+    .cw-industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+    }
+    @media (max-width: 992px) {
+      .cw-industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .cw-industry-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+    }
+    .cw-industry-item {
+      background: linear-gradient(160deg, var(--bg-card) 0%, rgba(248, 250, 252, 0.8) 100%);
+      border: 1.5px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem 1.6rem 1.85rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    [data-theme="dark"] .cw-industry-item {
+      background: linear-gradient(160deg, var(--bg-card) 0%, rgba(30, 41, 59, 0.5) 100%);
+    }
+    .cw-industry-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37, 211, 102, 0.4);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.07);
+    }
+    .cw-industry-topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+    .cw-industry-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .cw-industry-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .cw-industry-item p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .cw-strategic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 768px) {
+      .cw-strategic-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* Clean Comparison Table */
+    .seo-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      margin-top: 2rem;
+    }
+    .seo-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.94rem;
+    }
+    .seo-table th, .seo-table td {
+      padding: 1.15rem 1.4rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .seo-table th {
+      background: var(--bg-secondary);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .seo-table tr:last-child td {
+      border-bottom: none;
+    }
+    .seo-table tr:hover td {
+      background: rgba(37, 211, 102, 0.03);
+    }
+
+    /* Modern Interactive Accordion FAQ Section */
+    .cw-faq-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+    .cw-faq-wrapper {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .cw-faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+    .cw-faq-item:hover {
+      border-color: rgba(37, 211, 102, 0.5);
+    }
+    .cw-faq-item.active {
+      border-color: #25d366;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.08);
+    }
+    .cw-faq-trigger {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      transition: color 0.2s ease;
+    }
+    .cw-faq-trigger:hover {
+      color: #16a34a;
+    }
+    .cw-faq-chevron {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.1);
+      color: #16a34a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, color 0.25s ease;
+    }
+    .cw-faq-item.active .cw-faq-chevron {
+      transform: rotate(180deg);
+      background: #25d366;
+      color: #ffffff;
+    }
+    .cw-faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 1.5rem;
+    }
+    .cw-faq-item.active .cw-faq-body {
+      max-height: 320px;
+      padding: 0 1.5rem 1.35rem 1.5rem;
+    }
+    .cw-faq-body p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
     }
   </style>
 </head>
@@ -187,14 +601,14 @@
                 <a href="sbn.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-newspaper"></i></div>
                   <div>
-                    <div class="mega-title">SBN News App</div>
+                    <div class="mega-title">SBN News Network</div>
                   </div>
                 </a>
 
-                <a href="expert-sports.html" class="mega-item">
-                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-running"></i></div>
+                <a href="qrwings.html" class="mega-item">
+                  <div class="mega-icon" style="background-color: rgba(239, 68, 68, 0.15); color: #ef4444;"><i class="fas fa-qrcode"></i></div>
                   <div>
-                    <div class="mega-title">Expert Sports</div>
+                    <div class="mega-title">QR Wings</div>
                   </div>
                 </a>
               </div>
@@ -207,27 +621,27 @@
               <div class="mega-grid">
                 <a href="digital-marketing.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
-                  <div><div class="mega-title">Digital Marketing</div><div class="mega-desc">SEO &amp; Lead Gen.</div></div>
+                  <div><div class="mega-title">Digital Marketing</div></div>
                 </a>
                 <a href="website-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
-                  <div><div class="mega-title">Website Development</div><div class="mega-desc">Jamstack &amp; Portals.</div></div>
+                  <div><div class="mega-title">Website Development</div></div>
                 </a>
                 <a href="app-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i class="fas fa-mobile-alt"></i></div>
-                  <div><div class="mega-title">App Development</div><div class="mega-desc">iOS, Android &amp; Flutter.</div></div>
+                  <div><div class="mega-title">App Development</div></div>
                 </a>
                 <a href="software-engineering.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-code"></i></div>
-                  <div><div class="mega-title">Software Engineering</div><div class="mega-desc">Microservices &amp; Cloud.</div></div>
+                  <div><div class="mega-title">Software Engineering</div></div>
                 </a>
                 <a href="ai-automation.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-robot"></i></div>
-                  <div><div class="mega-title">AI Automation</div><div class="mega-desc">Custom LLMs &amp; AI.</div></div>
+                  <div><div class="mega-title">AI Automation</div></div>
                 </a>
                 <a href="cloud-devops.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i class="fas fa-cloud"></i></div>
-                  <div><div class="mega-title">Cloud &amp; DevOps</div><div class="mega-desc">AWS / GCP Pipelines.</div></div>
+                  <div><div class="mega-title">Cloud &amp; DevOps</div></div>
                 </a>
               </div>
             </div>
@@ -263,203 +677,425 @@
         <span style="color: #16a34a; font-weight: 700;">Chatwings</span>
       </div>
 
-      <div class="sp-hero-grid">
-        <div>
-          <span class="pm-badge"><i class="fab fa-whatsapp"></i> Official Meta Cloud API Platform</span>
-          <h1 class="pm-title">Chatwings — WhatsApp API &amp; Customer Engagement</h1>
-          <p class="pm-subtitle">Scale business conversations seamlessly. Execute targeted broadcast campaigns, automate customer journeys with 24/7 AI chatbots, and manage multi-agent support tickets from a unified dashboard.</p>
-          
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-            <a href="https://chatwings.co/" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem;">
-              Login / Visit Chatwings Live (chatwings.co) <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="contact.html?product=chatwings" class="pm-btn-ghost">
-              Request Demo <i class="fas fa-arrow-right"></i>
-            </a>
+      <div class="pm-hero-grid">
+        <div class="pm-hero-left">
+          <div>
+            <span class="pm-badge"><i class="fab fa-whatsapp"></i> Official Meta Cloud API Platform</span>
+            <h1 class="pm-title">Chatwings — WhatsApp API &amp; Customer Engagement</h1>
+            <p class="pm-subtitle">Scale business conversations seamlessly. Execute targeted broadcast campaigns, automate customer journeys with 24/7 AI chatbots, and manage multi-agent support tickets from a unified dashboard.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
+              <a href="https://chatwings.co/" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem;">
+                Launch Live Platform <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="#demo-form" class="pm-btn-ghost">
+                Request Live Demo <i class="fas fa-arrow-down"></i>
+              </a>
+            </div>
           </div>
 
           <div class="pm-metrics-row">
             <div class="pm-metric-item"><i class="fas fa-circle-check"></i> 99.9% Delivery Rate</div>
-            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Multi-Agent Shared Inbox</div>
-            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Meta Verified Sandbox</div>
+            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Multi-Agent Inbox</div>
+            <div class="pm-metric-item"><i class="fas fa-circle-check"></i> Meta Cloud API</div>
           </div>
         </div>
 
-        <div>
-          <div class="hero-enquiry-card" style="border: 1px solid var(--border-color); box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-radius: var(--radius-lg);">
-            <div class="hero-form-header">
-              <h3 style="font-weight: 800; font-size: 1.3rem;">Request Chatwings Demo</h3>
-              <p style="font-size: 0.88rem; color: var(--text-muted);">Get custom API rates, sandbox access, and credentials.</p>
+        <div class="pm-hero-right">
+          <div class="pm-hero-showcase">
+            <img src="images/chatwings_preview.jpg" alt="Chatwings Meta Cloud Dashboard on MacBook Pro">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1.5rem; background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.95) 100%); color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+              <div>
+                <div style="font-weight: 700; font-size: 1.05rem;">Chatwings Meta Cloud Console</div>
+                <div style="font-size: 0.82rem; color: #94a3b8;">Real-Time Campaigns &amp; 24/7 AI Bot Router</div>
+              </div>
+              <span style="background: rgba(37, 211, 102, 0.2); color: #4ade80; border: 1px solid rgba(37, 211, 102, 0.4); font-size: 0.75rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 999px;">
+                <i class="fab fa-whatsapp"></i> 99.9% Delivery
+              </span>
             </div>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="contactName" style="font-weight: 600; font-size: 0.85rem;">Your Name *</label>
-                <input type="text" id="contactName" class="form-control" placeholder="Alex Rivera" required>
-              </div>
-              <div class="form-group">
-                <label for="contactEmail" style="font-weight: 600; font-size: 0.85rem;">Work Email *</label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="alex@company.com" required>
-              </div>
-              <div class="form-group">
-                <label style="font-weight: 600; font-size: 0.85rem;">Expected Monthly Messages</label>
-                <select class="form-control" required>
-                  <option value="10k - 50k messages">10,000 - 50,000 / mo</option>
-                  <option value="50k - 250k messages">50,000 - 250,000 / mo</option>
-                  <option value="250k+ Enterprise">250,000+ Enterprise / mo</option>
-                </select>
-              </div>
-              <button type="submit" class="pm-btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem; border: none; cursor: pointer;">
-                Request Demo &amp; Sandbox Access <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Minimalist Capabilities Section -->
-  <section class="section" style="padding: 5rem 0; background: var(--bg-primary);">
+  <!-- Section 1: Overview & Strategic Value -->
+  <section class="cw-overview-section">
     <div class="container">
-      <div class="text-center" style="max-width: 650px; margin: 0 auto 3.5rem;">
-        <span class="pm-badge" style="background: rgba(59, 130, 246, 0.1); color: var(--brand-blue); border-color: rgba(59, 130, 246, 0.2);">Architected for Scale</span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">Everything You Need to Scale WhatsApp Growth</h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">Direct integration with Meta WhatsApp Cloud infrastructure for zero latency and enterprise compliance.</p>
+      <div class="cw-article-lead">
+        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25); margin-bottom: 1rem;">
+          <i class="fab fa-whatsapp"></i> Official Meta Cloud API Infrastructure
+        </span>
+        <p style="margin: 0; font-size: 1.15rem; line-height: 1.8;">
+          As enterprise customer expectations shift decisively toward instant, personalized mobile communication, forward-thinking organizations are adopting WhatsApp automation to stay competitive. Chatwings delivers official Meta WhatsApp Business API infrastructure, helping growth brands and large enterprises scale customer engagement, sales qualification, and 24/7 support without operational bottlenecks.
+        </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-        
-        <!-- Feature 1 -->
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(37, 211, 102, 0.12); color: #16a34a;">
-            <i class="fab fa-whatsapp"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Bulk Broadcast Campaigns</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Dispatch personalized promotional messages, flash sales, and product updates to opted-in users with live open-rate metrics.</p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(59, 130, 246, 0.12); color: var(--brand-blue);">
-            <i class="fas fa-users-gear"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Multi-Agent Shared Inbox</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Empower support teams to handle incoming customer inquiries from one central WhatsApp number with smart agent routing.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange);">
-            <i class="fas fa-robot"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Automated AI Chatbots</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Build 24/7 interactive chat flows for instant order tracking, lead qualification, FAQs, and appointment scheduling.</p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
-            <i class="fas fa-plug"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">CRM &amp; Webhook Sync</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Connect Chatwings directly with Shopify, HubSpot, Salesforce, WooCommerce, and custom REST API webhooks.</p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">
-            <i class="fas fa-circle-check"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Green Tick Assistance</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Get official Meta brand verification and green checkmark badges to instill trust and security with every recipient.</p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">
-            <i class="fas fa-chart-pie"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Real-Time Analytics</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Monitor campaign conversion rates, message delivery speeds, agent resolution time, and detailed operational reports.</p>
-        </div>
-
+      <div class="cw-article-block" style="margin-bottom: 0;">
+        <h2>Why WhatsApp Automation Matters</h2>
+        <p>
+          With over <strong>500 million active users in India</strong> and 2.7 billion worldwide, WhatsApp has become the default channel for business-to-consumer interaction. Traditional touchpoints like email and phone calls suffer from saturated inboxes and declining response rates, while WhatsApp delivers unmatched <strong>98% open rates</strong> and rapid response times.
+        </p>
+        <p style="margin-bottom: 0;">
+          However, manually managing hundreds or thousands of customer conversations is neither scalable nor efficient. A dedicated WhatsApp automation engine like Chatwings builds intelligent conversational systems that capture inbound leads, automate repetitive queries, and accelerate transactions around the clock without continuous human overhead.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Product Gallery Slider Section -->
-  <section class="pm-gallery-section">
+  <!-- Section 2: What Chatwings WhatsApp Automation Delivers (Impressive Sober Gradient) -->
+  <section class="cw-deliverables-section">
+    <div class="container">
+      <div class="cw-section-header">
+        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);">
+          <i class="fab fa-whatsapp"></i> Enterprise Capabilities
+        </span>
+        <h2>What Chatwings WhatsApp Automation Delivers</h2>
+        <p>
+          Chatwings provides a comprehensive suite of enterprise-ready capabilities designed to help modern businesses communicate at global scale:
+        </p>
+      </div>
+
+      <div class="cw-service-list">
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="cw-service-content">
+            <h3>Official WhatsApp Business API Setup</h3>
+            <p>Direct Meta-verified Cloud API integration that ensures full platform compliance, high delivery throughput, and zero risk of phone number blocking.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.06) 100%); color: #059669; border-color: rgba(16, 185, 129, 0.22);"><i class="fas fa-robot"></i></div>
+          <div class="cw-service-content">
+            <h3>AI-Powered Chatbots &amp; Conversational Flows</h3>
+            <p>Automated multi-turn journeys that answer FAQs, qualify prospective buyers, and guide customers through frictionless purchase paths 24/7.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-paper-plane"></i></div>
+          <div class="cw-service-content">
+            <h3>Bulk Broadcast Campaigns</h3>
+            <p>Dispatch promotional updates, product launches, and personalized reminders to large opted-in audiences using pre-approved Meta templates with live read-rate analytics.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 211, 102, 0.06) 100%); color: #2563eb; border-color: rgba(59, 130, 246, 0.22);"><i class="fas fa-plug-circle-bolt"></i></div>
+          <div class="cw-service-content">
+            <h3>CRM and Tool Integrations</h3>
+            <p>Native bi-directional synchronization with Shopify, WooCommerce, HubSpot, Salesforce, Zoho, Google Sheets, and custom REST API webhooks for seamless data flow.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(245, 158, 11, 0.06) 100%); color: #059669; border-color: rgba(16, 185, 129, 0.22);"><i class="fas fa-calendar-check"></i></div>
+          <div class="cw-service-content">
+            <h3>Appointment &amp; Order Automation</h3>
+            <p>Automated reservation confirmations, digital receipt dispatch, and real-time shipping tracking alerts for retail, healthcare, and service operations.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-headset"></i></div>
+          <div class="cw-service-content">
+            <h3>Unified Multi-Agent Team Inbox</h3>
+            <p>Equip multiple support and sales agents to manage, assign, and reply to conversations from a single shared dashboard on one verified company number.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Industries That Benefit (Impressive Sober Gradient) -->
+  <section class="cw-industries-section">
+    <div class="container">
+      <div class="cw-section-header">
+        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);">
+          <i class="fas fa-layer-group"></i> Sector Solutions
+        </span>
+        <h2>Industries That Benefit</h2>
+        <p>
+          WhatsApp automation transforms operations across diverse sectors by reducing response times, cutting operational expenses, and boosting customer satisfaction:
+        </p>
+      </div>
+
+      <div class="cw-industry-grid">
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #3b82f6, #10b981);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(37, 211, 102, 0.08)); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.2);">
+            <i class="fas fa-building"></i>
+          </div>
+          <h4>Real Estate &amp; PropTech</h4>
+          <p>Automate property inquiries, send interactive floor plans, and schedule instant site-visit appointments for high-intent property buyers.</p>
+        </div>
+
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(6, 182, 212, 0.08)); color: #059669; border: 1px solid rgba(16, 185, 129, 0.2);">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h4>Healthcare &amp; Clinics</h4>
+          <p>Deliver automated doctor appointment confirmations, share pre-consultation diet protocols, and securely distribute laboratory test reports.</p>
+        </div>
+
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #f97316, #25d366);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(37, 211, 102, 0.08)); color: #ea580c; border: 1px solid rgba(249, 115, 22, 0.2);">
+            <i class="fas fa-cart-shopping"></i>
+          </div>
+          <h4>E-Commerce &amp; D2C Brands</h4>
+          <p>Recover up to 28% of abandoned shopping carts, verify Cash-on-Delivery (COD) orders, and provide live delivery tracking notifications.</p>
+        </div>
+
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #8b5cf6, #10b981);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(37, 211, 102, 0.08)); color: #7c3aed; border: 1px solid rgba(139, 92, 246, 0.2);">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h4>FinTech &amp; Financial Services</h4>
+          <p>Dispatch mission-critical One-Time Passwords (OTPs) with 99.9% delivery within 3 seconds, send transaction alerts, and streamline KYC verification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Enterprise Infrastructure & Comparison Matrix -->
+  <section style="padding: 5rem 0 4.5rem; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      
+      <div class="cw-strategic-grid">
+        <div class="cw-article-block" style="margin-bottom: 0;">
+          <h2>The Strategic Advantage of Official Meta Infrastructure</h2>
+          <p>
+            Unlike unofficial browser extensions and QR code web scrapers that breach Meta’s Terms of Service and trigger sudden account bans, Chatwings connects directly to <strong>Meta’s global Graph API infrastructure</strong>. This guarantees enterprise-grade security (SOC 2, ISO 27001, GDPR), sub-20ms message processing, a 99.9% uptime SLA, and dedicated guidance for obtaining the coveted official Meta Green Verification Tick.
+          </p>
+        </div>
+
+        <div class="cw-article-block" style="margin-bottom: 0;">
+          <h2>The Road Ahead: AI-Driven Conversational Intelligence</h2>
+          <p>
+            As artificial intelligence continues to advance, WhatsApp automation is moving beyond simple auto-replies toward dynamic, context-aware conversations powered by large language models. Chatwings positions your brand to adopt these capabilities today, delivering faster, more personalized customer experiences while freeing human teams to focus on high-value revenue drivers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Comparison Matrix Table Header -->
+      <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
+        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);">
+          Platform Comparison
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+          Official Meta Cloud API vs Unofficial Web Scrapers
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          Why growing brands and enterprise organizations rely exclusively on official Meta Cloud infrastructure over vulnerable QR code emulators.
+        </p>
+      </div>
+
+      <div class="seo-table-wrapper">
+        <table class="seo-table">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Evaluation Factor</th>
+              <th style="width: 34%; color: #16a34a;"><i class="fas fa-circle-check"></i> Chatwings Official Cloud API</th>
+              <th style="width: 34%; color: #dc2626;"><i class="fas fa-circle-xmark"></i> Unofficial QR Web Gateways</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Account Ban Risk</strong></td>
+              <td style="color: #16a34a; font-weight: 600;">0% — Guaranteed Safe &amp; Meta Approved</td>
+              <td style="color: #dc2626; font-weight: 600;">High Risk (80%+ ban rate upon bulk sends)</td>
+            </tr>
+            <tr>
+              <td><strong>Message Delivery Throughput</strong></td>
+              <td>80 to 1,000+ messages per second</td>
+              <td>Slow (1 message every 3–5 seconds)</td>
+            </tr>
+            <tr>
+              <td><strong>Green Tick Official Verification</strong></td>
+              <td style="color: #16a34a;"><i class="fas fa-check"></i> Eligible with direct verification support</td>
+              <td style="color: #dc2626;"><i class="fas fa-xmark"></i> Prohibited by Meta policy</td>
+            </tr>
+            <tr>
+              <td><strong>Interactive Messaging Formats</strong></td>
+              <td>Rich action buttons, list menus, product catalogs</td>
+              <td>Plain text and raw URL links only</td>
+            </tr>
+            <tr>
+              <td><strong>Infrastructure Uptime SLA</strong></td>
+              <td style="color: #16a34a; font-weight: 600;">99.9% Meta Global Cloud SLA</td>
+              <td>Disrupts when browser session expires</td>
+            </tr>
+            <tr>
+              <td><strong>Data Security &amp; Compliance</strong></td>
+              <td>SOC 2, GDPR, End-to-End Encryption</td>
+              <td>Exposed to credential and session token theft</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Modern Interactive Accordion FAQ Section -->
+  <section class="cw-faq-section">
     <div class="container">
       <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
-        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);"><i class="fas fa-images"></i> Product Platform Showcase</span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; margin-top: 0.5rem; color: var(--text-primary);">Chatwings Interface &amp; Live Console</h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">Explore live dashboard views, campaign management tools, multi-agent chat interfaces, and automated flow builders.</p>
+        <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);">
+          Frequently Asked Questions
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+          Everything You Need to Know About Chatwings &amp; WhatsApp API
+        </h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
+          Clear, straightforward answers on technical setup, Meta verification, pricing, and multi-agent operations.
+        </p>
       </div>
 
-      <div class="pm-gallery-card">
-        <button class="pm-gallery-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-        <button class="pm-gallery-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-        
-        <div class="pm-gallery-viewport">
-          <div class="pm-gallery-track">
-            <!-- Slide 1 -->
-            <div class="pm-gallery-slide">
-              <img src="images/hero_bg_1.jpg" alt="Chatwings Meta Cloud Dashboard">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Meta Cloud API Command Center</h4>
-                  <p>Real-time campaign delivery metrics, system health, and API queue monitor.</p>
-                </div>
-                <span class="badge" style="background: #25d366; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Live Platform</span>
-              </div>
-            </div>
+      <div class="cw-faq-wrapper">
+        <div class="cw-faq-item active">
+          <button class="cw-faq-trigger" aria-expanded="true">
+            <span>How does the official WhatsApp Cloud API differ from the free WhatsApp Business app?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>The standard WhatsApp Business app is restricted to a single phone and manual broadcast lists of 256 contacts. Chatwings integrates directly into Meta's global Graph API, unlocking multi-agent team inboxes on a single phone number, automated 24/7 AI chatbot flows, direct CRM integrations, and broadcast campaigns to hundreds of thousands of opted-in customers without phone number ban risks.</p>
+          </div>
+        </div>
 
-            <!-- Slide 2 -->
-            <div class="pm-gallery-slide">
-              <img src="images/hero_dashboard.png" alt="Multi-Agent Shared Inbox Console">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Multi-Agent Shared Customer Inbox</h4>
-                  <p>Unified inbox for support agents with live chat routing and automated ticketing.</p>
-                </div>
-                <span class="badge" style="background: var(--brand-blue); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Team Workflow</span>
-              </div>
-            </div>
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Can we migrate our existing company phone number to Chatwings?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Yes. You can onboard any existing virtual number, landline, or mobile number to the Meta Cloud API. If the number is currently registered with consumer WhatsApp, our onboarding team guides you through a seamless 5-minute migration that preserves your business identity.</p>
+          </div>
+        </div>
 
-            <!-- Slide 3 -->
-            <div class="pm-gallery-slide">
-              <img src="images/software_showcase.jpg" alt="AI Automated Flow Builder">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Automated AI Chatbot Flow Builder</h4>
-                  <p>Visual drag-and-drop chatbot builder for instant FAQ and order updates.</p>
-                </div>
-                <span class="badge" style="background: var(--brand-orange); color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">AI Automation</span>
-              </div>
-            </div>
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>How does Meta's conversation-based pricing model work?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Meta charges per 24-hour conversation window categorized into Marketing, Utility, Authentication, and Service conversations. Service conversations initiated by inbound customer inquiries are billed at lower rates, and every WhatsApp Business Account receives 1,000 free service conversations each month.</p>
+          </div>
+        </div>
 
-            <!-- Slide 4 -->
-            <div class="pm-gallery-slide">
-              <img src="images/hero_bg_2.jpg" alt="Bulk Broadcast Analytics">
-              <div class="pm-gallery-caption">
-                <div>
-                  <h4>Broadcast Campaign Analytics</h4>
-                  <p>In-depth open-rate analysis, click tracking, and lead conversion reports.</p>
-                </div>
-                <span class="badge" style="background: #0284c7; color: #fff; padding: 0.3rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem;">Analytics</span>
-              </div>
-            </div>
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>What are the requirements for the official Meta Green Verification Tick?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>To qualify for the official green verified badge, your organization needs an approved Meta Business Manager, 2-factor authentication enabled, and demonstrable brand presence. Chatwings assists enterprise clients through the entire documentation and verification submission process.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>How does the multi-agent shared inbox handle ticket assignment and collisions?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Chatwings provides automated round-robin and skill-based assignment, routing incoming tickets to available specialists based on language, department, or inquiry type. Built-in collision detection prevents multiple team members from responding to the same conversation simultaneously.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>What third-party CRM and eCommerce platforms integrate with Chatwings?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Chatwings provides native bi-directional connectors for Shopify, WooCommerce, HubSpot, Salesforce, Zoho, and custom REST API webhooks. You can automatically trigger abandoned cart recoveries, order tracking links, payment receipts, and lead synchronization.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>How does Chatwings guarantee 99.9% message delivery without ban risks?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Unlike third-party QR code scrapers that violate WhatsApp terms of service, Chatwings communicates directly through Meta's Tier-1 Cloud API infrastructure with cryptographic TLS 1.3 encryption, ensuring zero account ban risks and sub-20ms delivery latencies.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Is customer communication compliant with enterprise data privacy and GDPR?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Yes. All customer data, interaction histories, and message payloads are protected with end-to-end encryption in transit and AES-256 at rest, adhering to ISO 27001, SOC 2 Type II, and GDPR compliance standards.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="pm-gallery-dots"></div>
+  <!-- Dedicated Enterprise Demo & Sandbox Request Section -->
+  <section id="demo-form" style="padding: 5rem 0; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="max-width: 860px; margin: 0 auto; background: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem 2.5rem; box-shadow: var(--shadow-lg);">
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+          <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);">
+            <i class="fas fa-key"></i> Enterprise Sandbox Access
+          </span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+            Request Chatwings Sandbox Demo &amp; Credentials
+          </h2>
+          <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Get dedicated Meta Cloud API sandbox credentials, custom volume pricing, and technical architecture onboarding from our engineers.
+          </p>
+        </div>
 
-      <!-- Live Action Buttons -->
-      <div style="text-align: center; margin-top: 2.75rem;">
-        <a href="https://chatwings.co/" target="_blank" rel="noopener noreferrer" class="pm-btn-primary" style="font-size: 1rem; padding: 0.95rem 2.25rem;">
-          Launch Chatwings Live Platform (chatwings.co) <i class="fas fa-arrow-up-right-from-square"></i>
-        </a>
+        <form id="chatwingsDemoForm" onsubmit="event.preventDefault(); alert('Thank you! Your Chatwings demo request has been received. Our solutions architect will contact you within 2 business hours.'); this.reset();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label for="cwName" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Your Name *</label>
+              <input type="text" id="cwName" class="form-control" placeholder="Alex Rivera" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+            </div>
+            <div class="form-group">
+              <label for="cwEmail" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Work Email *</label>
+              <input type="email" id="cwEmail" class="form-control" placeholder="alex@company.com" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label for="cwPhone" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Direct Phone / WhatsApp *</label>
+              <input type="tel" id="cwPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+            </div>
+            <div class="form-group">
+              <label for="cwVolume" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Expected Monthly Messages</label>
+              <select id="cwVolume" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+                <option value="10k - 50k messages">10,000 - 50,000 / mo</option>
+                <option value="50k - 250k messages">50,000 - 250,000 / mo</option>
+                <option value="250k+ Enterprise">250,000+ Enterprise / mo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="cwNotes" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Use Case / Integration Needs</label>
+            <textarea id="cwNotes" rows="3" class="form-control" placeholder="Briefly describe your customer messaging use case (e.g., Shopify order alerts, CRM WhatsApp inbox, automated lead gen bot)..." style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem; resize: vertical;"></textarea>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
+            <div style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-shield-halved" style="color: #25d366;"></i> Official Meta Business Solution Provider Partner
+            </div>
+            <button type="submit" class="pm-btn-primary" style="padding: 0.85rem 2rem; font-size: 1rem; border: none; cursor: pointer;">
+              Submit Demo Request <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -546,5 +1182,31 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('.cw-faq-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const item = trigger.closest('.cw-faq-item');
+          const isOpen = item.classList.contains('active');
+          
+          document.querySelectorAll('.cw-faq-item').forEach(other => {
+            if (other !== item) {
+              other.classList.remove('active');
+              other.querySelector('.cw-faq-trigger')?.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          if (isOpen) {
+            item.classList.remove('active');
+            trigger.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
