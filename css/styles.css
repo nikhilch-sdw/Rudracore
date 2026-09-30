@@ -845,11 +845,113 @@ body {
 .hero-grid {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.15fr 0.95fr;
-  gap: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Side Animated GIFs (Flanking Center Text) */
+.hero-side-gif {
+  flex: 0 0 250px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: transform var(--transition-normal);
+}
+
+.hero-side-left {
+  animation: heroFloatLeft 6.5s ease-in-out infinite;
+}
+
+.hero-side-right {
+  animation: heroFloatRight 7s ease-in-out infinite 0.5s;
+}
+
+.hero-side-gif:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.hero-gif-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.hero-floating-gif {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 15px 30px rgba(15, 23, 42, 0.08));
+  transition: filter var(--transition-normal);
+}
+
+[data-theme="dark"] .hero-floating-gif {
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 20px rgba(37, 99, 235, 0.25));
+}
+
+.hero-gif-caption {
+  margin-top: 0.85rem;
+}
+
+.gif-caption-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.gif-caption-badge.badge-blue {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: var(--brand-blue);
+}
+
+.gif-caption-badge.badge-orange {
+  background: rgba(255, 107, 0, 0.08);
+  border: 1px solid rgba(255, 107, 0, 0.25);
+  color: var(--brand-orange);
+}
+
+[data-theme="dark"] .gif-caption-badge.badge-blue {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.45);
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .gif-caption-badge.badge-orange {
+  background: rgba(255, 107, 0, 0.2);
+  border-color: rgba(255, 107, 0, 0.45);
+  color: #fdba74;
+}
+
+@keyframes heroFloatLeft {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes heroFloatRight {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
 /* 1. Status Pill Badge */
@@ -857,14 +959,14 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.28rem 0.85rem;
+  padding: 0.35rem 0.95rem;
   background: rgba(37, 99, 235, 0.06);
   border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: var(--radius-full);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--brand-blue);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
   transition: all var(--transition-fast);
@@ -937,22 +1039,25 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-}
-
-.hero-layer-laptop {
-  position: relative;
-  z-index: 2;
+  flex: 1 1 0;
+  max-width: 660px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 2. Hero Headline & Rotator Text */
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(2rem, 2.9vw, 2.85rem);
   font-weight: 800;
-  line-height: 1.14;
+  line-height: 1.15;
   letter-spacing: -0.035em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.95rem;
   color: var(--text-primary);
+  text-align: center;
 }
 
 .rotator-wrapper {
@@ -989,17 +1094,19 @@ body {
 .hero-description {
   font-size: 0.98rem;
   color: var(--text-secondary);
-  margin-bottom: 1.15rem;
-  max-width: 520px;
-  line-height: 1.52;
+  margin-bottom: 1.4rem;
+  max-width: 580px;
+  line-height: 1.55;
+  text-align: center;
 }
 
 /* 3. Hero Action Buttons */
 .hero-btns {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.85rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
   flex-wrap: wrap;
 }
 
@@ -1009,8 +1116,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.25rem;
-  font-size: 0.92rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .hero-btn-main:hover {
@@ -1025,8 +1133,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.25rem;
-  font-size: 0.92rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .hero-btn-sub:hover {
@@ -1039,8 +1148,9 @@ body {
 .hero-social-proof {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.85rem;
-  margin-top: 0.45rem;
+  margin-top: 0.5rem;
   padding: 0;
 }
 
@@ -1103,37 +1213,16 @@ body {
    5. Hero Visual - Premium 3D Tech Artwork Showcase
    ============================================================= */
 .hero-visual {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1200px;
+  display: none !important;
 }
 
 .hero-showcase-container {
-  position: relative;
-  width: 100%;
-  max-width: 530px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none !important;
 }
 
 /* Ambient Radial Glow Behind Image */
 .hero-ambient-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 110%;
-  height: 110%;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(249, 115, 22, 0.08) 50%, transparent 70%);
-  filter: blur(45px);
-  pointer-events: none;
-  z-index: 0;
-  animation: ambientPulse 6s ease-in-out infinite alternate;
+  display: none !important;
 }
 
 @keyframes ambientPulse {
@@ -1354,26 +1443,7 @@ body {
 
 /* Holographic Shimmer Across Glass Structure & Tech Devices */
 .hero-glass-shimmer {
-  position: absolute;
-  top: -60%;
-  left: -80%;
-  width: 70%;
-  height: 220%;
-  background: linear-gradient(
-    105deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0) 35%,
-    rgba(56, 189, 248, 0.22) 48%,
-    rgba(249, 115, 22, 0.18) 52%,
-    rgba(255, 255, 255, 0.3) 55%,
-    rgba(255, 255, 255, 0) 65%,
-    transparent 100%
-  );
-  transform: rotate(22deg);
-  pointer-events: none;
-  z-index: 4;
-  mix-blend-mode: overlay;
-  animation: glassShimmerSweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  display: none !important;
 }
 
 @keyframes glassShimmerSweep {
@@ -1768,6 +1838,16 @@ body {
   color: var(--brand-blue);
 }
 
+@media (max-width: 1200px) {
+  .hero-side-gif {
+    flex: 0 0 190px;
+    max-width: 190px;
+  }
+  .hero-floating-gif {
+    max-height: 200px;
+  }
+}
+
 @media (max-width: 992px) {
   .hero {
     min-height: auto;
@@ -1776,8 +1856,12 @@ body {
   }
 
   .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-side-gif {
+    display: none;
   }
 
   .hero-trust-bar {
