@@ -2105,7 +2105,7 @@ body {
   opacity: 1;
 }
 
-/* 1. CORAL ORANGE (Digital Marketing) */
+/* 1. CORAL ORANGE */
 .service-card.card-orange {
   background: linear-gradient(180deg, rgba(255, 107, 0, 0.08) 0%, rgba(255, 107, 0, 0.012) 28%, #ffffff 42%, #ffffff 100%);
   border-color: rgba(255, 107, 0, 0.18);
@@ -2397,7 +2397,7 @@ body {
    Bullet Badges & Action Buttons for All 8 Color Themes
    ========================================================================== */
 
-/* 1. ORANGE (Digital Marketing) */
+/* 1. ORANGE ACCENT */
 .service-card.card-orange .service-features li i {
   background: rgba(255, 107, 0, 0.08);
   color: #ff6b00;

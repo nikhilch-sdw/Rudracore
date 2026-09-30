@@ -157,7 +157,7 @@ function initTypewriterEffect() {
   if (!target) return;
 
   const phrases = [
-    'Digital Marketing',
+    'Cloud Solutions',
     'Custom Software',
     'Mobile App Design',
     'Cloud & AI Engines'
@@ -330,7 +330,7 @@ function initTestimonialSlider() {
       role: "VP Product, Horizon Properties"
     },
     {
-      quote: "Our logistics fleet tracking app runs seamlessly across iOS and Android. Their digital marketing team also boosted our organic lead acquisition by 240%.",
+      quote: "Our logistics fleet tracking app runs seamlessly across iOS and Android. Their automated route dispatch engine also increased our daily fulfillment efficiency by 240%.",
       author: "David K. Miller",
       role: "Operations Director, LogiSpeed Global"
     }

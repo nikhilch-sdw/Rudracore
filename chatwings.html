@@ -424,71 +424,83 @@
       margin: 0;
     }
 
-    /* 2-Column Demo Enquiry Form & Visual Showcase */
+    /* 2-Column Demo Enquiry Form & Visual Showcase (Equal Height & Compact) */
     .cw-demo-section {
-      padding: 5.5rem 0;
+      padding: 3.5rem 0;
       background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
       border-top: 1px solid var(--border-color);
     }
     .cw-demo-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 3rem;
-      align-items: center;
+      gap: 2rem;
+      align-items: stretch;
     }
     @media (max-width: 992px) {
       .cw-demo-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2rem;
       }
     }
     .cw-demo-form-card {
       background: var(--bg-card);
       border: 1.5px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 2.75rem 2.25rem;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+      padding: 1.85rem 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
       position: relative;
     }
     [data-theme="dark"] .cw-demo-form-card {
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
     .cw-form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.15rem;
-      margin-bottom: 1.15rem;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
     }
     @media (max-width: 600px) {
       .cw-form-row {
         grid-template-columns: 1fr;
-        gap: 0.9rem;
+        gap: 0.7rem;
       }
       .cw-demo-form-card {
-        padding: 1.75rem 1.25rem;
+        padding: 1.5rem 1.25rem;
       }
     }
     .cw-demo-image-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 0.85rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      height: 100%;
+    }
+    [data-theme="dark"] .cw-demo-image-card {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
     .cw-demo-img-wrapper {
       position: relative;
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-md);
       overflow: hidden;
-      border: 1.5px solid var(--border-color);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
-      background: var(--bg-card);
-    }
-    [data-theme="dark"] .cw-demo-img-wrapper {
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-color);
+      background: #0b1120;
+      flex: 1;
+      display: flex;
+      height: 100%;
+      min-height: 280px;
     }
     .cw-demo-img {
       width: 100%;
-      height: auto;
-      max-height: 480px;
+      height: 100%;
       object-fit: cover;
+      object-position: top center;
       display: block;
       transition: transform 0.4s ease;
     }
@@ -497,22 +509,22 @@
     }
     .cw-demo-badge-overlay {
       position: absolute;
-      bottom: 1.25rem;
-      left: 1.25rem;
-      right: 1.25rem;
+      bottom: 0.85rem;
+      left: 0.85rem;
+      right: 0.85rem;
       z-index: 2;
     }
     .cw-demo-perks {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      padding: 0.25rem 0.5rem;
+      gap: 0.45rem;
+      margin-bottom: 1.15rem;
     }
     .cw-demo-perk-item {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-size: 0.94rem;
+      gap: 0.6rem;
+      font-size: 0.86rem;
       font-weight: 600;
       color: var(--text-primary);
     }
@@ -705,10 +717,6 @@
             <a href="index.html#services" class="nav-link">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
             <div class="mega-dropdown">
               <div class="mega-grid">
-                <a href="digital-marketing.html" class="mega-item">
-                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
-                  <div><div class="mega-title">Digital Marketing</div></div>
-                </a>
                 <a href="website-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
                   <div><div class="mega-title">Website Development</div></div>
@@ -1116,83 +1124,57 @@
         
         <!-- Left Side: Enquiry Form -->
         <div class="cw-demo-form-card">
-          <div style="margin-bottom: 2rem;">
-            <span class="pm-badge" style="background: rgba(37, 211, 102, 0.12); color: #16a34a; border-color: rgba(37, 211, 102, 0.25);">
-              <i class="fas fa-key"></i> Enterprise Sandbox Access
-            </span>
-            <h2 style="font-family: var(--font-heading); font-size: 2.1rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem; letter-spacing: -0.02em;">
-              Request Chatwings Sandbox Demo &amp; Credentials
+          <div style="margin-bottom: 1.15rem;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem; letter-spacing: -0.02em;">
+              Request Sandbox Demo
             </h2>
-            <p style="font-size: 0.98rem; margin-top: 0.4rem; line-height: 1.6;">
-              Get dedicated Meta Cloud API sandbox credentials, custom volume pricing, and technical architecture onboarding from our engineers.
+            <p style="font-size: 0.92rem; margin: 0; line-height: 1.5;">
+              Get dedicated Meta Cloud API sandbox credentials and technical architecture onboarding from our engineers.
             </p>
           </div>
 
           <form id="chatwingsDemoForm" onsubmit="event.preventDefault(); alert('Thank you! Your Chatwings demo request has been received. Our solutions architect will contact you within 2 business hours.'); this.reset();">
             <div class="cw-form-row">
               <div class="form-group">
-                <label for="cwName" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Your Name *</label>
-                <input type="text" id="cwName" class="form-control" placeholder="Alex Rivera" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+                <label for="cwName" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Name *</label>
+                <input type="text" id="cwName" class="form-control" placeholder="Your name" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
               </div>
               <div class="form-group">
-                <label for="cwEmail" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Work Email *</label>
-                <input type="email" id="cwEmail" class="form-control" placeholder="alex@company.com" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+                <label for="cwEmail" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Work Email *</label>
+                <input type="email" id="cwEmail" class="form-control" placeholder="name@company.com" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
               </div>
             </div>
 
             <div class="cw-form-row">
               <div class="form-group">
-                <label for="cwPhone" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Direct Phone / WhatsApp *</label>
-                <input type="tel" id="cwPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+                <label for="cwPhone" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Phone / WhatsApp *</label>
+                <input type="tel" id="cwPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
               </div>
               <div class="form-group">
-                <label for="cwVolume" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Expected Monthly Messages</label>
-                <select id="cwVolume" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
-                  <option value="10k - 50k messages">10,000 - 50,000 / mo</option>
-                  <option value="50k - 250k messages">50,000 - 250,000 / mo</option>
-                  <option value="250k+ Enterprise">250,000+ Enterprise / mo</option>
-                </select>
+                <label for="cwNotes" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Use Case</label>
+                <input type="text" id="cwNotes" class="form-control" placeholder="E.g., CRM alerts, chatbot" style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
               </div>
             </div>
 
-            <div class="form-group" style="margin-bottom: 1.25rem;">
-              <label for="cwNotes" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Use Case / Integration Needs</label>
-              <textarea id="cwNotes" rows="3" class="form-control" placeholder="Briefly describe your customer messaging use case (e.g., Shopify order alerts, CRM WhatsApp inbox, automated lead gen bot)..." style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem; resize: vertical;"></textarea>
-            </div>
-
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem;">
               <div style="font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
-                <i class="fas fa-shield-halved" style="color: #25d366;"></i> Official Meta BSP Partner
+                <i class="fas fa-shield-halved" style="color: #25d366;"></i> Meta BSP Partner
               </div>
-              <button type="submit" class="pm-btn-primary" style="padding: 0.85rem 1.85rem; font-size: 0.95rem; border: none; cursor: pointer;">
-                Submit Demo Request <i class="fas fa-paper-plane"></i>
+              <button type="submit" class="pm-btn-primary" style="padding: 0.7rem 1.6rem; font-size: 0.92rem; border: none; cursor: pointer;">
+                Request Demo <i class="fas fa-arrow-right"></i>
               </button>
             </div>
           </form>
         </div>
 
-        <!-- Right Side: Visual Showcase Image & Highlights -->
+        <!-- Right Side: Visual Showcase Image -->
         <div class="cw-demo-image-card">
           <div class="cw-demo-img-wrapper">
             <img src="images/chatwings_demo_showcase.jpg" alt="Chatwings WhatsApp Business API Live Sandbox Console" class="cw-demo-img">
             <div class="cw-demo-badge-overlay">
-              <span class="pm-badge" style="background: rgba(15, 23, 42, 0.85); color: #4ade80; border-color: rgba(74, 222, 128, 0.4); backdrop-filter: blur(8px);">
+              <span class="pm-badge" style="background: rgba(15, 23, 42, 0.85); color: #4ade80; border-color: rgba(74, 222, 128, 0.4); backdrop-filter: blur(8px); padding: 0.3rem 0.75rem; font-size: 0.78rem; margin: 0;">
                 <i class="fab fa-whatsapp"></i> Live Multi-Agent &amp; AI Routing Console
               </span>
-            </div>
-          </div>
-          <div class="cw-demo-perks">
-            <div class="cw-demo-perk-item">
-              <i class="fas fa-check-circle" style="color: #25d366;"></i>
-              <span>Instant Test API Key Generated</span>
-            </div>
-            <div class="cw-demo-perk-item">
-              <i class="fas fa-check-circle" style="color: #25d366;"></i>
-              <span>Pre-Built CRM &amp; Webhook Flows</span>
-            </div>
-            <div class="cw-demo-perk-item">
-              <i class="fas fa-check-circle" style="color: #25d366;"></i>
-              <span>Dedicated Solutions Architect 1-on-1</span>
             </div>
           </div>
         </div>
@@ -1217,7 +1199,6 @@
         <div class="footer-col">
           <h5 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem;">Services</h5>
           <ul class="footer-links">
-            <li><a href="digital-marketing.html">Digital Marketing</a></li>
             <li><a href="website-development.html">Website Development</a></li>
             <li><a href="app-development.html">Mobile App Development</a></li>
             <li><a href="software-engineering.html">Software Engineering</a></li>

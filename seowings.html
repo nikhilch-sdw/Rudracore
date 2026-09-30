@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SEOWings - All-in-One Website Technical SEO Audit Tool, Keyword Rank Tracker & Core Web Vitals Optimizer.">
+  <meta name="description" content="SEOWings - Enterprise Website Technical SEO Audit Tool, Keyword Rank Tracker & Core Web Vitals Optimizer.">
   <meta name="keywords" content="SEOWings, Website Diagnostic Tool, SEO Audit, Rank Tracker, Core Web Vitals, Backlink Monitor">
   <title>SEOWings — Website Audit & Rank Tracking Tool | Rudracore</title>
 
@@ -153,87 +153,271 @@
     .pm-metric-item i {
       color: var(--brand-orange);
     }
-    .pm-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
+    :root {
+      --text-muted: #414142;
+      --text-secondary: #414142;
+    }
+    [data-theme="dark"] {
+      --text-muted: #94a3b8;
+      --text-secondary: #cbd5e1;
+    }
+
+    body {
+      color: #414142;
+    }
+    [data-theme="dark"] body {
+      color: #cbd5e1;
+    }
+
+    /* Clean Professional Editorial Overview */
+    .cw-overview-section {
+      padding: 4.5rem 0 3.5rem;
+      background: var(--bg-primary);
+    }
+    .cw-article-lead {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #414142;
+      margin-bottom: 2.75rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .cw-article-block {
+      margin-bottom: 3.5rem;
+    }
+    .cw-article-block h2 {
+      font-family: var(--font-heading);
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .cw-article-block p {
+      color: #414142;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .cw-article-block p strong {
+      color: var(--text-primary);
+    }
+    .pm-subtitle,
+    .cw-article-lead p,
+    .cw-article-block p,
+    .cw-section-header p,
+    .cw-service-content p,
+    .cw-industry-item p,
+    .cw-faq-body p,
+    .cw-demo-form-card p,
+    .seo-table td {
+      color: #414142;
+    }
+    [data-theme="dark"] .pm-subtitle,
+    [data-theme="dark"] .cw-article-lead,
+    [data-theme="dark"] .cw-article-lead p,
+    [data-theme="dark"] .cw-article-block p,
+    [data-theme="dark"] .cw-section-header p,
+    [data-theme="dark"] .cw-service-content p,
+    [data-theme="dark"] .cw-industry-item p,
+    [data-theme="dark"] .cw-faq-body p,
+    [data-theme="dark"] .cw-demo-form-card p,
+    [data-theme="dark"] .seo-table td {
+      color: #cbd5e1;
+    }
+
+    /* Section 2: What SEOWings Delivers (Sober Gradient) */
+    .cw-deliverables-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(249, 115, 22, 0.04) 40%, rgba(234, 88, 12, 0.02) 80%, var(--bg-secondary) 100%);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+    [data-theme="dark"] .cw-deliverables-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(249, 115, 22, 0.06) 50%, var(--bg-secondary) 100%);
+    }
+    .cw-section-header {
+      margin-bottom: 2.75rem;
+    }
+    .cw-section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-top: 0.65rem;
+      letter-spacing: -0.02em;
+    }
+    .cw-section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 0.5rem;
+      max-width: 850px;
+    }
+    .cw-service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem 2rem;
+    }
+    @media (max-width: 768px) {
+      .cw-service-list {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+    }
+    .cw-service-item {
+      background: linear-gradient(145deg, var(--bg-card) 0%, rgba(249, 115, 22, 0.03) 100%);
+      border: 1px solid rgba(249, 115, 22, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.35rem;
+      align-items: flex-start;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      position: relative;
+      overflow: hidden;
     }
-    .pm-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-      border-color: rgba(249, 115, 22, 0.4);
+    .cw-service-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--brand-orange) 0%, #ea580c 100%);
+      border-radius: 4px 0 0 4px;
     }
-    .pm-icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
+    .cw-service-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(249, 115, 22, 0.5);
+      box-shadow: 0 12px 28px rgba(249, 115, 22, 0.1);
+    }
+    .cw-service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 88, 12, 0.06) 100%);
+      color: var(--brand-orange);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(249, 115, 22, 0.22);
+    }
+    .cw-service-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+    .cw-service-content p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.65;
+      margin: 0;
     }
 
-    /* SEO Matrix & Text Components for SEOWings */
-    .seo-pillar-grid {
+    /* Section 3: Industries That Benefit (Sober Gradient) */
+    .cw-industries-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(241, 245, 249, 0.65) 50%, var(--bg-primary) 100%);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+    [data-theme="dark"] .cw-industries-section {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(15, 23, 42, 0.55) 50%, var(--bg-primary) 100%);
+    }
+    .cw-industry-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+      gap: 1.75rem;
     }
     @media (max-width: 992px) {
-      .seo-pillar-grid {
+      .cw-industry-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
     @media (max-width: 576px) {
-      .seo-pillar-grid {
+      .cw-industry-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
       }
     }
-    .seo-pillar-card {
-      background: var(--bg-card);
+    .cw-industry-item {
+      background: linear-gradient(160deg, var(--bg-card) 0%, rgba(248, 250, 252, 0.8) 100%);
       border: 1.5px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.5rem;
-      transition: all 0.3s ease;
+      border-radius: 16px;
+      padding: 2rem 1.6rem 1.85rem;
       position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
     }
-    .seo-pillar-card:hover {
-      border-color: var(--brand-orange);
-      transform: translateY(-3px);
+    [data-theme="dark"] .cw-industry-item {
+      background: linear-gradient(160deg, var(--bg-card) 0%, rgba(30, 41, 59, 0.5) 100%);
     }
-    .seo-pillar-badge {
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      background: rgba(249, 115, 22, 0.12);
-      color: var(--brand-orange);
-      display: inline-block;
-      margin-bottom: 1rem;
+    .cw-industry-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(249, 115, 22, 0.4);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.07);
     }
+    .cw-industry-topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+    .cw-industry-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .cw-industry-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .cw-industry-item p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Clean Comparison Table */
     .seo-table-wrapper {
       overflow-x: auto;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       background: var(--bg-card);
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
       margin-top: 2rem;
     }
     .seo-table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
     }
     .seo-table th, .seo-table td {
-      padding: 1.1rem 1.35rem;
+      padding: 1.15rem 1.4rem;
       border-bottom: 1px solid var(--border-color);
     }
     .seo-table th {
@@ -247,56 +431,178 @@
     .seo-table tr:hover td {
       background: rgba(249, 115, 22, 0.03);
     }
-    .seo-blueprint-step {
+
+    /* Modern Interactive Accordion FAQ Section */
+    .cw-faq-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+    .cw-faq-wrapper {
+      max-width: 840px;
+      margin: 0 auto;
       display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      padding: 1.75rem 0;
-      border-bottom: 1px solid var(--border-color);
+      flex-direction: column;
+      gap: 0.85rem;
     }
-    .seo-blueprint-step:last-child {
-      border-bottom: none;
+    .cw-faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      overflow: hidden;
+      transition: all 0.25s ease;
     }
-    .seo-step-number {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--brand-orange) 0%, #ea580c 100%);
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.1rem;
+    .cw-faq-item:hover {
+      border-color: rgba(249, 115, 22, 0.5);
+    }
+    .cw-faq-item.active {
+      border-color: var(--brand-orange);
+      box-shadow: 0 8px 24px rgba(249, 115, 22, 0.08);
+    }
+    .cw-faq-trigger {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      transition: color 0.2s ease;
+    }
+    .cw-faq-trigger:hover {
+      color: var(--brand-orange);
+    }
+    .cw-faq-chevron {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--brand-orange);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      font-size: 0.8rem;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, color 0.25s ease;
     }
-    .seo-faq-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.75rem 2rem;
-      margin-bottom: 1.25rem;
-      transition: all 0.3s ease;
+    .cw-faq-item.active .cw-faq-chevron {
+      transform: rotate(180deg);
+      background: var(--brand-orange);
+      color: #ffffff;
     }
-    .seo-faq-card:hover {
-      border-color: var(--brand-orange);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    .cw-faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 1.5rem;
     }
-    .seo-faq-question {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+    .cw-faq-item.active .cw-faq-body {
+      max-height: 320px;
+      padding: 0 1.5rem 1.35rem 1.5rem;
     }
-    .seo-faq-answer {
+    .cw-faq-body p {
       color: var(--text-muted);
       font-size: 0.95rem;
-      line-height: 1.65;
+      line-height: 1.7;
       margin: 0;
+    }
+
+    /* 2-Column Demo Enquiry Form & Visual Showcase (Equal Height & Compact) */
+    .cw-demo-section {
+      padding: 3.5rem 0;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      border-top: 1px solid var(--border-color);
+    }
+    .cw-demo-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+    @media (max-width: 992px) {
+      .cw-demo-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    .cw-demo-form-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.85rem 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      position: relative;
+    }
+    [data-theme="dark"] .cw-demo-form-card {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .cw-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    @media (max-width: 600px) {
+      .cw-form-row {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+      }
+      .cw-demo-form-card {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+    .cw-demo-image-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 0.85rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    [data-theme="dark"] .cw-demo-image-card {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .cw-demo-img-wrapper {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #0b1120;
+      flex: 1;
+      display: flex;
+      height: 100%;
+      min-height: 280px;
+    }
+    .cw-demo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .cw-demo-img-wrapper:hover .cw-demo-img {
+      transform: scale(1.02);
+    }
+    .cw-demo-badge-overlay {
+      position: absolute;
+      bottom: 0.85rem;
+      left: 0.85rem;
+      right: 0.85rem;
+      z-index: 2;
     }
   </style>
 </head>
@@ -371,10 +677,6 @@
             <a href="index.html#services" class="nav-link">Services <i class="fas fa-chevron-down nav-arrow"></i></a>
             <div class="mega-dropdown">
               <div class="mega-grid">
-                <a href="digital-marketing.html" class="mega-item">
-                  <div class="mega-icon" style="background-color: var(--bg-accent-blue); color: var(--brand-blue);"><i class="fas fa-bullhorn"></i></div>
-                  <div><div class="mega-title">Digital Marketing</div></div>
-                </a>
                 <a href="website-development.html" class="mega-item">
                   <div class="mega-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);"><i class="fas fa-globe"></i></div>
                   <div><div class="mega-title">Website Development</div></div>
@@ -432,7 +734,7 @@
       <div class="pm-hero-grid">
         <div class="pm-hero-left">
           <div>
-            <span class="pm-badge"><i class="fas fa-chart-line"></i> Digital Website Diagnostic Suite</span>
+            <span class="pm-badge"><i class="fas fa-chart-line"></i> Automated Technical SEO &amp; Audit Suite</span>
             <h1 class="pm-title">SEOWings — Automated Audit &amp; Rank Tracking Engine</h1>
             <p class="pm-subtitle">Achieve #1 Google search rankings. SEOWings executes 50+ technical site audits, tracks keyword positions across global search regions, and diagnoses Core Web Vitals performance bottlenecks.</p>
             
@@ -471,152 +773,162 @@
     </div>
   </section>
 
-  <!-- Section 1: 4-Pillar Technical Audit Framework (Text Format) -->
-  <section style="padding: 5rem 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+  <!-- Section 1: Overview & Strategic Value -->
+  <section class="cw-overview-section">
     <div class="container">
-      <div class="text-center" style="max-width: 720px; margin: 0 auto;">
-        <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);">
-          <i class="fas fa-layer-group"></i> SEO Framework
+      <div class="cw-article-lead">
+        <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25); margin-bottom: 1rem;">
+          <i class="fas fa-microchip"></i> Modern Headless Search Crawling
         </span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
-          The 4-Pillar Website Technical Diagnostics Architecture
-        </h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
-          SEOWings systematically crawls every layer of your web infrastructure to uncover hidden technical roadblocks that suppress organic Google rankings.
+        <p style="margin: 0; font-size: 1.15rem; line-height: 1.8;">
+          As search engine algorithms become increasingly sophisticated, technical health and Page Experience have become primary ranking determinants. SEOWings provides enterprise-grade automated site crawling, Core Web Vitals profiling, and keyword rank intelligence, enabling engineering teams and digital leaders to eliminate ranking bottlenecks before they harm organic search revenue.
         </p>
       </div>
 
-      <div class="seo-pillar-grid">
-        <div class="seo-pillar-card">
-          <span class="seo-pillar-badge">PILLAR 1 • PERFORMANCE</span>
-          <div style="color: var(--brand-orange); font-size: 1.6rem; margin-bottom: 0.75rem;"><i class="fas fa-gauge-high"></i></div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Core Web Vitals</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
-            Continuously monitors Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS) against Google PageSpeed thresholds.
-          </p>
+      <div class="cw-article-block" style="margin-bottom: 0;">
+        <h2>Why Technical SEO &amp; Site Diagnostics Matter</h2>
+        <p>
+          Over <strong>68% of online experiences begin with a search engine</strong>, and websites appearing in the top 3 Google results capture over 54% of all organic clicks. However, modern Single Page Applications (Next.js, React, Vue) and rapid continuous deployments often introduce silent technical regressions—such as broken canonical tags, creeping layout shifts, or bloated JavaScript bundles that degrade crawl efficiency.
+        </p>
+        <p style="margin-bottom: 0;">
+          SEOWings solves this by continuously running headless Chromium audits across your entire production domain. By simulating real user interactions and Googlebot indexing behavior, SEOWings pinpoints code-level fixes, validates structured JSON-LD Schema, and provides engineering-ready remediation plans that drive sustainable top-tier organic visibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: What SEOWings Delivers (Sober Gradient) -->
+  <section class="cw-deliverables-section">
+    <div class="container">
+      <div class="cw-section-header">
+        <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);">
+          <i class="fas fa-layer-group"></i> Enterprise SEO Capabilities
+        </span>
+        <h2>What SEOWings Automated Audits Deliver</h2>
+        <p>
+          A comprehensive suite of crawler capabilities engineered to maximize search indexing speed, user experience, and keyword dominance:
+        </p>
+      </div>
+
+      <div class="cw-service-list">
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-microchip"></i></div>
+          <div class="cw-service-content">
+            <h3>Headless Chromium DOM Rendering</h3>
+            <p>Fully executes dynamic JavaScript bundles, waiting for network idle states to inspect the exact DOM and hydrated tags that Googlebot indexes.</p>
+          </div>
         </div>
 
-        <div class="seo-pillar-card">
-          <span class="seo-pillar-badge">PILLAR 2 • INDEXATION</span>
-          <div style="color: #3b82f6; font-size: 1.6rem; margin-bottom: 0.75rem;"><i class="fas fa-sitemap"></i></div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Crawl &amp; Sitemaps</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
-            Detects 404 dead ends, 301/302 redirect loops, canonical tag conflicts, and robots.txt directives that drain your site's search crawl budget.
-          </p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: linear-gradient(135deg, rgba(234, 88, 12, 0.15) 0%, rgba(249, 115, 22, 0.06) 100%); color: #ea580c; border-color: rgba(234, 88, 12, 0.22);"><i class="fas fa-gauge-high"></i></div>
+          <div class="cw-service-content">
+            <h3>Core Web Vitals &amp; INP Diagnostics</h3>
+            <p>Continuously monitors Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS) against Google thresholds.</p>
+          </div>
         </div>
 
-        <div class="seo-pillar-card">
-          <span class="seo-pillar-badge">PILLAR 3 • STRUCTURE</span>
-          <div style="color: #10b981; font-size: 1.6rem; margin-bottom: 0.75rem;"><i class="fas fa-code"></i></div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Semantic Schema</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
-            Validates H1-H6 heading hierarchy, OpenGraph social metadata, and JSON-LD structured data markup for Google Rich Snippets eligibility.
-          </p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="cw-service-content">
+            <h3>Internal Link Equity &amp; PageRank Flow</h3>
+            <p>Maps click depth, identifies orphaned landing pages, resolves redirect chains, and redistributes internal link authority across core money pages.</p>
+          </div>
         </div>
 
-        <div class="seo-pillar-card">
-          <span class="seo-pillar-badge">PILLAR 4 • SERP TRACKING</span>
-          <div style="color: #8b5cf6; font-size: 1.6rem; margin-bottom: 0.75rem;"><i class="fas fa-chart-line"></i></div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Global Rank Tracker</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
-            Monitors organic search positions daily across desktop and mobile in 180+ countries with competitor SERP displacement alerts.
-          </p>
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(249, 115, 22, 0.06) 100%); color: #2563eb; border-color: rgba(59, 130, 246, 0.22);"><i class="fas fa-code"></i></div>
+          <div class="cw-service-content">
+            <h3>Structured Data &amp; Schema Validation</h3>
+            <p>Validates JSON-LD semantic markup, breadcrumbs, and OpenGraph tags to guarantee rich snippet eligibility across Google Search surfaces.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(249, 115, 22, 0.06) 100%); color: #059669; border-color: rgba(16, 185, 129, 0.22);"><i class="fas fa-chart-line"></i></div>
+          <div class="cw-service-content">
+            <h3>Global Daily Keyword Rank Tracking</h3>
+            <p>Monitors keyword positions daily across desktop and mobile devices in 180+ geographical markets with competitor displacement alerts.</p>
+          </div>
+        </div>
+
+        <div class="cw-service-item">
+          <div class="cw-service-icon"><i class="fas fa-bell"></i></div>
+          <div class="cw-service-content">
+            <h3>Real-Time Regression &amp; Indexing Alerts</h3>
+            <p>Instant Slack and email webhooks triggered whenever critical money pages de-index, status codes change, or server crawl speed drops.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Technical Deep-Dive Capabilities (SEO Text Format) -->
-  <section class="section" style="padding: 5rem 0; background: var(--bg-secondary);">
+  <!-- Section 3: Industries That Benefit (Sober Gradient) -->
+  <section class="cw-industries-section">
     <div class="container">
-      <div class="text-center" style="max-width: 680px; margin: 0 auto 3.5rem;">
-        <span class="pm-badge" style="background: rgba(59, 130, 246, 0.1); color: var(--brand-blue); border-color: rgba(59, 130, 246, 0.2);">
-          Crawler Engineering
+      <div class="cw-section-header">
+        <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);">
+          <i class="fas fa-chart-pie"></i> Sector Impact
         </span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
-          Enterprise Diagnostic Suite &amp; Tools
-        </h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
-          Deep crawling capabilities engineered for developers, technical SEOs, and digital marketing leaders.
+        <h2>Industries That Benefit</h2>
+        <p>
+          Technical diagnostic precision tailored to organizations with mission-critical web presence:
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange);">
-            <i class="fas fa-microchip"></i>
+      <div class="cw-industry-grid">
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #f97316, #ea580c);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(234, 88, 12, 0.08)); color: #ea580c; border: 1px solid rgba(249, 115, 22, 0.2);">
+            <i class="fas fa-cart-shopping"></i>
           </div>
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Headless Chromium JS Execution</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
-            Unlike legacy text scrapers that fail on modern Jamstack apps, SEOWings renders full JavaScript client-side bundles (React, Next.js, Vue, Angular) to audit the exact DOM that Googlebot indexes.
-          </p>
+          <h4>E-Commerce &amp; Retail</h4>
+          <p>Audit millions of dynamic product SKUs, eliminate duplicate filter URLs, and optimize product schema for Google Shopping inclusion.</p>
         </div>
 
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(59, 130, 246, 0.12); color: var(--brand-blue);">
-            <i class="fas fa-network-wired"></i>
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #3b82f6, #06b6d4);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(6, 182, 212, 0.08)); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.2);">
+            <i class="fas fa-laptop-code"></i>
           </div>
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Internal Link Equity &amp; PageRank</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
-            Map click depth and internal PageRank flow across your website. Identify orphaned landing pages, under-linked money pages, and redirect chains that weaken authority distribution.
-          </p>
+          <h4>SaaS &amp; Tech Platforms</h4>
+          <p>Ensure dynamic React/Next.js documentation and product feature pages are fully pre-rendered and indexed without crawl budget loss.</p>
         </div>
 
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
-            <i class="fas fa-shield-virus"></i>
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #10b981, #f97316);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(249, 115, 22, 0.08)); color: #059669; border: 1px solid rgba(16, 185, 129, 0.2);">
+            <i class="fas fa-newspaper"></i>
           </div>
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Algorithmic Penalty Shield</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
-            Detect thin content, automated spam signals, duplicate meta titles, and toxic backlink spikes before major Google Core updates strike your organic revenue.
-          </p>
+          <h4>Publishing &amp; Media</h4>
+          <p>Optimize sub-second Core Web Vitals to qualify for Google News carousel placement and maintain high programmatic ad viewability.</p>
         </div>
 
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">
-            <i class="fas fa-file-pdf"></i>
+        <div class="cw-industry-item">
+          <div class="cw-industry-topbar" style="background: linear-gradient(90deg, #8b5cf6, #f97316);"></div>
+          <div class="cw-industry-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(249, 115, 22, 0.08)); color: #7c3aed; border: 1px solid rgba(139, 92, 246, 0.2);">
+            <i class="fas fa-building-circle-check"></i>
           </div>
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Automated White-Label Client Reports</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
-            Empower digital marketing agencies with custom-branded, professional PDF audit summaries featuring agency logos, client domains, prioritized remediation checklists, and scheduled auto-dispatch.
-          </p>
-        </div>
-
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">
-            <i class="fas fa-magnifying-glass-chart"></i>
-          </div>
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Keyword Opportunity Discovery</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
-            Uncover high-intent, low-competition search queries where your competitors rank on page 2. Get automated content briefs and semantic keyword injection recommendations.
-          </p>
-        </div>
-
-        <div class="pm-card">
-          <div class="pm-icon-box" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
-            <i class="fas fa-bell"></i>
-          </div>
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Real-Time Search Delta Alerts</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
-            Receive instant Slack or email notifications when critical pages drop out of Google's index, robots.txt is accidentally misconfigured, or server response times exceed 800ms.
-          </p>
+          <h4>Multi-Location Chains</h4>
+          <p>Maintain consistent local citation data, schema markup, and geo-targeted landing page rankings across hundreds of store locations.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: SEOWings vs Legacy SEO Suites (SEO Comparison Table) -->
-  <section style="padding: 5rem 0; background: var(--bg-primary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+  <!-- Section 4: SEOWings vs Manual Audits & Legacy Scrapers (Comparison Matrix) -->
+  <section style="padding: 5rem 0; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
     <div class="container">
-      <div class="text-center" style="max-width: 760px; margin: 0 auto;">
+
+      <!-- Comparison Matrix Table Header -->
+      <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
         <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);">
-          <i class="fas fa-scale-balanced"></i> Benchmark Comparison
+          Audit Comparison
         </span>
         <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
-          SEOWings vs Manual Audits &amp; Legacy Generic Suites
+          SEOWings vs Manual Audits &amp; Legacy Scrapers
         </h2>
         <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
-          Compare how our automated crawler infrastructure delivers deeper technical diagnostics at a fraction of the manual consultancy expense.
+          Why digital leaders and engineering teams choose continuous automated diagnostics over static spreadsheet reports.
         </p>
       </div>
 
@@ -624,36 +936,41 @@
         <table class="seo-table">
           <thead>
             <tr>
-              <th style="width: 30%;">Audit Capability</th>
-              <th style="width: 35%; color: var(--brand-orange);"><i class="fas fa-circle-check"></i> SEOWings Automated Suite</th>
-              <th style="width: 35%; color: var(--text-muted);"><i class="fas fa-circle-xmark"></i> Manual / Generic Legacy Tools</th>
+              <th style="width: 32%;">Evaluation Factor</th>
+              <th style="width: 34%; color: var(--brand-orange);"><i class="fas fa-circle-check"></i> SEOWings Automated Suite</th>
+              <th style="width: 34%; color: #dc2626;"><i class="fas fa-circle-xmark"></i> Manual / Generic Legacy Tools</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>Crawl Depth &amp; JS Execution</strong></td>
               <td style="color: var(--brand-orange); font-weight: 600;">Full Headless Chromium DOM Rendering</td>
-              <td>Basic HTML regex scraper (Misses JS content)</td>
+              <td style="color: #dc2626; font-weight: 600;">Basic HTML scraper (Misses client-rendered JS)</td>
             </tr>
             <tr>
               <td><strong>Core Web Vitals Profiling</strong></td>
-              <td style="color: var(--brand-orange); font-weight: 600;">Automated Lab + Real User Metrics (LCP/INP)</td>
+              <td>Automated Lab + Real User Metrics (LCP/INP)</td>
               <td>Manual PageSpeed URL-by-URL lookups</td>
             </tr>
             <tr>
-              <td><strong>Developer Fix Recommendations</strong></td>
-              <td>Ready-to-deploy code snippets &amp; Schema JSON-LD</td>
-              <td>Vague warnings without technical remediation guides</td>
+              <td><strong>Engineering Fix Directives</strong></td>
+              <td style="color: var(--brand-orange);"><i class="fas fa-check"></i> Code-level solutions &amp; JSON-LD Schema</td>
+              <td style="color: #dc2626;"><i class="fas fa-xmark"></i> Vague warnings without code snippets</td>
             </tr>
             <tr>
               <td><strong>Continuous Delta Monitoring</strong></td>
               <td style="color: var(--brand-orange); font-weight: 600;">Daily automated crawls with Slack / Email alerts</td>
-              <td>Static one-off PDF audits that quickly become stale</td>
+              <td>Static one-off PDF audits that quickly expire</td>
             </tr>
             <tr>
-              <td><strong>White-Label Agency Client Export</strong></td>
-              <td>Instant unbranded PDF reports with custom agency logo</td>
-              <td>Expensive enterprise add-on fees ($200+/mo extra)</td>
+              <td><strong>Automated Schema Testing</strong></td>
+              <td>Validates rich snippets, breadcrumbs, and tags</td>
+              <td>Requires third-party external validators</td>
+            </tr>
+            <tr>
+              <td><strong>White-Label Client PDF Exports</strong></td>
+              <td style="color: var(--brand-orange); font-weight: 600;">Included: Custom agency branding &amp; logo</td>
+              <td>Expensive enterprise add-on fees ($200+/mo)</td>
             </tr>
           </tbody>
         </table>
@@ -661,175 +978,152 @@
     </div>
   </section>
 
-  <!-- Section 4: 4-Step Remediation Blueprint (Roadmap Format) -->
-  <section style="padding: 5rem 0; background: var(--bg-secondary);">
-    <div class="container" style="max-width: 860px;">
-      <div class="text-center" style="margin-bottom: 3.5rem;">
-        <span class="pm-badge" style="background: rgba(16, 185, 129, 0.12); color: #10b981; border-color: rgba(16, 185, 129, 0.25);">
-          Optimization Roadmap
-        </span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
-          From Site Crawl to #1 Google Ranking
-        </h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
-          Our proven technical execution framework utilized across 1,200+ enterprise client web applications.
-        </p>
-      </div>
-
-      <div>
-        <div class="seo-blueprint-step">
-          <div class="seo-step-number">01</div>
-          <div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Deep Cloud Architecture Crawl</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin: 0;">
-              Our high-speed cloud crawler traverses your entire sitemap, checking status codes, canonical link integrity, meta descriptions, image formats, and server response headers across every URL.
-            </p>
-          </div>
-        </div>
-
-        <div class="seo-blueprint-step">
-          <div class="seo-step-number">02</div>
-          <div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Algorithmic Severity Prioritization</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin: 0;">
-              Issues are scored based on their direct ranking impact: Critical (blocking indexation), Warning (suppressing authority flow), and Opportunity (quick wins for top-3 SERP gains).
-            </p>
-          </div>
-        </div>
-
-        <div class="seo-blueprint-step">
-          <div class="seo-step-number">03</div>
-          <div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Engineering Remediation &amp; Schema Injection</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin: 0;">
-              Developers receive exact code-level instructions: eliminating render-blocking CSS/JS, fixing image dimensions to prevent layout shifts, and injecting validated JSON-LD Schema.
-            </p>
-          </div>
-        </div>
-
-        <div class="seo-blueprint-step">
-          <div class="seo-step-number">04</div>
-          <div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">Continuous Automated Rank Verification</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin: 0;">
-              Post-deployment crawlers re-verify fixes automatically, tracking resulting keyword position jumps and ensuring zero regressions during code pushes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Search Engine Optimization & Technical Audit FAQ -->
-  <section style="padding: 5rem 0; background: var(--bg-primary); border-top: 1px solid var(--border-color);">
-    <div class="container" style="max-width: 860px;">
-      <div class="text-center" style="margin-bottom: 3.5rem;">
+  <!-- Section 5: Modern Interactive Accordion FAQ Section -->
+  <section class="cw-faq-section">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 3rem;">
         <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);">
-          <i class="fas fa-circle-question"></i> Search Engine Intelligence
+          Frequently Asked Questions
         </span>
         <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
-          Technical SEO Audit Frequently Asked Questions
+          Everything You Need to Know About SEOWings
         </h2>
         <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem;">
-          Expert answers on crawl budget optimization, JavaScript rendering, and Core Web Vitals rankings.
+          Expert technical answers on crawl budget optimization, JavaScript rendering, and Core Web Vitals rankings.
         </p>
       </div>
 
-      <div class="seo-faq-card">
-        <div class="seo-faq-question">
-          <i class="fas fa-question-circle" style="color: var(--brand-orange);"></i>
-          How often does SEOWings crawl our website for technical errors?
+      <div class="cw-faq-wrapper">
+        <div class="cw-faq-item active">
+          <button class="cw-faq-trigger" aria-expanded="true">
+            <span>How often does SEOWings crawl our website for technical errors?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>SEOWings runs automated scheduled cloud crawls weekly or daily, depending on your plan tier. You can also trigger an on-demand crawl anytime you deploy code changes to immediately verify that canonical tags, sitemaps, and robots.txt remain intact.</p>
+          </div>
         </div>
-        <p class="seo-faq-answer">
-          SEOWings runs automated scheduled cloud crawls weekly or daily, depending on your plan tier. You can also trigger an on-demand crawl anytime you deploy code changes to immediately verify that canonical tags, sitemaps, and robots.txt remain intact.
-        </p>
-      </div>
 
-      <div class="seo-faq-card">
-        <div class="seo-faq-question">
-          <i class="fas fa-question-circle" style="color: var(--brand-orange);"></i>
-          Does SEOWings audit JavaScript-heavy Single Page Applications (Next.js, React, Vue)?
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Does SEOWings audit JavaScript-heavy Single Page Applications (Next.js, React, Vue)?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Yes. SEOWings features a modern headless Chromium execution cluster that fully executes JavaScript bundles, waits for network idle states, and parses dynamically injected tags and hydration bundles exactly as Googlebot does.</p>
+          </div>
         </div>
-        <p class="seo-faq-answer">
-          Yes. SEOWings features a modern headless Chromium execution cluster that fully executes JavaScript bundles, waits for network idle states, and parses dynamically injected tags and hydration bundles exactly as Googlebot does.
-        </p>
-      </div>
 
-      <div class="seo-faq-card">
-        <div class="seo-faq-question">
-          <i class="fas fa-question-circle" style="color: var(--brand-orange);"></i>
-          Why are Core Web Vitals critical for organic search ranking?
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Why are Core Web Vitals critical for organic search ranking?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Google officially considers Core Web Vitals (Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift) as direct Page Experience ranking signals. Sites failing Core Web Vitals suffer lower rankings, higher bounce rates, and reduced organic conversions.</p>
+          </div>
         </div>
-        <p class="seo-faq-answer">
-          Google officially considers Core Web Vitals (Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift) as direct Page Experience ranking signals. Sites failing Core Web Vitals suffer lower rankings, higher bounce rates, and reduced organic conversions.
-        </p>
-      </div>
 
-      <div class="seo-faq-card">
-        <div class="seo-faq-question">
-          <i class="fas fa-question-circle" style="color: var(--brand-orange);"></i>
-          Can our digital agency generate white-label PDF audit reports for clients?
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Can our digital agency generate white-label PDF audit reports for clients?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Absolutely. SEOWings includes a white-label reporting suite that enables agencies to add their custom brand logo, primary colors, executive commentary, and automated weekly or monthly email delivery directly to client stakeholders.</p>
+          </div>
         </div>
-        <p class="seo-faq-answer">
-          Absolutely. SEOWings includes a white-label reporting suite that enables agencies to add their custom brand logo, primary colors, executive commentary, and automated weekly or monthly email delivery directly to client stakeholders.
-        </p>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>How does internal PageRank mapping uncover hidden ranking opportunities?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>SEOWings computes mathematical PageRank flow across your internal link graph, identifying orphaned pages and high-value conversion URLs that lack sufficient internal links. Remedying these authority gaps typically yields swift ranking boosts without requiring new backlinks.</p>
+          </div>
+        </div>
+
+        <div class="cw-faq-item">
+          <button class="cw-faq-trigger" aria-expanded="false">
+            <span>Can SEOWings integrate with developer CI/CD workflows and Slack?</span>
+            <div class="cw-faq-chevron"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="cw-faq-body">
+            <p>Yes. SEOWings provides REST API endpoints, GitHub Actions integration, and Slack/Teams webhooks that automatically trigger test crawls post-deploy and alert engineering teams if broken redirects or indexing tags are introduced.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Dedicated Enterprise Demo & SEO Audit Request Section -->
-  <section id="demo-form" style="padding: 5rem 0; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); border-top: 1px solid var(--border-color);">
+  <section id="demo-form" class="cw-demo-section">
     <div class="container">
-      <div style="max-width: 860px; margin: 0 auto; background: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem 2.5rem; box-shadow: var(--shadow-lg);">
-        <div style="text-align: center; margin-bottom: 2.5rem;">
-          <span class="pm-badge" style="background: rgba(249, 115, 22, 0.12); color: var(--brand-orange); border-color: rgba(249, 115, 22, 0.25);">
-            <i class="fas fa-magnifying-glass-chart"></i> Instant Technical Audit
-          </span>
-          <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
-            Request Free Comprehensive Site Audit
-          </h2>
-          <p style="color: var(--text-muted); font-size: 15px; margin-top: 0.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Enter your domain to run 50+ automated crawlers across Core Web Vitals, schema tags, backlinks, and keyword rankings.
-          </p>
+      <div class="cw-demo-grid">
+        
+        <!-- Left Side: Enquiry Form -->
+        <div class="cw-demo-form-card">
+          <div style="margin-bottom: 1.15rem;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem; letter-spacing: -0.02em;">
+              Request Free Site Audit
+            </h2>
+            <p style="font-size: 0.92rem; margin: 0; line-height: 1.5;">
+              Enter your domain to run 50+ automated crawlers across Core Web Vitals, schema tags, backlinks, and keyword rankings.
+            </p>
+          </div>
+
+          <form id="seowingsDemoForm" onsubmit="event.preventDefault(); alert('Thank you! Your SEOWings technical audit has started. We will email the complete report within 15 minutes.'); this.reset();">
+            <div class="cw-form-row">
+              <div class="form-group">
+                <label for="seoName" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Name *</label>
+                <input type="text" id="seoName" class="form-control" placeholder="Your name" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+              <div class="form-group">
+                <label for="seoEmail" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Work Email *</label>
+                <input type="email" id="seoEmail" class="form-control" placeholder="name@company.com" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div class="cw-form-row">
+              <div class="form-group">
+                <label for="seoUrl" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Target Website URL *</label>
+                <input type="url" id="seoUrl" class="form-control" placeholder="https://yourdomain.com" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+              <div class="form-group">
+                <label for="seoPhone" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Phone / WhatsApp *</label>
+                <input type="tel" id="seoPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0.75rem;">
+              <label for="seoGoals" style="display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 0.3rem; color: var(--text-primary);">Primary SEO Objective</label>
+              <input type="text" id="seoGoals" class="form-control" placeholder="E.g., Core Web Vitals fix, keyword rank tracking" style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.9rem;">
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem;">
+              <div style="font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
+                <i class="fas fa-shield-halved" style="color: var(--brand-orange);"></i> 100% Confidential
+              </div>
+              <button type="submit" class="pm-btn-primary" style="padding: 0.7rem 1.6rem; font-size: 0.92rem; border: none; cursor: pointer;">
+                Launch Audit <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
         </div>
 
-        <form id="seowingsDemoForm" onsubmit="event.preventDefault(); alert('Thank you! Your SEOWings technical audit has started. We will email the complete report within 15 minutes.'); this.reset();">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-            <div class="form-group">
-              <label for="seoName" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Your Name *</label>
-              <input type="text" id="seoName" class="form-control" placeholder="Marcus Vance" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
-            </div>
-            <div class="form-group">
-              <label for="seoEmail" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Work Email *</label>
-              <input type="email" id="seoEmail" class="form-control" placeholder="marcus@company.com" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
+        <!-- Right Side: Visual Showcase Image -->
+        <div class="cw-demo-image-card">
+          <div class="cw-demo-img-wrapper">
+            <img src="images/seowings_preview.jpg" alt="SEOWings Technical SEO Audit Live Dashboard" class="cw-demo-img">
+            <div class="cw-demo-badge-overlay">
+              <span class="pm-badge" style="background: rgba(15, 23, 42, 0.85); color: #fb923c; border-color: rgba(249, 115, 22, 0.4); backdrop-filter: blur(8px); padding: 0.3rem 0.75rem; font-size: 0.78rem; margin: 0;">
+                <i class="fas fa-chart-line"></i> Real-Time Crawl &amp; Diagnostic Console
+              </span>
             </div>
           </div>
+        </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-            <div class="form-group">
-              <label for="seoUrl" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Target Website URL *</label>
-              <input type="url" id="seoUrl" class="form-control" placeholder="https://yourdomain.com" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
-            </div>
-            <div class="form-group">
-              <label for="seoPhone" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Direct Phone / WhatsApp *</label>
-              <input type="tel" id="seoPhone" class="form-control" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem;">
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom: 1.5rem;">
-            <label for="seoGoals" style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--text-primary);">Target Keywords or Primary SEO Goals</label>
-            <textarea id="seoGoals" rows="3" class="form-control" placeholder="List target search keywords or technical issues you're experiencing (e.g., slow LCP, dropped rankings, international geotargeting)..." style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary); font-size: 0.95rem; resize: vertical;"></textarea>
-          </div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
-            <div style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem;">
-              <i class="fas fa-shield-halved" style="color: var(--brand-orange);"></i> 100% Confidential • Zero Spam Guarantee
-            </div>
-            <button type="submit" class="pm-btn-primary" style="padding: 0.85rem 2rem; font-size: 1rem; border: none; cursor: pointer;">
-              Launch Technical Audit <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </form>
       </div>
     </div>
   </section>
@@ -850,7 +1144,6 @@
         <div class="footer-col">
           <h5 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem;">Services</h5>
           <ul class="footer-links">
-            <li><a href="digital-marketing.html">Digital Marketing</a></li>
             <li><a href="website-development.html">Website Development</a></li>
             <li><a href="app-development.html">Mobile App Development</a></li>
             <li><a href="software-engineering.html">Software Engineering</a></li>
@@ -916,5 +1209,31 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('.cw-faq-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const item = trigger.closest('.cw-faq-item');
+          const isOpen = item.classList.contains('active');
+          
+          document.querySelectorAll('.cw-faq-item').forEach(other => {
+            if (other !== item) {
+              other.classList.remove('active');
+              other.querySelector('.cw-faq-trigger')?.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          if (isOpen) {
+            item.classList.remove('active');
+            trigger.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
