@@ -20,6 +20,140 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Compact layout adjustments for Contact page */
+    .page-hero {
+      padding: 7rem 0 2.25rem 0 !important;
+    }
+    .page-hero h1 {
+      font-size: clamp(1.85rem, 2.5vw, 2.35rem) !important;
+      margin-bottom: 0.65rem !important;
+    }
+    .page-hero p {
+      font-size: 0.98rem !important;
+      line-height: 1.58 !important;
+      max-width: 680px;
+      margin-bottom: 0 !important;
+    }
+    .breadcrumb {
+      margin-bottom: 0.75rem !important;
+    }
+    .section-tag {
+      margin-bottom: 0.5rem !important;
+    }
+    .contact-cards-grid {
+      gap: 1rem !important;
+      margin-bottom: 2rem !important;
+    }
+    .contact-cards-grid .contact-info-box {
+      padding: 1.25rem 1.2rem !important;
+      gap: 0.5rem !important;
+      border-radius: var(--radius-md) !important;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease !important;
+    }
+    .card-grad-blue {
+      background: linear-gradient(165deg, var(--bg-card) 0%, rgba(37, 99, 235, 0.08) 100%) !important;
+      border: 1.5px solid rgba(37, 99, 235, 0.25) !important;
+      border-top: 3.5px solid #2563eb !important;
+    }
+    .card-grad-orange {
+      background: linear-gradient(165deg, var(--bg-card) 0%, rgba(249, 115, 22, 0.08) 100%) !important;
+      border: 1.5px solid rgba(249, 115, 22, 0.25) !important;
+      border-top: 3.5px solid #f97316 !important;
+    }
+    .card-grad-purple {
+      background: linear-gradient(165deg, var(--bg-card) 0%, rgba(99, 102, 241, 0.08) 100%) !important;
+      border: 1.5px solid rgba(99, 102, 241, 0.25) !important;
+      border-top: 3.5px solid #6366f1 !important;
+    }
+    .card-grad-emerald {
+      background: linear-gradient(165deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.08) 100%) !important;
+      border: 1.5px solid rgba(16, 185, 129, 0.25) !important;
+      border-top: 3.5px solid #10b981 !important;
+    }
+    .card-grad-blue:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.15) !important;
+      border-color: #2563eb !important;
+    }
+    .card-grad-orange:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.15) !important;
+      border-color: #f97316 !important;
+    }
+    .card-grad-purple:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(99, 102, 241, 0.15) !important;
+      border-color: #6366f1 !important;
+    }
+    .card-grad-emerald:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(16, 185, 129, 0.15) !important;
+      border-color: #10b981 !important;
+    }
+    .faq-item {
+      margin-bottom: 0.75rem !important;
+    }
+    .faq-header {
+      padding: 1.1rem 1.35rem !important;
+      font-size: 1.02rem !important;
+    }
+    .faq-body {
+      padding: 0 1.35rem 1.15rem 1.35rem !important;
+      font-size: 0.92rem !important;
+      line-height: 1.62 !important;
+    }
+    .contact-two-col-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .contact-form-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .contact-support-col {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      height: 100%;
+    }
+    .contact-support-img-wrapper {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+    .contact-support-img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+    @media (max-width: 991px) {
+      .contact-two-col-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.75rem !important;
+      }
+      .contact-support-col {
+        height: 280px !important;
+      }
+      .contact-support-img-wrapper {
+        min-height: 280px !important;
+        height: 280px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -152,8 +286,6 @@
           </li>
 
           <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="career.html" class="nav-link">Career</a></li>
           <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
 
@@ -193,123 +325,151 @@
   </section>
 
   <!-- Contact Cards & Consultation Form Section -->
-  <section style="padding: 5rem 0; background-color: var(--bg-primary);">
+  <section style="padding: 2.25rem 0 2.5rem 0; background-color: var(--bg-primary);">
     <div class="container">
       <!-- Contact Info Cards -->
       <div class="contact-cards-grid">
-        <div class="contact-info-box">
-          <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-info-box card-grad-blue">
+          <div class="contact-info-icon" style="background-color: rgba(37, 99, 235, 0.12); color: #2563eb;"><i class="fas fa-map-marker-alt"></i></div>
           <h4 class="contact-info-title">Office Address</h4>
           <p class="contact-info-text">Meerut</p>
         </div>
 
-        <div class="contact-info-box">
-          <div class="contact-info-icon" style="background-color: var(--bg-accent-orange); color: var(--brand-orange);">
+        <div class="contact-info-box card-grad-orange">
+          <div class="contact-info-icon" style="background-color: rgba(249, 115, 22, 0.12); color: #f97316;">
             <i class="fas fa-envelope"></i></div>
           <h4 class="contact-info-title">Email Us</h4>
           <p class="contact-info-text"><a href="mailto:contact@rudracore.com" style="color: inherit; text-decoration: none;">contact@rudracore.com</a><br><a href="mailto:sales@rudracore.com" style="color: inherit; text-decoration: none;">sales@rudracore.com</a></p>
         </div>
 
-        <div class="contact-info-box">
-          <div class="contact-info-icon" style="background-color: var(--bg-tertiary); color: var(--brand-navy);"><i
+        <div class="contact-info-box card-grad-purple">
+          <div class="contact-info-icon" style="background-color: rgba(99, 102, 241, 0.12); color: #6366f1;"><i
               class="fas fa-phone-alt"></i></div>
           <h4 class="contact-info-title">Call Direct</h4>
-          <p class="contact-info-text"><a href="tel:+917906683614" style="color: inherit; text-decoration: none; font-weight: 700;">+91-7906683614</a><br><a href="https://wa.me/917906683614" target="_blank" class="btn btn-whatsapp" style="margin-top: 0.5rem; padding: 0.35rem 0.8rem; font-size: 0.8rem; border-radius: 9999px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></p>
+          <p class="contact-info-text"><a href="tel:+917906683614" style="color: inherit; text-decoration: none; font-weight: 700;">+91-7906683614</a><br><a href="https://wa.me/917906683614" target="_blank" class="btn btn-whatsapp" style="margin-top: 0.4rem; padding: 0.3rem 0.75rem; font-size: 0.78rem; border-radius: 9999px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></p>
         </div>
 
-        <div class="contact-info-box">
-          <div class="contact-info-icon" style="background-color: var(--bg-accent-blue); color: #10b981;"><i
+        <div class="contact-info-box card-grad-emerald">
+          <div class="contact-info-icon" style="background-color: rgba(16, 185, 129, 0.12); color: #10b981;"><i
               class="fas fa-clock"></i></div>
           <h4 class="contact-info-title">Business Hours</h4>
           <p class="contact-info-text">Mon-Sat: 10AM to 7PM</p>
         </div>
       </div>
 
-      <!-- Main Form Container -->
+      <!-- Main Form & Customer Care Showcase Container (Full Container Width) -->
       <div
-        style="background-color: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem 2.5rem; box-shadow: var(--shadow-md); max-width: 950px; margin: 0 auto;">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto 2.5rem auto;">
-          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">
-            Schedule a Free Technical Consultation</h2>
-          <p style="color: var(--text-secondary); font-size: 0.95rem;">Fill out the scope below and our enterprise
-            architects will contact you within 4 business hours.</p>
+        style="background: linear-gradient(165deg, var(--bg-card) 0%, rgba(37, 99, 235, 0.03) 50%, rgba(249, 115, 22, 0.03) 100%); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.85rem 2rem; box-shadow: var(--shadow-md); width: 100%;">
+        
+        <div class="contact-two-col-grid">
+          <!-- Left Column: Generic Contact Form -->
+          <div class="contact-form-col">
+            <div style="margin-bottom: 1.15rem;">
+              <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.75rem; background: var(--bg-accent-orange); color: var(--brand-orange); border-radius: 9999px; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+                <i class="fas fa-envelope-open-text"></i> Quick Inquiry
+              </span>
+              <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; margin-bottom: 0.3rem; color: var(--text-primary);">
+                Send Us a Message
+              </h2>
+              <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0; line-height: 1.5;">
+                Fill out the form below and our team will get in touch with you shortly.
+              </p>
+            </div>
+
+            <form id="contactForm">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 0.8rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="contactName"
+                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; display: block; color: var(--text-primary);">Full Name
+                    *</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="Rahul Sharma" required
+                    style="width: 100%;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="contactEmail"
+                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; display: block; color: var(--text-primary);">Work Email
+                    *</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="rahul.sharma@company.in" required
+                    style="width: 100%;">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 0.8rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="contactPhone"
+                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; display: block; color: var(--text-primary);">Phone Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="+91 98765 43210"
+                    style="width: 100%;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="contactSubject"
+                    style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; display: block; color: var(--text-primary);">Subject</label>
+                  <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Web &amp; App Development Inquiry"
+                    style="width: 100%;">
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.1rem;">
+                <label for="contactMessage"
+                  style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; display: block; color: var(--text-primary);">Message *</label>
+                <textarea id="contactMessage" class="form-control" rows="3"
+                  placeholder="Describe your requirements, project scope, or technical questions..." required
+                  style="width: 100%;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary-orange"
+                style="width: 100%; font-size: 0.95rem; font-weight: 700; padding: 0.72rem 1.25rem;">
+                Send Message <i class="fas fa-paper-plane" style="margin-left: 0.35rem;"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Customer Care Image Showcase -->
+          <div class="contact-support-col">
+            <div class="contact-support-img-wrapper">
+              <img src="images/contact_customer_care.jpg" alt="Rudracore Customer Care & Technical Support">
+              
+              <!-- Floating Top Badge -->
+              <div style="position: absolute; top: 0.85rem; left: 0.85rem; z-index: 2; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 0.35rem 0.75rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.45rem; color: #ffffff; font-size: 0.75rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.18);">
+                <span style="width: 7px; height: 7px; background-color: #10b981; border-radius: 50%; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.35);"></span>
+                Dedicated Customer Care
+              </div>
+
+              <!-- Bottom Glassmorphic Info Card Overlay -->
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 1.1rem 1.15rem; background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.75) 65%, transparent 100%); color: #ffffff;">
+                <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">
+                  We're Here to Help You
+                </div>
+                <p style="font-size: 0.8rem; color: #e2e8f0; margin-bottom: 0.65rem; line-height: 1.4;">
+                  Speak with our customer support and tech specialists for quick consultations or onboarding support.
+                </p>
+                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                  <a href="tel:+917906683614" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.7rem; background: #ffffff; color: #0f172a; font-size: 0.78rem; font-weight: 700; border-radius: 9999px; text-decoration: none;">
+                    <i class="fas fa-phone-alt" style="color: var(--brand-orange);"></i> +91-7906683614
+                  </a>
+                  <a href="https://wa.me/917906683614" target="_blank" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.7rem; background: #25D366; color: #ffffff; font-size: 0.78rem; font-weight: 700; border-radius: 9999px; text-decoration: none;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <form id="contactForm">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1rem;">
-            <div class="form-group">
-              <label for="contactName"
-                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Your Name
-                *</label>
-              <input type="text" id="contactName" class="form-control" placeholder="John Doe" required
-                style="width: 100%;">
-            </div>
-
-            <div class="form-group">
-              <label for="contactEmail"
-                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Work Email
-                *</label>
-              <input type="email" id="contactEmail" class="form-control" placeholder="john@company.com" required
-                style="width: 100%;">
-            </div>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1rem;">
-            <div class="form-group">
-              <label for="contactService"
-                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Primary Service
-                Required</label>
-              <select id="contactService" class="form-control" style="width: 100%;">
-                <option value="Software Development">Software Engineering &amp; Microservices</option>
-                <option value="Website Development">Website &amp; Jamstack Portal</option>
-                <option value="App Development">Mobile App (iOS / Android / Flutter)</option>
-                <option value="AI Automation">AI &amp; LLM Automation Workflows</option>
-                <option value="Full Stack Enterprise Solution">Full Stack Enterprise Solution</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="contactIndustry"
-                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Target
-                Industry</label>
-              <select id="contactIndustry" class="form-control" style="width: 100%;">
-                <option value="Healthcare">Healthcare &amp; Telehealth</option>
-                <option value="Real Estate">Real Estate &amp; PropTech</option>
-                <option value="Logistics">Logistics &amp; Supply Chain</option>
-                <option value="FinTech">FinTech &amp; Payments</option>
-                <option value="EdTech">EdTech &amp; E-Learning</option>
-                <option value="Energy">Energy &amp; Utilities</option>
-              </select>
-            </div>
-          </div>
-
-
-          <div class="form-group" style="margin-bottom: 1.5rem;">
-            <label for="contactMessage"
-              style="font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Project Objectives
-              &amp; Requirements Scope</label>
-            <textarea id="contactMessage" class="form-control" rows="4"
-              placeholder="Briefly describe your objectives, key features required, or target launch timeframe..."
-              style="width: 100%;"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary-orange"
-            style="width: 100%; font-size: 1.05rem; padding: 0.9rem;">
-            Submit Consultation Request <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
       </div>
     </div>
   </section>
 
   <!-- Interactive Client FAQ Accordion Section -->
-  <section style="padding: 5rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+  <section style="padding: 2.25rem 0 2.75rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
     <div class="container">
-      <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem auto;">
-        <div class="section-tag tag-orange" style="margin: 0 auto 0.75rem auto;">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 1.5rem auto;">
+        <div class="section-tag tag-orange" style="margin: 0 auto 0.45rem auto;">
           <i class="fas fa-question-circle"></i> Got Questions?
         </div>
-        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800;">Frequently Asked Questions
+        <h2 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 800; margin-bottom: 0;">Frequently Asked Questions
         </h2>
       </div>
 
